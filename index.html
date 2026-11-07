@@ -59,6 +59,9 @@ h2{font:700 13px/1.2 var(--display);font-stretch:110%;letter-spacing:.08em;text-
 @keyframes ring{from{transform:scale(1.5);opacity:1}to{transform:scale(1);opacity:0}}
 .zoom{position:absolute;right:10px;top:10px;display:flex;align-items:center;gap:6px;background:rgba(7,9,18,.7);color:#e7e9f3;border-radius:999px;padding:6px 10px;font:600 11px var(--mono)}
 .zoom input{width:96px;accent-color:var(--accent)}
+.lens{position:absolute;left:10px;top:10px;border:1px solid rgba(242,194,48,.6);background:rgba(7,9,18,.7);color:#e7e9f3;border-radius:999px;padding:6px 12px;font:600 11px var(--mono)}
+.np{border:1px dashed var(--line);border-radius:12px;padding:10px 12px;font-size:13px;line-height:1.45;color:var(--muted)}
+.np b{color:var(--ink)}
 .finder .idle{position:absolute;inset:0;display:grid;place-content:center;gap:12px;text-align:center;color:#d9dcea;padding:24px}
 .finder .idle p{margin:0;max-width:32ch;font-size:14px;color:#aab0c8}
 .controls{display:flex;gap:10px;margin-top:12px;align-items:center}
@@ -181,6 +184,7 @@ nav.tabs button em{font-style:normal;font-family:var(--mono);font-size:11px;colo
       <img class="still" id="still" alt="" hidden>
       <div class="frame" id="frame" hidden><i></i><b class="n">name</b><b class="c">no. 136/189</b></div>
       <div class="hint" id="hint" hidden>Hold about <em>20 cm</em> away · tap to focus</div>
+      <button class="lens" id="lensBtn" type="button" hidden>Lens 1/1</button>
       <label class="zoom" id="zoomBox" hidden>Zoom <input id="zoom" type="range" min="1" max="4" step="0.1" value="1" aria-label="Camera zoom"></label>
       <div class="idle" id="idle">
         <button class="btn primary" id="camBtn" type="button">Start camera</button>
@@ -194,7 +198,7 @@ nav.tabs button em{font-style:normal;font-family:var(--mono);font-size:11px;colo
       <button class="btn" id="stopBtn" type="button" disabled>Stop</button>
     </div>
     <form class="search" id="searchForm">
-      <input id="q" type="search" placeholder="Or type a name, e.g. Charizard ex 199" autocomplete="off" enterkeyhint="search">
+      <input id="q" type="search" placeholder="Name or number, e.g. Charizard ex or 005/128" autocomplete="off" enterkeyhint="search">
       <button class="btn primary" type="submit">Find</button>
     </form>
     <div class="status" id="status"></div>
@@ -413,13 +417,33 @@ async function getJSON(url){
   }
   throw new Error((last&&last.message)||"Couldn't reach the price service.");
 }
+let sets = null, setById = new Map();
+const setIdOf = id => id.slice(0, id.lastIndexOf("-"));
 async function loadIndex(){
   if(index) return;
   setStatus("Loading the card list (first scan only)…", true);
-  const list = await getJSON(API+"/cards");
+  const [list, sl] = await Promise.all([getJSON(API+"/cards"), getJSON(API+"/sets").catch(()=>[])]);
   index = list.filter(c=>c && c.name);
   nameMap = new Map();
   for(const c of index){ const k=norm(c.name); if(!nameMap.has(k)) nameMap.set(k,[]); nameMap.get(k).push(c); }
+  sets = Array.isArray(sl) ? sl : [];
+  setById = new Map(sets.map(s=>[s.id,s]));
+}
+// sets whose printed total ("/128") matches; Trainer/Galarian Gallery totals carry their prefix ("TG30")
+function setsWithTotal(total){
+  if(!total || !sets) return null;
+  const m = String(total).toUpperCase().match(/^([A-Z]*)0*(\d+)$/); if(!m) return null;
+  const pre = m[1], n = +m[2];
+  const ok = s => s.cardCount && (pre ? new RegExp(pre.toLowerCase()+"$").test(s.id) : true);
+  let hit = sets.filter(s=>ok(s) && s.cardCount.official===n);
+  if(!hit.length) hit = sets.filter(s=>ok(s) && s.cardCount.total===n);
+  return new Set(hit.map(s=>s.id));
+}
+// "005/128", "TG05/TG30", "SWSH020" → matching prints, newest sets first
+function byNumber(num){
+  const ids = setsWithTotal(num.total);
+  return index.filter(c=>sameLocal(c.localId, num.local) && (!ids || ids.has(setIdOf(c.id))))
+    .map((c,i)=>({c, m:true, s:0, order:i})).reverse().slice(0,40);
 }
 const fullCache = new Map();
 async function getCard(id){
@@ -437,18 +461,84 @@ function thumb(src, alt){ return src ? `<img src="${esc(src)}" alt="${esc(alt)}"
 const mini = v => `<span class="mini k-${esc(v.kind)}${v.stamp?" k-stamp":""}" aria-hidden="true"></span>`;
 
 /* ---------- camera ---------- */
+/* Phones with several back lenses (e.g. Galaxy A-series: main, ultra-wide, macro) often hand the
+   browser a fixed-focus lens. Probe each back lens once, keep the one that can autofocus. */
+let cams = [], camIdx = 0;
+const hasAF = caps => Array.isArray(caps.focusMode) && caps.focusMode.includes("continuous");
+async function openCam(deviceId){
+  return navigator.mediaDevices.getUserMedia({ audio:false, video: deviceId
+    ? { deviceId:{exact:deviceId}, width:{ideal:2560}, height:{ideal:1440} }
+    : { facingMode:{ideal:"environment"}, width:{ideal:2560}, height:{ideal:1440} } });
+}
+async function findCams(){
+  const devs = (await navigator.mediaDevices.enumerateDevices()).filter(d=>d.kind==="videoinput");
+  let back = devs.filter(d=>/back|rear|environment/i.test(d.label));
+  if(!back.length) back = devs.filter(d=>!/front|user|selfie/i.test(d.label));
+  return back.length ? back : devs;
+}
+async function probe(list){
+  const scored = [];
+  for(const d of list.slice(0,6)){
+    try{
+      const s = await openCam(d.deviceId), t = s.getVideoTracks()[0];
+      const caps = t.getCapabilities ? t.getCapabilities() : {};
+      s.getTracks().forEach(x=>x.stop());
+      const main = /\b(camera2 0|camera 0)\b/i.test(d.label);
+      scored.push({ d, af:hasAF(caps), s:(hasAF(caps)?100:0) + (main?20:0) + ((caps.width&&caps.width.max)||0)/1000 });
+    }catch{}
+  }
+  scored.sort((a,b)=>b.s-a.s);
+  return scored;
+}
 async function startCamera(){
   try{
-    stream = await navigator.mediaDevices.getUserMedia({ audio:false,
-      video:{ facingMode:{ideal:"environment"}, width:{ideal:2560}, height:{ideal:1440} } });
-    track = stream.getVideoTracks()[0];
-    const v=$("video"); v.srcObject=stream; await v.play();
-    v.hidden=false; $("still").hidden=true; $("frame").hidden=false; $("hint").hidden=false; $("idle").hidden=true;
-    $("shutter").disabled=false; $("stopBtn").disabled=false;
-    await tuneCamera();
+    setStatus("Starting camera…", true);
+    let s = await openCam(null);           // asks permission; labels become readable after this
+    const list = await findCams();
+    const saved = store.get("bs.cam", null);
+    if(list.length > 1){
+      const t0 = s.getVideoTracks()[0], caps0 = t0.getCapabilities ? t0.getCapabilities() : {};
+      const savedDev = saved && list.find(d=>d.deviceId===saved);
+      if(savedDev || !hasAF(caps0)){
+        s.getTracks().forEach(x=>x.stop()); s = null;
+        if(savedDev){ cams = [savedDev, ...list.filter(d=>d!==savedDev)]; }
+        else {
+          setStatus("Finding the lens that can focus…", true);
+          const ranked = await probe(list);
+          cams = ranked.length ? ranked.map(r=>r.d) : list;
+          if(ranked[0]) store.set("bs.cam", ranked[0].d.deviceId);
+        }
+        camIdx = 0;
+      } else {
+        const cur = t0.getSettings ? t0.getSettings().deviceId : null;
+        cams = list; camIdx = Math.max(0, list.findIndex(d=>d.deviceId===cur));
+      }
+    } else cams = list;
+    await useStream(s || await openCam(cams[camIdx] && cams[camIdx].deviceId));
+    setStatus("");
   }catch(e){
     setStatus("Camera unavailable here. Use <b>Camera app</b> instead. "+(location.protocol!=="https:"?"(The live camera needs the page served over https.)":""));
   }
+}
+async function useStream(s){
+  stream = s; track = stream.getVideoTracks()[0];
+  const v=$("video"); v.srcObject=stream; await v.play();
+  v.hidden=false; $("still").hidden=true; $("frame").hidden=false; $("hint").hidden=false; $("idle").hidden=true;
+  $("shutter").disabled=false; $("stopBtn").disabled=false;
+  $("lensBtn").hidden = cams.length < 2; $("lensBtn").textContent = `Lens ${camIdx+1}/${cams.length}`;
+  await tuneCamera();
+  const caps = track.getCapabilities ? track.getCapabilities() : {};
+  $("hint").innerHTML = (cams.length>1 && caps.focusMode && !hasAF(caps))
+    ? "This lens can't autofocus — tap <em>Lens</em> to switch"
+    : "Hold about <em>20 cm</em> away · tap to focus";
+}
+async function nextLens(e){
+  e.stopPropagation();
+  if(cams.length<2) return;
+  camIdx = (camIdx+1) % cams.length;
+  if(stream) stream.getTracks().forEach(t=>t.stop());
+  try{ await useStream(await openCam(cams[camIdx].deviceId)); store.set("bs.cam", cams[camIdx].deviceId); }
+  catch{ setStatus("Couldn't open that lens. Tap Lens again."); }
 }
 // Ask for continuous autofocus and a little zoom, so the phone can sit far enough back to focus
 async function tuneCamera(){
@@ -463,7 +553,7 @@ async function tuneCamera(){
   if(Object.keys(adv).length){ try{ await track.applyConstraints({advanced:[adv]}); }catch{} }
 }
 async function tapFocus(e){
-  if(!track || e.target.closest(".zoom")) return;
+  if(!track || e.target.closest(".zoom,.lens")) return;
   const box=$("finder").getBoundingClientRect(), x=(e.clientX-box.left)/box.width, y=(e.clientY-box.top)/box.height;
   const r=document.createElement("span"); r.className="ring"; r.style.left=(x*100)+"%"; r.style.top=(y*100)+"%";
   $("finder").appendChild(r); setTimeout(()=>r.remove(),800);
@@ -478,7 +568,7 @@ async function tapFocus(e){
 }
 function stopCamera(){
   if(stream){ stream.getTracks().forEach(t=>t.stop()); stream=null; track=null; }
-  $("video").hidden=true; $("frame").hidden=true; $("hint").hidden=true; $("zoomBox").hidden=true; $("idle").hidden=false;
+  $("video").hidden=true; $("frame").hidden=true; $("hint").hidden=true; $("zoomBox").hidden=true; $("lensBtn").hidden=true; $("idle").hidden=false;
   $("shutter").disabled=true; $("stopBtn").disabled=true;
 }
 // crop the card frame out of the live video (object-fit: cover mapping)
@@ -565,15 +655,20 @@ async function scan(card, framed){
       if(!seen) seen = (found[0]&&found[0][0]) || "";
     }
     const read = `Read: <code>${esc(seen||"—")}</code>${num?` · no. <code>${esc(num.local)}${num.total?"/"+esc(num.total):""}</code>`:""}`;
+    if(!found.length && num && num.total){
+      const r = byNumber(num);
+      if(r.length){ setStatus(read+`<br>Couldn't read the name, so I matched the number. ${r.length===1?"Pick the version below.":"Tap your card."}`); renderCands(r); if(r.length===1) selectCard(r[0].c.id); return; }
+    }
     if(!found.length){ setStatus(read+"<br>Couldn't match a card name. If the preview looks blurry, move the phone back a little and tap the card to focus — or use <b>Camera app</b>, or type the name below."); return; }
     showCandidates(found, num, read);
   }catch(e){ setStatus(esc(e.message||"Scan failed.")); }
 }
 function rankCandidates(names, num){
   const out=[];
+  const tot = num && setsWithTotal(num.total);
   names.forEach(([n,score],ni)=>{
     for(const c of (nameMap.get(n)||[])){
-      const m = num && sameLocal(c.localId, num.local);
+      const m = num && sameLocal(c.localId, num.local) && (!tot || !tot.size || tot.has(setIdOf(c.id)));
       out.push({c, m, s: score*10 - ni + (m?20:0)});
     }
   });
@@ -590,7 +685,8 @@ function showCandidates(names, num, seen){
 }
 function renderCands(ranked){
   $("candWrap").hidden = !ranked.length;
-  $("cands").innerHTML = ranked.map(({c,m})=>`<button class="cand${m?" match":""}" type="button" data-id="${esc(c.id)}" aria-pressed="false">${thumb(img(c),c.name)}<small>${esc(c.id)}</small></button>`).join("");
+  $("cands").innerHTML = ranked.map(({c,m})=>{ const s=setById.get(setIdOf(c.id));
+    return `<button class="cand${m?" match":""}" type="button" data-id="${esc(c.id)}" aria-pressed="false" title="${esc(c.name)} · ${esc(s?s.name:setIdOf(c.id))} ${esc(c.localId)}">${thumb(img(c),c.name)}<small>${esc(c.name)}</small><small>${esc(s?s.name:setIdOf(c.id))} · ${esc(c.localId)}</small></button>`; }).join("");
 }
 function clearResults(){ $("candWrap").hidden=true; $("detailWrap").hidden=true; $("cands").innerHTML=""; current=null; }
 
@@ -598,6 +694,15 @@ async function textSearch(q){
   clearResults();
   try{
     await loadIndex();
+    const only = q.trim().match(/^#?\s*([A-Za-z]{0,4}\s?\d{1,3}[A-Za-z]?)\s*(?:\/\s*([A-Za-z]{0,4}\s?\d{1,3}))?$/);
+    if(only && (only[2] || /[A-Za-z]/.test(only[1]))){
+      const num = { local: only[1].replace(/\s/g,"").toUpperCase(), total: only[2] ? only[2].replace(/\s/g,"").toUpperCase() : null };
+      const r = byNumber(num);
+      if(!r.length){ setStatus(`No card numbered <code>${esc(num.local)}${num.total?"/"+esc(num.total):""}</code>. Check the number in the bottom corner of the card.`); return; }
+      setStatus(`${r.length} card${r.length===1?"":"s"} numbered <code>${esc(num.local)}${num.total?"/"+esc(num.total):""}</code>. ${r.length===1?"Pick the version below.":"Tap yours."}`);
+      renderCands(r); if(r.length===1) selectCard(r[0].c.id);
+      return;
+    }
     const parts = q.trim().split(/\s+/); let num=null;
     const last = parts[parts.length-1];
     if(parts.length>1 && /\d/.test(last)){ num = parseNumber(last.includes("/")?last:last+"/0") || {local:last}; parts.pop(); }
@@ -632,8 +737,14 @@ async function selectCard(id){
   try{
     const c = await getCard(id); current = c;
     const vs = buildVariants(c);
+    const unpriced = vs.every(v=>v.usd==null && v.eur==null);
+    // New sets arrive with a single placeholder "Normal" and no prices; let people record their real version
+    if(unpriced && vs.length===1 && vs[0].type==="normal" && !vs[0].stamp && !vs[0].foil){
+      vs.push({ vid:"x-reverse", type:"reverse", foil:null, kind:"reverse", stamp:false, label:"Reverse holo", how:HOW.reverse, usd:null, eur:null, updated:null },
+              { vid:"x-holo", type:"holo", foil:null, kind:"holo", stamp:false, label:"Holo", how:HOW.holo, usd:null, eur:null, updated:null });
+    }
     const first = vs.find(v=>v.usd!=null||v.eur!=null) || vs[0];
-    const q = encodeURIComponent(`${c.name} ${c.localId}${c.set&&c.set.cardCount&&c.set.cardCount.official?"/"+c.set.cardCount.official:""}`);
+    const q = encodeURIComponent(`${c.name} ${c.set&&c.set.name?c.set.name+" ":""}${c.localId}${c.set&&c.set.cardCount&&c.set.cardCount.official?"/"+c.set.cardCount.official:""}`);
     const upd = first && first.updated;
     $("detail").innerHTML = `
       ${img(c,"high")?`<img src="${esc(img(c,"high"))}" alt="${esc(c.name)}">`:`<div class="ph">no image</div>`}
@@ -653,6 +764,7 @@ async function selectCard(id){
           </button>`).join("")}
         </div>
       </div>
+      ${unpriced?`<div class="np full"><b>No market price yet.</b> The free price data doesn't cover this card yet — common for sets released in the last few months. Check the TCGplayer and eBay sold links below for now. You can still add it: pick your version, and its price fills in when you tap Refresh prices once the data catches up.</div>`:""}
       ${GUIDE}
       <div class="add"><button class="btn primary" id="addBtn" type="button">Add to collection</button></div>
       <div class="links">
@@ -756,6 +868,7 @@ $("tabColl").onclick=()=>showTab("coll");
 $("camBtn").onclick=startCamera;
 $("stopBtn").onclick=stopCamera;
 $("finder").addEventListener("click", tapFocus);
+$("lensBtn").onclick=nextLens;
 $("zoom").oninput=e=>{ if(track) track.applyConstraints({advanced:[{zoom:+e.target.value}]}).catch(()=>{}); };
 $("shutter").onclick=async()=>{
   if(!stream) return; $("shutter").disabled=true;
