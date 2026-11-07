@@ -234,7 +234,7 @@ nav.tabs button em{font-style:normal;font-family:var(--mono);font-size:11px;colo
     </div>
     <div class="status" id="collStatus"></div>
     <div class="list" id="list"></div>
-    <p class="note">Prices come from <a href="https://tcgdex.dev" target="_blank" rel="noopener">TCGdex</a>: TCGplayer market price (updated hourly) and Cardmarket trend (daily). Raw, ungraded cards only. Your collection is saved in this browser; use Export to back it up.</p>
+    <p class="note">Prices come from <a href="https://tcgdex.dev" target="_blank" rel="noopener">TCGdex</a>: TCGplayer market price (updated hourly) and Cardmarket trend (daily). Sets TCGdex hasn't priced yet use TCGplayer prices from <a href="https://tcgcsv.com" target="_blank" rel="noopener">TCGCSV</a>, refreshed daily. Raw, ungraded cards only. Your collection is saved in this browser; use Export to back it up.</p>
   </section>
 </div>
 
@@ -393,9 +393,30 @@ function buildVariants(card){
       usd: tcgPick(p.tcgplayer,t,null), eur: cmPick(p.cardmarket,t,null), updated:(p.tcgplayer&&p.tcgplayer.updated)||null }));
     if(cv.firstEdition) out.push({ vid:"firstEdition", type:"normal", foil:null, kind:"normal", stamp:true, label:"1st Edition", how:"", usd:null, eur:null, updated:null });
   }
-  // plain prints first, then special foils, then stamped/odd sizes
+  return sortVariants(out);
+}
+// plain prints first, then special foils, then stamped/odd sizes
+function sortVariants(out){
   const rank = v => (v.stamp?20:0) + (v.foil?10:0) + ({normal:0,reverse:1,holo:2}[v.type]??3);
   return out.map((v,i)=>({v,i})).sort((a,b)=>rank(a.v)-rank(b.v)||a.i-b.i).map(x=>x.v);
+}
+// TCGCSV products for one card number → versions (TCGplayer prices only)
+function tcToVariants(list, updated){
+  const out = [];
+  for(const prod of list){
+    const pat = /master ?ball/i.test(prod.n) ? "masterball" : /pok[eé] ?ball/i.test(prod.n) ? "pokeball" : /cosmos/i.test(prod.n) ? "cosmos" : null;
+    const extra = (prod.n.match(/\(([^)]+)\)/)||[])[1];
+    for(const [sub, price] of Object.entries(prod.p||{})){
+      const type = /reverse/i.test(sub) ? "reverse" : /holo|foil/i.test(sub) ? "holo" : "normal";
+      const kind = pat || type, stamp = /1st edition/i.test(sub);
+      let label = pat ? FOIL[pat] : TYPE[type];
+      if(stamp) label += " · 1st Edition";
+      if(extra && !pat) label += " · " + extra;
+      out.push({ vid:"tc-"+prod.i+"-"+norm(sub).replace(/ /g,"-"), type, foil:pat, kind, stamp, label, how:HOW[kind]||"",
+        usd:pos(price), eur:null, updated, src:"tcgcsv" });
+    }
+  }
+  return sortVariants(out);
 }
 
 /* ---------- money ---------- */
@@ -444,6 +465,37 @@ function byNumber(num){
   const ids = setsWithTotal(num.total);
   return index.filter(c=>sameLocal(c.localId, num.local) && (!ids || ids.has(setIdOf(c.id))))
     .map((c,i)=>({c, m:true, s:0, order:i})).reverse().slice(0,40);
+}
+/* Second price source: a daily GitHub Action copies TCGplayer prices from TCGCSV into prices/ in this repo.
+   Used when TCGdex has no price (e.g. sets from the last few months). */
+const PRICE_BASES = ["prices/", "https://raw.githubusercontent.com/claudeboxpsyc-tech/binder-scan/main/prices/"];
+let tcIndex = null; const tcFiles = new Map();
+async function tcGet(file){
+  for(const b of PRICE_BASES){ try{ const r = await fetch(b+file); if(r.ok) return await r.json(); }catch{} }
+  return null;
+}
+const stripPre = s => norm(String(s).replace(/^[A-Za-z]{1,6}\d*(\.\d+)?[a-z]?\s*:\s*/,""));
+async function tcVariants(card){
+  if(!card.set || !card.set.name) return null;
+  if(!tcIndex) tcIndex = (await tcGet("index.json")) || { groups:[] };
+  const want = norm(card.set.name), gs = tcIndex.groups || [];
+  const g = gs.find(x=>stripPre(x.n)===want) || gs.find(x=>norm(x.n)===want) || gs.find(x=>stripPre(x.n).endsWith(" "+want));
+  if(!g) return null;
+  if(!tcFiles.has(g.g)) tcFiles.set(g.g, await tcGet(g.g+".json"));
+  const cards = tcFiles.get(g.g); if(!cards) return null;
+  let list = [];
+  for(const [num, arr] of Object.entries(cards)) if(sameLocal(num.split("/")[0], card.localId)) list.push(...arr);
+  const named = list.filter(p=>norm(p.n).startsWith(norm(card.name)));
+  if(named.length) list = named;
+  return list.length ? tcToVariants(list, tcIndex.u) : null;
+}
+async function variantsFor(card){
+  const vs = buildVariants(card);
+  if(vs.some(v=>v.usd!=null)) return vs;
+  let tc = null; try{ tc = await tcVariants(card); }catch{}
+  if(!tc || !tc.length) return vs;
+  for(const v of tc){ const m = vs.find(x=>x.kind===v.kind && x.eur!=null); if(m) v.eur = m.eur; }   // keep Cardmarket € where TCGdex has it
+  return tc;
 }
 const fullCache = new Map();
 async function getCard(id){
@@ -736,8 +788,10 @@ async function selectCard(id){
   $("detail").innerHTML = `<div class="ph" style="width:100%">loading…</div><div class="meta"><div class="bar"><i></i></div></div>`;
   try{
     const c = await getCard(id); current = c;
-    const vs = buildVariants(c);
+    const vs = await variantsFor(c);
+    if(current !== c) return;   // another card was tapped meanwhile
     const unpriced = vs.every(v=>v.usd==null && v.eur==null);
+    const viaTc = vs.some(v=>v.src==="tcgcsv");
     // New sets arrive with a single placeholder "Normal" and no prices; let people record their real version
     if(unpriced && vs.length===1 && vs[0].type==="normal" && !vs[0].stamp && !vs[0].foil){
       vs.push({ vid:"x-reverse", type:"reverse", foil:null, kind:"reverse", stamp:false, label:"Reverse holo", how:HOW.reverse, usd:null, eur:null, updated:null },
@@ -753,7 +807,7 @@ async function selectCard(id){
         <div class="sub">${esc(c.set?c.set.name:"")} · ${esc(c.localId)}${c.set&&c.set.cardCount?"/"+esc(c.set.cardCount.official):""}${c.rarity?"<br>"+esc(c.rarity):""}</div>
         <div class="big" id="bigVal"></div>
         <div class="bigLbl" id="bigLbl"></div>
-        <div class="sub">${upd?"updated "+new Date(upd).toLocaleDateString():""}</div>
+        <div class="sub">${upd?(viaTc?"TCGplayer via TCGCSV · ":"")+"updated "+new Date(upd).toLocaleDateString():""}</div>
       </div>
       <div class="full">
         <div class="vh"><span>Version (${vs.length})</span><span><span>TCGplayer</span><span>Cardmarket</span></span></div>
@@ -835,9 +889,13 @@ async function refreshAll(){
   const btn=$("refreshBtn"); btn.disabled=true; let done=0, failed=0;
   const ids=[...new Set(collection.map(x=>x.id))];
   const q=[...ids];
-  async function run(){ while(q.length){ const id=q.shift(); try{ fullCache.delete(id); const c=await getCard(id); const vs=buildVariants(c);
-      collection.filter(x=>x.id===id).forEach(x=>{ const v = vs.find(v=>v.vid===x.vid) || vs.find(v=>v.label===x.label) || vs.find(v=>v.kind===x.kind && !v.stamp);
-        if(v){ x.usd=v.usd; x.eur=v.eur; x.updated=v.updated; if(x.vid!==v.vid){ x.vid=v.vid; x.key=x.id+"|"+v.vid; } } });
+  async function run(){ while(q.length){ const id=q.shift(); try{ fullCache.delete(id); const c=await getCard(id); const vs=await variantsFor(c);
+      collection.filter(x=>x.id===id).forEach(x=>{
+        // single-print cards: a placeholder "Normal" saved earlier becomes the one real version
+        const v = vs.find(v=>v.vid===x.vid) || vs.find(v=>v.label===x.label) || vs.find(v=>v.kind===x.kind && !v.stamp) || (vs.length===1 ? vs[0] : null);
+        if(v){ x.usd=v.usd; x.eur=v.eur; x.updated=v.updated;
+          if(x.added){ if(x.added.tcg==null) x.added.tcg=v.usd; if(x.added.cm==null) x.added.cm=v.eur; }
+          if(x.vid!==v.vid){ x.vid=v.vid; x.key=x.id+"|"+v.vid; x.label=v.label; x.kind=v.kind; x.stamp=v.stamp; } } });
     }catch{ failed++; } done++; $("collStatus").textContent=`Updating ${done}/${ids.length}…`; } }
   await Promise.all([run(),run(),run()]);
   store.set("bs.collection",collection); store.set("bs.refreshed",Date.now()); renderCollection();
