@@ -1,5 +1,5 @@
 {
-"001/017":[{"i":83905,"n":"Blaziken","p":{"Normal":22.51,"Holofoil":29.59}}],
+"001/017":[{"i":83905,"n":"Blaziken","p":{"Normal":22.51,"Holofoil":30.57}}],
 "002/017":[{"i":87336,"n":"Metagross","p":{"Normal":17.56,"Holofoil":15.76}}],
 "003/017":[{"i":88624,"n":"Rayquaza","p":{"Normal":435.42,"Holofoil":317.43}}],
 "004/017":[{"i":88946,"n":"Sceptile","p":{"Normal":21.07,"Holofoil":37.01}}],
@@ -8,12 +8,12 @@
 "007/017":[{"i":87245,"n":"Masquerain","p":{"Normal":5.59}}],
 "008/017":[{"i":87650,"n":"Murkrow","p":{"Normal":19.95}}],
 "009/017":[{"i":88448,"n":"Pupitar","p":{"Normal":14.68}}],
-"010/017":[{"i":89967,"n":"Torkoal","p":{"Normal":12.61}}],
+"010/017":[{"i":89967,"n":"Torkoal","p":{"Normal":12.79}}],
 "011/017":[{"i":86636,"n":"Larvitar","p":{"Normal":3.72}}],
 "012/017":[{"i":87483,"n":"Minun","p":{"Normal":5.66}}],
-"013/017":[{"i":88163,"n":"Plusle","p":{"Normal":5.66}}],
+"013/017":[{"i":88163,"n":"Plusle","p":{"Normal":5.72}}],
 "014/017":[{"i":89647,"n":"Surskit","p":{"Normal":1.56}}],
-"015/017":[{"i":89690,"n":"Swellow","p":{"Normal":1.9}}],
+"015/017":[{"i":89690,"n":"Swellow","p":{"Normal":1.94}}],
 "016/017":[{"i":83623,"n":"Armaldo ex (Non-Holo)","p":{"Normal":40.12}},{"i":97806,"n":"Armaldo ex (Holo)","p":{"Holofoil":150}}],
 "017/017":[{"i":90124,"n":"Tyranitar ex (Holo)","p":{"Holofoil":195.18}},{"i":97807,"n":"Tyranitar ex (Non-Holo)","p":{"Normal":117.55}}]
 }

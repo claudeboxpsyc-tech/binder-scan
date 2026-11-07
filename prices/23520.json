@@ -7,7 +7,7 @@
 "034/198":[{"i":557046,"n":"Houndoom - Armarouge 23","p":{"Normal":0.31}},{"i":557050,"n":"Houndoom - Armarouge 27","p":{"Normal":0.28}}],
 "035/198":[{"i":557070,"n":"Torkoal - Armarouge 4","p":{"Normal":0.16}},{"i":557071,"n":"Torkoal - Armarouge 53","p":{"Normal":0.15}}],
 "036/193":[{"i":557007,"n":"Crocalor - Armarouge 15","p":{"Normal":0.18}},{"i":557008,"n":"Crocalor - Armarouge 30","p":{"Normal":0.18}},{"i":557009,"n":"Crocalor - Armarouge 51","p":{"Normal":0.2}}],
-"038/198":[{"i":557067,"n":"Skeledirge - Armarouge 36","p":{"Normal":0.24}}],
+"038/198":[{"i":557067,"n":"Skeledirge - Armarouge 36","p":{"Normal":0.25}}],
 "039/193":[{"i":557004,"n":"Charcadet - Armarouge 13","p":{"Normal":0.27}},{"i":557005,"n":"Charcadet - Armarouge 19","p":{"Normal":0.33}},{"i":557006,"n":"Charcadet - Armarouge 56","p":{"Normal":0.34}}],
 "040/197":[{"i":557055,"n":"Larvesta - Armarouge 31","p":{"Normal":0.32}},{"i":557056,"n":"Larvesta - Armarouge 44","p":{"Normal":0.29}}],
 "041/197":[{"i":557072,"n":"Volcarona - Armarouge 46","p":{"Normal":0.18}}],
@@ -42,5 +42,5 @@
 "188/192":[{"i":556920,"n":"Potion - Pikachu 15","p":{"Normal":0.12}},{"i":556921,"n":"Potion - Pikachu 18","p":{"Normal":0.14}}],
 "188/198":[{"i":556871,"n":"Potion - Darkrai Deck","p":{"Normal":0.13}},{"i":557065,"n":"Potion - Armarouge 25","p":{"Normal":0.14}},{"i":557066,"n":"Potion - Armarouge 37","p":{"Normal":0.15}}],
 "194/198":[{"i":556893,"n":"Switch - Darkrai Deck","p":{"Normal":0.15}},{"i":556928,"n":"Switch - Pikachu 36","p":{"Normal":0.14}},{"i":556931,"n":"Switch - Pikachu 52","p":{"Normal":0.19}},{"i":557068,"n":"Switch - Armarouge 40","p":{"Normal":0.16}},{"i":557069,"n":"Switch - Armarouge 58","p":{"Normal":0.13}}],
-"198/198":[{"i":556909,"n":"Youngster - Darkrai Deck","p":{"Normal":0.09}},{"i":556944,"n":"Youngster - Pikachu 21","p":{"Normal":0.2}},{"i":556946,"n":"Youngster - Pikachu 50","p":{"Normal":0.15}},{"i":556947,"n":"Youngster - Pikachu 59","p":{"Normal":0.15}},{"i":557073,"n":"Youngster - Armarouge 18","p":{"Normal":0.14}},{"i":557074,"n":"Youngster - Armarouge 50","p":{"Normal":0.13}},{"i":557075,"n":"Youngster - Armarouge 59","p":{"Normal":0.15}}]
+"198/198":[{"i":556909,"n":"Youngster - Darkrai Deck","p":{"Normal":0.09}},{"i":556944,"n":"Youngster - Pikachu 21","p":{"Normal":0.2}},{"i":556946,"n":"Youngster - Pikachu 50","p":{"Normal":0.15}},{"i":556947,"n":"Youngster - Pikachu 59","p":{"Normal":0.15}},{"i":557073,"n":"Youngster - Armarouge 18","p":{"Normal":0.16}},{"i":557074,"n":"Youngster - Armarouge 50","p":{"Normal":0.15}},{"i":557075,"n":"Youngster - Armarouge 59","p":{"Normal":0.15}}]
 }
