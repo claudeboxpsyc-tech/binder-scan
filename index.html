@@ -16,6 +16,7 @@
 :root{
   --bg:#eef0f6; --surface:#ffffff; --ink:#151a2e; --muted:#5b6382; --line:#d6dae7;
   --accent:#e8b21c; --accent-ink:#1b1a12; --scan:#14182b; --up:#1f8a52; --down:#c2413a;
+  --foil:linear-gradient(125deg,#f7d774 0%,#9fe3f5 30%,#d9a7f2 55%,#f5f0a0 80%,#9fd8f5 100%);
   --display:"Archivo",system-ui,sans-serif; --body:"Archivo",system-ui,sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
   --r:14px; color-scheme:light;
@@ -42,9 +43,9 @@ h1 span{color:var(--accent)}
 h2{font:700 13px/1.2 var(--display);font-stretch:110%;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:22px 0 10px}
 
 /* viewfinder */
-.finder{position:relative;background:var(--scan);border-radius:18px;overflow:hidden;aspect-ratio:3/3.6;max-width:100%}
+.finder{position:relative;background:var(--scan);border-radius:18px;overflow:hidden;aspect-ratio:3/3.4;max-width:100%;touch-action:manipulation}
 .finder video,.finder img.still{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.frame{position:absolute;left:50%;top:50%;height:86%;aspect-ratio:63/88;transform:translate(-50%,-50%);
+.frame{position:absolute;left:50%;top:46%;height:68%;aspect-ratio:63/88;transform:translate(-50%,-50%);
   border-radius:4.5%/3.2%;box-shadow:0 0 0 999px rgba(7,9,18,.55);pointer-events:none}
 .frame::before,.frame::after{content:"";position:absolute;left:0;right:0;border:2px dashed rgba(242,194,48,.75);border-left:0;border-right:0}
 .frame::before{top:2%;height:10%}
@@ -52,8 +53,14 @@ h2{font:700 13px/1.2 var(--display);font-stretch:110%;letter-spacing:.08em;text-
 .frame i{position:absolute;inset:0;border:3px solid var(--accent);border-radius:inherit}
 .frame b{position:absolute;left:4%;font:600 10px/1 var(--mono);color:var(--accent);letter-spacing:.05em;text-transform:uppercase;background:rgba(7,9,18,.7);padding:3px 5px;border-radius:4px}
 .frame b.n{top:13%} .frame b.c{bottom:12.5%}
+.hint{position:absolute;left:0;right:0;bottom:10px;text-align:center;font:600 12px/1.3 var(--mono);color:#e7e9f3;pointer-events:none;padding:0 12px}
+.hint em{font-style:normal;color:var(--accent)}
+.ring{position:absolute;width:64px;height:64px;margin:-32px 0 0 -32px;border:2px solid var(--accent);border-radius:50%;pointer-events:none;animation:ring .7s ease-out forwards}
+@keyframes ring{from{transform:scale(1.5);opacity:1}to{transform:scale(1);opacity:0}}
+.zoom{position:absolute;right:10px;top:10px;display:flex;align-items:center;gap:6px;background:rgba(7,9,18,.7);color:#e7e9f3;border-radius:999px;padding:6px 10px;font:600 11px var(--mono)}
+.zoom input{width:96px;accent-color:var(--accent)}
 .finder .idle{position:absolute;inset:0;display:grid;place-content:center;gap:12px;text-align:center;color:#d9dcea;padding:24px}
-.finder .idle p{margin:0;max-width:30ch;font-size:14px;color:#aab0c8}
+.finder .idle p{margin:0;max-width:32ch;font-size:14px;color:#aab0c8}
 .controls{display:flex;gap:10px;margin-top:12px;align-items:center}
 .btn{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:10px 16px;font-weight:600;font-size:14px;display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
 .btn.primary{background:var(--accent);color:var(--accent-ink);border-color:transparent}
@@ -68,7 +75,7 @@ h2{font:700 13px/1.2 var(--display);font-stretch:110%;letter-spacing:.08em;text-
 .bar{height:3px;border-radius:2px;background:var(--line);overflow:hidden;margin-top:8px}
 .bar i{display:block;height:100%;width:30%;background:var(--accent);animation:slide 1.1s ease-in-out infinite}
 @keyframes slide{0%{transform:translateX(-100%)}100%{transform:translateX(340%)}}
-@media (prefers-reduced-motion:reduce){.bar i{animation:none;width:100%}}
+@media (prefers-reduced-motion:reduce){.bar i{animation:none;width:100%}.ring{animation:none;opacity:0}}
 
 /* candidates */
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:10px}
@@ -82,22 +89,48 @@ h2{font:700 13px/1.2 var(--display);font-stretch:110%;letter-spacing:.08em;text-
 
 /* detail */
 .detail{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px;display:grid;grid-template-columns:120px 1fr;gap:14px}
-.detail img{width:120px;border-radius:7px}
+.detail > img{width:120px;border-radius:7px}
 .detail .meta{min-width:0}
 .detail h3{font:800 22px/1.05 var(--display);font-stretch:85%;margin:0 0 4px}
 .detail .sub{font:12px/1.4 var(--mono);color:var(--muted)}
-.big{font:700 32px/1 var(--mono);margin:12px 0 2px;font-variant-numeric:tabular-nums}
-.big small{font-size:12px;color:var(--muted);font-weight:400;margin-left:6px}
-.prices{grid-column:1/-1;width:100%;border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums}
-.prices th,.prices td{padding:7px 4px;border-top:1px solid var(--line);text-align:right}
-.prices th:first-child,.prices td:first-child{text-align:left}
-.prices thead th{font:600 10px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border-top:0}
-.prices td{font-family:var(--mono)}
+.big{font:700 32px/1 var(--mono);margin:12px 0 4px;font-variant-numeric:tabular-nums}
+.bigLbl{font:600 12px/1.3 var(--body);color:var(--muted)}
+.full{grid-column:1/-1;min-width:0}
+.vh{display:flex;justify-content:space-between;align-items:baseline;gap:8px;font:600 10px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding:0 10px 6px 56px}
+.vh span:last-child{display:flex;gap:16px}
+.vlist{display:grid;gap:6px}
+.vopt{display:grid;grid-template-columns:34px 1fr auto;gap:12px;align-items:center;width:100%;text-align:left;border:1.5px solid var(--line);background:var(--bg);border-radius:12px;padding:8px 10px}
+.vopt[aria-checked="true"]{border-color:var(--accent);background:var(--surface);box-shadow:0 0 0 1px var(--accent) inset}
+.vopt .lbl{min-width:0}
+.vopt .lbl b{display:block;font-size:14px;line-height:1.2}
+.vopt .lbl span{display:block;font-size:12px;color:var(--muted);line-height:1.3}
+.vopt .pr{display:flex;gap:16px;font:600 13px var(--mono);font-variant-numeric:tabular-nums;text-align:right}
+.vopt .pr span{min-width:58px}
+.vopt .pr .na{color:var(--muted);font-weight:400}
+@media (max-width:420px){.vopt .pr{flex-direction:column;gap:2px}.vopt .pr span{min-width:0}.vh span:last-child{flex-direction:column;gap:2px;text-align:right}}
+
+/* mini card: shows where the shine is */
+.mini{width:34px;aspect-ratio:63/88;border-radius:3px;border:1.5px solid var(--muted);position:relative;background:var(--surface);overflow:hidden}
+.mini::before{content:"";position:absolute;left:12%;right:12%;top:13%;height:40%;border:1px solid var(--muted);background:var(--surface)}
+.mini::after{content:"";position:absolute;left:12%;right:12%;top:62%;height:3px;background:var(--line);box-shadow:0 5px 0 var(--line),0 10px 0 var(--line)}
+.k-holo::before,.k-cosmos::before{background:var(--foil)}
+.k-cosmos::before{background:radial-gradient(circle,var(--surface) 22%,transparent 26%) 0 0/5px 5px,var(--foil)}
+.k-reverse,.k-pokeball,.k-masterball{background:var(--foil)}
+.k-pokeball{background:radial-gradient(circle,transparent 30%,rgba(214,58,58,.75) 33%,rgba(214,58,58,.75) 45%,transparent 48%) 0 0/9px 9px,var(--foil)}
+.k-masterball{background:radial-gradient(circle,transparent 30%,rgba(124,64,196,.85) 33%,rgba(124,64,196,.85) 45%,transparent 48%) 0 0/9px 9px,var(--foil)}
+.k-stamp::before{background:radial-gradient(circle at 75% 75%,var(--accent) 18%,transparent 21%),var(--surface)}
+.k-stamp.k-holo::before{background:radial-gradient(circle at 75% 75%,var(--accent) 18%,transparent 21%),var(--foil)}
+
+details.guide{border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:var(--bg)}
+details.guide summary{cursor:pointer;font-weight:700;font-size:14px}
+details.guide p{margin:8px 0 10px;font-size:13px;color:var(--muted)}
+.gl{display:grid;gap:10px}
+.gl div{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:center;font-size:13px;line-height:1.35}
+.gl b{display:block;font-size:13px}
 .add{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-.add select{border:1px solid var(--line);background:var(--bg);border-radius:999px;padding:9px 12px}
 .links{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px}
 .links a{color:var(--muted)}
-@media (max-width:420px){.detail{grid-template-columns:96px 1fr}.detail img{width:96px}.big{font-size:26px}}
+@media (max-width:420px){.detail{grid-template-columns:96px 1fr}.detail > img{width:96px}.big{font-size:26px}}
 
 /* collection */
 .total{background:var(--scan);color:#f2f3f8;border-radius:var(--r);padding:18px;display:grid;gap:4px}
@@ -147,13 +180,15 @@ nav.tabs button em{font-style:normal;font-family:var(--mono);font-size:11px;colo
       <video id="video" playsinline muted autoplay hidden></video>
       <img class="still" id="still" alt="" hidden>
       <div class="frame" id="frame" hidden><i></i><b class="n">name</b><b class="c">no. 136/189</b></div>
+      <div class="hint" id="hint" hidden>Hold about <em>20 cm</em> away · tap to focus</div>
+      <label class="zoom" id="zoomBox" hidden>Zoom <input id="zoom" type="range" min="1" max="4" step="0.1" value="1" aria-label="Camera zoom"></label>
       <div class="idle" id="idle">
         <button class="btn primary" id="camBtn" type="button">Start camera</button>
-        <p>Line the card up inside the frame, name at the top. Flat, good light, no glare on the name.</p>
+        <p>Card inside the frame, flat, good light, no glare on the name. Blurry? Use <b>Camera app</b> below — your phone's own camera focuses better.</p>
       </div>
     </div>
     <div class="controls">
-      <label class="btn" for="fileIn">Upload photo</label>
+      <label class="btn" for="fileIn">Camera app</label>
       <input id="fileIn" type="file" accept="image/*" capture="environment" hidden>
       <button class="shutter" id="shutter" type="button" aria-label="Scan card" disabled><span></span></button>
       <button class="btn" id="stopBtn" type="button" disabled>Stop</button>
@@ -214,13 +249,13 @@ const store = {
   get(k, d){ try{ const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; }catch{ return d; } },
   set(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch{} }
 };
+const sleep = ms => new Promise(r=>setTimeout(r,ms));
 
 /* ---------- state ---------- */
-let collection = store.get("bs.collection", []);   // [{key,id,name,set,num,image,variant,qty,pricing,addedValue,addedAt}]
+let collection = store.get("bs.collection", []);   // [{key,id,vid,label,kind,name,set,num,image,qty,usd,eur,updated,added:{tcg,cm},addedAt}]
 let source = store.get("bs.source", "tcg");          // "tcg" | "cm"
-let index = null;           // full brief list [{id,localId,name,image}]
-let nameMap = null;         // normName -> [brief cards]
-let stream = null, worker = null, current = null;
+let index = null, nameMap = null;
+let stream = null, track = null, worker = null, current = null;
 
 /* ---------- text helpers (pure) ---------- */
 function norm(s){
@@ -235,8 +270,7 @@ function lev(a,b){
   return prev[n];
 }
 function sim(a,b){ const L=Math.max(a.length,b.length); return L?1-lev(a,b)/L:0; }
-const STOP = new Set(["basic","stage","stage1","stage2","hp","evolves","from","pokemon","trainer","item","supporter","stadium","tool","put","on","the","this","card","ability","lv","level","x","v","vmax","vstar","ex","gx","tera","break","mega"]);
-// Words that belong to a card name but OCR often mangles; kept in windows, not used alone
+const STOP = new Set(["basic","stage","stage1","stage2","hp","evolves","from","pokemon","trainer","item","supporter","stadium","tool","put","on","the","this","card","ability","lv","level","x","v","vmax","vstar","ex","gx","tera","break","mega","energy","weakness","resistance","retreat","illus","your","opponent","damage","attack","each","turn","coin","flip","heads","tails"]);
 function nameWindows(text){
   const lines = String(text).split(/\n+/).map(norm).filter(Boolean);
   const out = new Set();
@@ -261,7 +295,6 @@ function bestNames(text, names, limit=6){
       if(Math.abs(w.length-n.length) > Math.max(3, n.length*0.4)) continue;
       const s = sim(w,n); if(s>best) best=s;
     }
-    // reward exact core-word hit ("charizard" inside "charizard ex")
     const core = n.split(" ")[0];
     if(core.length>=4 && wins.includes(core)) best = Math.max(best, 0.7 + 0.3*(core.length/n.length));
     if(best>=0.62) scored.push([n,best]);
@@ -269,9 +302,21 @@ function bestNames(text, names, limit=6){
   scored.sort((a,b)=>b[1]-a[1] || b[0].length-a[0].length);
   return scored.slice(0,limit);
 }
+// Whole-photo reading: the card name is among the tallest lines of text on a card
+function namesFromLines(lines, names){
+  const ls = lines.filter(l=>l.text && l.text.trim().length>=3).map(l=>({t:l.text, h:l.bbox.y1-l.bbox.y0}));
+  if(!ls.length) return [];
+  const hmax = Math.max(...ls.map(l=>l.h));
+  ls.sort((a,b)=>b.h-a.h);
+  const acc = new Map();
+  for(const l of ls.slice(0,8)){
+    const w = 0.55 + 0.45*(l.h/hmax);
+    for(const [n,s] of bestNames(l.t, names, 4)){ const v=s*w; if(v>(acc.get(n)||0)) acc.set(n,v); }
+  }
+  return [...acc.entries()].sort((a,b)=>b[1]-a[1]).slice(0,6);
+}
 function parseNumber(text){
   const t = String(text).toUpperCase().replace(/[Oo](?=\d)/g,"0").replace(/\s+/g," ");
-  // keep a letter prefix only when it is a real collector-number prefix (TG12, GG05, RC3, SV049), not a set or language code
   const keep = s => { s=s.replace(/\s/g,""); const p=(s.match(/^[A-Z]+/)||[""])[0]; return /^(TG|GG|RC|SV|SH|H)?$/.test(p) ? s : s.slice(p.length); };
   let m = t.match(/([A-Z]{0,4}\s?\d{1,3}[A-Z]?)\s?\/\s?([A-Z]{0,4}\s?\d{1,3})\b/);
   if(m) return { local: keep(m[1]), total: keep(m[2]) };
@@ -284,34 +329,89 @@ function sameLocal(a,b){
   return f(a)===f(b);
 }
 
+/* ---------- variants (pure) ---------- */
+const pos = v => (typeof v==="number" && v>0) ? v : null;
+const cap = s => String(s).replace(/-/g," ").replace(/\b\w/g,c=>c.toUpperCase());
+const FOIL = { pokeball:"Poké Ball reverse holo", masterball:"Master Ball reverse holo", cosmos:"Cosmos holo", "cracked-ice":"Cracked Ice holo", galaxy:"Galaxy holo", energy:"Energy symbol reverse holo" };
+const TYPE = { normal:"Normal", reverse:"Reverse holo", holo:"Holo" };
+const HOW = {
+  normal:"Nothing on the card shines.",
+  holo:"The picture shines; the rest is flat.",
+  reverse:"Everything shines except the picture.",
+  pokeball:"Shine in a repeating Poké Ball pattern.",
+  masterball:"Shine in a repeating Master Ball pattern.",
+  cosmos:"Picture shines with little circles and stars."
+};
+function stampName(s){ return s==="1st-edition" ? "1st Edition" : cap(s)+" stamp"; }
+function tcgPick(t, type, foil){
+  if(!t) return null;
+  const keys = Object.keys(t).filter(k=>t[k] && typeof t[k]==="object");
+  const want = foil ? ["holofoil","holo","reverse-holofoil"] :
+    type==="reverse" ? ["reverse-holofoil","reverse","reverseHolofoil"] :
+    type==="holo" ? ["holofoil","holo","1st-edition-holofoil","unlimited-holofoil"] :
+    ["normal","1st-edition","unlimited"];
+  let k = want.find(w=>keys.includes(w));
+  if(!k && keys.length===1 && foil) k = keys[0];   // special foils are their own product
+  if(!k) return null;
+  const o = t[k]; return pos(o.marketPrice) ?? pos(o.midPrice) ?? pos(o.lowPrice);
+}
+function cmPick(m, type, foil){
+  if(!m) return null;
+  if(type==="normal" && !foil) return pos(m.trend) ?? pos(m.avg30) ?? pos(m.avg);
+  if(type==="holo" && !foil) return pos(m.trend) ?? pos(m.avg30) ?? pos(m["trend-holo"]);
+  return pos(m["trend-holo"]) ?? pos(m["avg30-holo"]) ?? pos(m["avg-holo"]);
+}
+function buildVariants(card){
+  const vd = Array.isArray(card.variants_detailed) ? card.variants_detailed : [];
+  const out = [];
+  vd.forEach((v,i)=>{
+    const type = v.type || "normal", foil = v.foil || null;
+    const stamps = Array.isArray(v.stamp) ? v.stamp : (v.stamp ? [v.stamp] : []);
+    const kind = foil && FOIL[foil] && HOW[foil] ? foil : (foil ? (type==="reverse"?"reverse":"holo") : (TYPE[type]?type:"normal"));
+    let label = foil ? (FOIL[foil] || cap(foil)+" "+(TYPE[type]||"").toLowerCase()) : (TYPE[type] || cap(type));
+    const bits = [];
+    if(v.subtype) bits.push(cap(v.subtype));
+    stamps.forEach(s=>bits.push(stampName(s)));
+    if(v.size && v.size!=="standard") bits.push(cap(v.size));
+    const p = v.pricing || {};
+    out.push({
+      vid: v.variantId || String(i), type, foil, kind, stamp: stamps.length>0,
+      label: bits.length ? label+" · "+bits.join(" · ") : label,
+      how: HOW[kind] || "",
+      usd: tcgPick(p.tcgplayer, type, foil), eur: cmPick(p.cardmarket, type, foil),
+      updated: (p.tcgplayer&&p.tcgplayer.updated) || (p.cardmarket&&p.cardmarket.updated) || null
+    });
+  });
+  if(!out.length){ // older records without per-variant data
+    const p = card.pricing || {}, cv = card.variants || {};
+    const types = ["normal","reverse","holo"].filter(t=>cv[t]);
+    (types.length?types:["normal"]).forEach(t=>out.push({ vid:t, type:t, foil:null, kind:t, stamp:false, label:TYPE[t], how:HOW[t],
+      usd: tcgPick(p.tcgplayer,t,null), eur: cmPick(p.cardmarket,t,null), updated:(p.tcgplayer&&p.tcgplayer.updated)||null }));
+    if(cv.firstEdition) out.push({ vid:"firstEdition", type:"normal", foil:null, kind:"normal", stamp:true, label:"1st Edition", how:"", usd:null, eur:null, updated:null });
+  }
+  // plain prints first, then special foils, then stamped/odd sizes
+  const rank = v => (v.stamp?20:0) + (v.foil?10:0) + ({normal:0,reverse:1,holo:2}[v.type]??3);
+  return out.map((v,i)=>({v,i})).sort((a,b)=>rank(a.v)-rank(b.v)||a.i-b.i).map(x=>x.v);
+}
+
 /* ---------- money ---------- */
 const fmt = (v, cur) => v==null || isNaN(v) ? "—" : new Intl.NumberFormat(undefined,{style:"currency",currency:cur,maximumFractionDigits: v>=1000?0:2}).format(v);
 const CUR = () => source==="cm" ? "EUR" : "USD";
-function variantValue(pricing, variant, src=source){
-  if(!pricing) return null;
-  if(src==="tcg"){
-    const t = pricing.tcgplayer; if(!t) return null;
-    const keyOrder = { normal:["normal"], reverse:["reverse","reverse-holofoil","reverseHolofoil"], holo:["holo","holofoil"], firstEdition:["1st-edition","1stEdition","1st-edition-holofoil","firstEdition"] }[variant] || [variant];
-    for(const k of keyOrder){ const o=t[k]; if(o && typeof o==="object"){ return o.marketPrice ?? o.midPrice ?? o.lowPrice ?? null; } }
-    return null;
-  } else {
-    const c = pricing.cardmarket; if(!c) return null;
-    if(variant==="holo" || variant==="reverse") return c["trend-holo"] ?? c["avg30-holo"] ?? c.trend ?? null;
-    return c.trend ?? c.avg30 ?? c.avg ?? null;
-  }
-}
-function tcgVariants(pricing){
-  const t = pricing && pricing.tcgplayer; if(!t) return [];
-  return Object.keys(t).filter(k => t[k] && typeof t[k]==="object");
-}
-const VLABEL = { normal:"Normal", reverse:"Reverse holo", holo:"Holo", firstEdition:"1st Edition", "1st-edition":"1st Edition", "1st-edition-holofoil":"1st Ed. holo" };
-const vname = v => VLABEL[v] || v.replace(/-/g," ").replace(/^./,c=>c.toUpperCase());
+const valOf = (x, src=source) => src==="cm" ? x.eur : x.usd;
 
 /* ---------- API ---------- */
 async function getJSON(url){
-  const r = await fetch(url);
-  if(!r.ok) throw new Error("TCGdex answered "+r.status);
-  return r.json();
+  let last;
+  for(let i=0;i<4;i++){
+    try{
+      const r = await fetch(url);
+      const t = await r.text();
+      if(r.status===404) throw Object.assign(new Error("Card not found."),{final:true});
+      try{ return JSON.parse(t); }catch{ last = new Error("The price service is busy."); }
+    }catch(e){ if(e.final) throw e; last = e; }
+    await sleep(600*(i+1));
+  }
+  throw new Error((last&&last.message)||"Couldn't reach the price service.");
 }
 async function loadIndex(){
   if(index) return;
@@ -334,21 +434,51 @@ function setStatus(html, busy=false){ $("status").innerHTML = html; $("busy").hi
 let toastT; function toast(msg){ const t=$("toast"); t.textContent=msg; t.hidden=false; clearTimeout(toastT); toastT=setTimeout(()=>t.hidden=true,2200); }
 function esc(s){ return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
 function thumb(src, alt){ return src ? `<img src="${esc(src)}" alt="${esc(alt)}" loading="lazy">` : `<div class="ph">no image</div>`; }
+const mini = v => `<span class="mini k-${esc(v.kind)}${v.stamp?" k-stamp":""}" aria-hidden="true"></span>`;
 
 /* ---------- camera ---------- */
 async function startCamera(){
   try{
-    stream = await navigator.mediaDevices.getUserMedia({ video:{ facingMode:{ideal:"environment"}, width:{ideal:1920}, height:{ideal:1080} }, audio:false });
+    stream = await navigator.mediaDevices.getUserMedia({ audio:false,
+      video:{ facingMode:{ideal:"environment"}, width:{ideal:2560}, height:{ideal:1440} } });
+    track = stream.getVideoTracks()[0];
     const v=$("video"); v.srcObject=stream; await v.play();
-    v.hidden=false; $("still").hidden=true; $("frame").hidden=false; $("idle").hidden=true;
+    v.hidden=false; $("still").hidden=true; $("frame").hidden=false; $("hint").hidden=false; $("idle").hidden=true;
     $("shutter").disabled=false; $("stopBtn").disabled=false;
+    await tuneCamera();
   }catch(e){
-    setStatus("Camera unavailable here. Use <b>Upload photo</b> instead — your phone's camera opens from it. "+(location.protocol!=="https:"?"(Camera needs the page served over https.)":""));
+    setStatus("Camera unavailable here. Use <b>Camera app</b> instead. "+(location.protocol!=="https:"?"(The live camera needs the page served over https.)":""));
   }
 }
+// Ask for continuous autofocus and a little zoom, so the phone can sit far enough back to focus
+async function tuneCamera(){
+  const caps = track && track.getCapabilities ? track.getCapabilities() : {};
+  const adv = {};
+  if(Array.isArray(caps.focusMode) && caps.focusMode.includes("continuous")) adv.focusMode = "continuous";
+  if(caps.zoom && caps.zoom.max > caps.zoom.min){
+    const z = $("zoom"); z.min=caps.zoom.min; z.max=Math.min(caps.zoom.max, 8); z.step=caps.zoom.step||0.1;
+    const want = Math.min(Math.max(2, caps.zoom.min), z.max);
+    z.value = want; adv.zoom = want; $("zoomBox").hidden = false;
+  } else $("zoomBox").hidden = true;
+  if(Object.keys(adv).length){ try{ await track.applyConstraints({advanced:[adv]}); }catch{} }
+}
+async function tapFocus(e){
+  if(!track || e.target.closest(".zoom")) return;
+  const box=$("finder").getBoundingClientRect(), x=(e.clientX-box.left)/box.width, y=(e.clientY-box.top)/box.height;
+  const r=document.createElement("span"); r.className="ring"; r.style.left=(x*100)+"%"; r.style.top=(y*100)+"%";
+  $("finder").appendChild(r); setTimeout(()=>r.remove(),800);
+  const caps = track.getCapabilities ? track.getCapabilities() : {};
+  const modes = caps.focusMode || [];
+  try{
+    const a = { pointsOfInterest:[{x,y}] };
+    if(modes.includes("single-shot")) a.focusMode="single-shot";
+    await track.applyConstraints({advanced:[a]});
+    if(modes.includes("continuous")) setTimeout(()=>track && track.applyConstraints({advanced:[{focusMode:"continuous"}]}).catch(()=>{}),1500);
+  }catch{}
+}
 function stopCamera(){
-  if(stream){ stream.getTracks().forEach(t=>t.stop()); stream=null; }
-  $("video").hidden=true; $("frame").hidden=true; $("idle").hidden=false;
+  if(stream){ stream.getTracks().forEach(t=>t.stop()); stream=null; track=null; }
+  $("video").hidden=true; $("frame").hidden=true; $("hint").hidden=true; $("zoomBox").hidden=true; $("idle").hidden=false;
   $("shutter").disabled=true; $("stopBtn").disabled=true;
 }
 // crop the card frame out of the live video (object-fit: cover mapping)
@@ -362,10 +492,30 @@ function grabFrame(){
   c.getContext("2d").drawImage(v,sx,sy,sw,sh,0,0,c.width,c.height);
   return c;
 }
+// variance of the Laplacian over the name strip: higher = sharper
+function sharpness(card){
+  const w=240, h=Math.max(8,Math.round(w*0.14*card.height/card.width));
+  const c=document.createElement("canvas"); c.width=w; c.height=h;
+  const g=c.getContext("2d"); g.drawImage(card,0,card.height*0.02,card.width,card.height*0.12,0,0,w,h);
+  const p=g.getImageData(0,0,w,h).data, Y=new Float32Array(w*h);
+  for(let i=0;i<w*h;i++) Y[i]=0.299*p[i*4]+0.587*p[i*4+1]+0.114*p[i*4+2];
+  let s=0,s2=0,n=0;
+  for(let y=1;y<h-1;y++) for(let x=1;x<w-1;x++){ const i=y*w+x; const L=4*Y[i]-Y[i-1]-Y[i+1]-Y[i-w]-Y[i+w]; s+=L; s2+=L*L; n++; }
+  return n ? s2/n-(s/n)**2 : 0;
+}
+async function captureSharpest(){
+  let best=null, bs=-1;
+  for(let i=0;i<8;i++){
+    const c=grabFrame(), s=sharpness(c);
+    if(s>bs){ bs=s; best=c; }
+    await sleep(110);
+  }
+  return { card: best, score: bs };
+}
 function imageToCanvas(file){
   return new Promise((res,rej)=>{
     const url=URL.createObjectURL(file), im=new Image();
-    im.onload=()=>{ const c=document.createElement("canvas"); const s=Math.min(1,1600/Math.max(im.width,im.height));
+    im.onload=()=>{ const c=document.createElement("canvas"); const s=Math.min(1,2400/Math.max(im.width,im.height));
       c.width=Math.round(im.width*s); c.height=Math.round(im.height*s); c.getContext("2d").drawImage(im,0,0,c.width,c.height);
       $("still").src=url; $("still").hidden=false; $("idle").hidden=true; res(c); };
     im.onerror=()=>rej(new Error("That file isn't an image this browser can read."));
@@ -373,9 +523,9 @@ function imageToCanvas(file){
   });
 }
 // cut a horizontal band out of the card, upscale and boost contrast for OCR
-function band(card, y0, y1, x0=0, x1=1){
+function band(card, y0, y1, x0=0, x1=1, minW=900){
   const sx=card.width*x0, sy=card.height*y0, sw=card.width*(x1-x0), sh=card.height*(y1-y0);
-  const k=Math.max(1, 900/sw);
+  const k=Math.max(1, minW/sw);
   const c=document.createElement("canvas"); c.width=Math.round(sw*k); c.height=Math.round(sh*k);
   const g=c.getContext("2d"); g.drawImage(card,sx,sy,sw,sh,0,0,c.width,c.height);
   const d=g.getImageData(0,0,c.width,c.height), p=d.data; let lo=255,hi=0;
@@ -390,27 +540,33 @@ async function ocr(canvas, psm){
   if(!worker){ setStatus("Loading the text reader (first scan only)…", true); worker = await Tesseract.createWorker("eng"); }
   await worker.setParameters({ tessedit_pageseg_mode: String(psm) });
   const { data } = await worker.recognize(canvas);
-  return data.text || "";
+  return data;
 }
-async function scan(card){
+// framed = image is already cropped to the card (live camera); otherwise it's a whole photo
+async function scan(card, framed){
   clearResults();
   try{
     if(typeof Tesseract==="undefined") throw new Error("The text reader didn't load. Check your connection and reload.");
     await loadIndex();
-    setStatus("Reading the card…", true);
-    const top = await ocr(band(card,0.02,0.13), 6);
-    const bottom = await ocr(band(card,0.86,0.99), 11);
-    let names = bestNames(top, nameMap.keys());
-    let num = parseNumber(bottom) || parseNumber(top);
-    if(!names.length){
-      setStatus("Name was hard to read — checking the whole card…", true);
-      const all = await ocr(band(card,0,1), 3);
-      names = bestNames(all.split("\n").slice(0,4).join("\n"), nameMap.keys());
-      num = num || parseNumber(all);
+    const names = [...nameMap.keys()];
+    let found=[], num=null, seen="";
+    if(framed){
+      setStatus("Reading the card…", true);
+      const top = (await ocr(band(card,0.02,0.13), 6)).text||"";
+      const bottom = (await ocr(band(card,0.86,0.99), 11)).text||"";
+      found = bestNames(top, names); num = parseNumber(bottom) || parseNumber(top);
+      seen = top.replace(/\s+/g," ").trim().slice(0,40);
     }
-    const seen = `Read: <code>${esc(top.replace(/\s+/g," ").trim().slice(0,40)||"—")}</code>${num?` · no. <code>${esc(num.local)}${num.total?"/"+esc(num.total):""}</code>`:""}`;
-    if(!names.length){ setStatus(seen+"<br>Couldn't match a card name. Try again closer and flatter, or type the name below."); return; }
-    showCandidates(names, num, seen);
+    if(!found.length){
+      setStatus(framed ? "Name was hard to read — checking the whole card…" : "Reading the photo…", true);
+      const data = await ocr(band(card,0,1,0,1,framed?1100:0), 11);
+      found = Array.isArray(data.lines) && data.lines.length ? namesFromLines(data.lines, names) : bestNames(data.text||"", names);
+      num = num || parseNumber(data.text||"");
+      if(!seen) seen = (found[0]&&found[0][0]) || "";
+    }
+    const read = `Read: <code>${esc(seen||"—")}</code>${num?` · no. <code>${esc(num.local)}${num.total?"/"+esc(num.total):""}</code>`:""}`;
+    if(!found.length){ setStatus(read+"<br>Couldn't match a card name. If the preview looks blurry, move the phone back a little and tap the card to focus — or use <b>Camera app</b>, or type the name below."); return; }
+    showCandidates(found, num, read);
   }catch(e){ setStatus(esc(e.message||"Scan failed.")); }
 }
 function rankCandidates(names, num){
@@ -421,7 +577,6 @@ function rankCandidates(names, num){
       out.push({c, m, s: score*10 - ni + (m?20:0)});
     }
   });
-  // newer sets tend to sit later in the list; prefer them on ties
   out.forEach((o,i)=>o.order=i);
   out.sort((a,b)=>b.s-a.s || b.order-a.order);
   return out.slice(0,30);
@@ -429,7 +584,7 @@ function rankCandidates(names, num){
 function showCandidates(names, num, seen){
   const ranked = rankCandidates(names, num);
   const matches = ranked.filter(r=>r.m);
-  setStatus(seen + `<br>${matches.length===1?"Found it — check it's the right print.":ranked.length+" possible prints. Tap yours."}`);
+  setStatus(seen + `<br>${matches.length===1?"Found it — now pick the version that matches your card.":ranked.length+" possible prints. Tap yours."}`);
   renderCands(ranked);
   if(matches.length===1) selectCard(matches[0].c.id);
 }
@@ -459,64 +614,85 @@ async function textSearch(q){
 }
 
 /* ---------- detail ---------- */
+const GUIDE = `<details class="guide full"><summary>Which version do I have?</summary>
+  <p>Tilt the card under a light and watch where it shines.</p>
+  <div class="gl">
+    <div>${mini({kind:"normal"})}<span><b>Normal</b>Nothing shines. Most commons and uncommons.</span></div>
+    <div>${mini({kind:"holo"})}<span><b>Holo</b>Only the picture shines. Every ex, V, full art and secret rare is holo — there's no plain version.</span></div>
+    <div>${mini({kind:"reverse"})}<span><b>Reverse holo</b>The opposite: the frame, text box and background shine, the picture doesn't. About one per pack.</span></div>
+    <div>${mini({kind:"pokeball"})}<span><b>Poké Ball / Master Ball</b>A reverse holo where the shine forms a repeating ball pattern. Only in some sets (151, Prismatic Evolutions and others). Master Ball is far rarer.</span></div>
+    <div>${mini({kind:"cosmos"})}<span><b>Cosmos holo</b>The picture shines with small circles and stars. Usually promos from blister packs and boxes.</span></div>
+    <div>${mini({kind:"normal",stamp:true})}<span><b>Stamped</b>A logo printed on the picture — 1st Edition, a set logo, or an event. Priced separately.</span></div>
+  </div></details>`;
+
 async function selectCard(id){
   document.querySelectorAll(".cand").forEach(b=>b.setAttribute("aria-pressed", String(b.dataset.id===id)));
   $("detailWrap").hidden=false;
   $("detail").innerHTML = `<div class="ph" style="width:100%">loading…</div><div class="meta"><div class="bar"><i></i></div></div>`;
   try{
     const c = await getCard(id); current = c;
-    const p = c.pricing || {};
-    const variants = tcgVariants(p);
-    const cv = c.variants || {};
-    const opts = variants.length ? variants : Object.keys(cv).filter(k=>cv[k]);
-    const firstV = opts[0] || "normal";
-    const t = p.tcgplayer, m = p.cardmarket;
-    const rows = variants.map(v=>{ const o=t[v]; return `<tr><td>${esc(vname(v))}</td><td>${fmt(o.lowPrice,"USD")}</td><td><b>${fmt(o.marketPrice,"USD")}</b></td><td>${fmt(o.highPrice,"USD")}</td></tr>`; }).join("");
-    const cmRow = m ? `<tr><td>Cardmarket</td><td>${fmt(m.low,"EUR")}</td><td><b>${fmt(m.trend,"EUR")}</b></td><td>${fmt(m.avg30,"EUR")} <small>30d</small></td></tr>`
-      + (m["trend-holo"]!=null ? `<tr><td>Cardmarket holo</td><td>${fmt(m["low-holo"],"EUR")}</td><td><b>${fmt(m["trend-holo"],"EUR")}</b></td><td>${fmt(m["avg30-holo"],"EUR")} <small>30d</small></td></tr>` : "") : "";
-    const head = variantValue(p, firstV);
+    const vs = buildVariants(c);
+    const first = vs.find(v=>v.usd!=null||v.eur!=null) || vs[0];
     const q = encodeURIComponent(`${c.name} ${c.localId}${c.set&&c.set.cardCount&&c.set.cardCount.official?"/"+c.set.cardCount.official:""}`);
-    const upd = (t&&t.updated)||(m&&m.updated);
+    const upd = first && first.updated;
     $("detail").innerHTML = `
       ${img(c,"high")?`<img src="${esc(img(c,"high"))}" alt="${esc(c.name)}">`:`<div class="ph">no image</div>`}
       <div class="meta">
         <h3>${esc(c.name)}</h3>
         <div class="sub">${esc(c.set?c.set.name:"")} · ${esc(c.localId)}${c.set&&c.set.cardCount?"/"+esc(c.set.cardCount.official):""}${c.rarity?"<br>"+esc(c.rarity):""}</div>
-        <div class="big" id="bigVal">${fmt(head, CUR())}<small id="bigLbl">${esc(vname(firstV))}</small></div>
+        <div class="big" id="bigVal"></div>
+        <div class="bigLbl" id="bigLbl"></div>
         <div class="sub">${upd?"updated "+new Date(upd).toLocaleDateString():""}</div>
       </div>
-      ${(rows||cmRow)?`<table class="prices"><thead><tr><th>Price</th><th>Low</th><th>Market</th><th>High</th></tr></thead><tbody>${rows}${cmRow}</tbody></table>`:`<p class="sub" style="grid-column:1/-1">No market price listed for this print yet. Check the links below.</p>`}
-      <div class="add">
-        <select id="varSel" aria-label="Variant">${(opts.length?opts:["normal"]).map(v=>`<option value="${esc(v)}">${esc(vname(v))}</option>`).join("")}</select>
-        <button class="btn primary" id="addBtn" type="button">Add to collection</button>
+      <div class="full">
+        <div class="vh"><span>Version (${vs.length})</span><span><span>TCGplayer</span><span>Cardmarket</span></span></div>
+        <div class="vlist" role="radiogroup" aria-label="Card version" id="vlist">
+          ${vs.map(v=>`<button type="button" class="vopt" role="radio" aria-checked="false" data-vid="${esc(v.vid)}">
+            ${mini(v)}<span class="lbl"><b>${esc(v.label)}</b>${v.how?`<span>${esc(v.how)}</span>`:""}</span>
+            <span class="pr"><span class="${v.usd==null?"na":""}">${v.usd==null?"no price":fmt(v.usd,"USD")}</span><span class="${v.eur==null?"na":""}">${v.eur==null?"—":fmt(v.eur,"EUR")}</span></span>
+          </button>`).join("")}
+        </div>
       </div>
+      ${GUIDE}
+      <div class="add"><button class="btn primary" id="addBtn" type="button">Add to collection</button></div>
       <div class="links">
         <a href="https://www.tcgplayer.com/search/pokemon/product?q=${q}" target="_blank" rel="noopener">TCGplayer listings</a>
         <a href="https://www.ebay.com/sch/i.html?_nkw=${q}&LH_Sold=1&LH_Complete=1" target="_blank" rel="noopener">eBay sold</a>
         <a href="https://www.pricecharting.com/search-products?type=prices&q=${q}" target="_blank" rel="noopener">PriceCharting (graded)</a>
       </div>`;
-    $("varSel").onchange = e => { $("bigVal").firstChild.textContent = fmt(variantValue(p,e.target.value),CUR()); $("bigLbl").textContent = vname(e.target.value); };
-    $("addBtn").onclick = () => addToCollection(c, $("varSel").value);
+    let chosen = first;
+    const pick = v => {
+      chosen = v;
+      document.querySelectorAll(".vopt").forEach(b=>b.setAttribute("aria-checked", String(b.dataset.vid===v.vid)));
+      const val = valOf(v);
+      $("bigVal").textContent = val!=null ? fmt(val,CUR()) : (valOf(v, source==="cm"?"tcg":"cm")!=null ? fmt(valOf(v, source==="cm"?"tcg":"cm"), source==="cm"?"USD":"EUR") : "No price");
+      $("bigLbl").textContent = v.label;
+    };
+    $("vlist").onclick = e => { const b=e.target.closest(".vopt"); if(b) pick(vs.find(v=>v.vid===b.dataset.vid)); };
+    if(first) pick(first);
+    $("addBtn").onclick = () => chosen && addToCollection(c, chosen);
     $("detailWrap").scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth", block:"start"});
-  }catch(e){ $("detail").innerHTML = `<p class="sub" style="grid-column:1/-1">${esc(e.message||"Couldn't load prices.")}</p>`; }
+  }catch(e){ $("detail").innerHTML = `<p class="sub" style="grid-column:1/-1">${esc(e.message||"Couldn't load prices.")} Tap the card again to retry.</p>`; }
 }
 
 /* ---------- collection ---------- */
-function slimPricing(p){ // keep only what valuation needs
-  if(!p) return null; const o={};
-  if(p.tcgplayer){ o.tcgplayer={updated:p.tcgplayer.updated}; for(const k of tcgVariants(p)) o.tcgplayer[k]={marketPrice:p.tcgplayer[k].marketPrice,midPrice:p.tcgplayer[k].midPrice,lowPrice:p.tcgplayer[k].lowPrice}; }
-  if(p.cardmarket){ const m=p.cardmarket; o.cardmarket={updated:m.updated,trend:m.trend,avg30:m.avg30,avg:m.avg,"trend-holo":m["trend-holo"],"avg30-holo":m["avg30-holo"]}; }
-  return o;
-}
-function addToCollection(c, variant){
-  const key = c.id+"|"+variant;
+function addToCollection(c, v){
+  const key = c.id+"|"+v.vid;
   const ex = collection.find(x=>x.key===key);
   if(ex) ex.qty++;
-  else collection.unshift({ key, id:c.id, name:c.name, set:c.set?c.set.name:"", num:c.localId + (c.set&&c.set.cardCount?"/"+c.set.cardCount.official:""),
-    image:c.image||null, variant, qty:1, pricing:slimPricing(c.pricing),
-    added:{ tcg:variantValue(c.pricing,variant,"tcg"), cm:variantValue(c.pricing,variant,"cm") }, addedAt:Date.now() });
-  save(); toast(ex?`${c.name} ×${ex.qty}`:`Added ${c.name}`);
+  else collection.unshift({ key, id:c.id, vid:v.vid, label:v.label, kind:v.kind, stamp:v.stamp, name:c.name, set:c.set?c.set.name:"",
+    num:c.localId + (c.set&&c.set.cardCount?"/"+c.set.cardCount.official:""), image:c.image||null, qty:1,
+    usd:v.usd, eur:v.eur, updated:v.updated, added:{ tcg:v.usd, cm:v.eur }, addedAt:Date.now() });
+  save(); toast(ex?`${c.name} ×${ex.qty}`:`Added ${c.name} (${v.label})`);
 }
+// entries saved by the first version of the app kept raw pricing and a variant key
+function migrate(x){
+  if(x.label) return x;
+  const t = {normal:"normal",reverse:"reverse","reverse-holofoil":"reverse",holo:"holo",holofoil:"holo"}[x.variant] || "normal";
+  const p = x.pricing || {};
+  return Object.assign(x, { vid:t, kind:t, stamp:false, label:TYPE[t], usd:tcgPick(p.tcgplayer,t,null), eur:cmPick(p.cardmarket,t,null), key:x.id+"|"+t, pricing:undefined, variant:undefined });
+}
+collection = collection.map(migrate);
 function save(){ store.set("bs.collection", collection); renderCollection(); }
 function renderCollection(){
   const cur = CUR();
@@ -525,19 +701,19 @@ function renderCollection(){
   document.querySelectorAll(".seg button").forEach(b=>b.setAttribute("aria-pressed", String(b.dataset.src===source)));
   let total=0, base=0, unpriced=0;
   const rows = collection.map((x,i)=>{
-    const v = variantValue(x.pricing, x.variant);
+    const v = valOf(x);
     const a = x.added ? x.added[source] : null;
-    if(v!=null){ total+=v*x.qty; if(a!=null) base+=a*x.qty; else base+=v*x.qty; } else unpriced++;
+    if(v!=null){ total+=v*x.qty; base+=(a!=null?a:v)*x.qty; } else unpriced++;
     const d = v!=null && a!=null && a>0 ? (v-a)/a*100 : null;
     return `<div class="row">
       ${x.image?`<img src="${esc(x.image)}/low.webp" alt="" loading="lazy">`:`<div class="ph">—</div>`}
-      <div class="t"><b>${esc(x.name)}</b><span>${esc(x.set)} · ${esc(x.num)}</span><span>${esc(vname(x.variant))}</span></div>
+      <div class="t"><b>${esc(x.name)}</b><span>${esc(x.set)} · ${esc(x.num)}</span><span>${esc(x.label)}</span></div>
       <div class="v">${fmt(v==null?null:v*x.qty,cur)}
         ${d!=null&&Math.abs(d)>=0.5?`<small class="${d>0?"up":"down"}">${d>0?"▲":"▼"} ${Math.abs(d).toFixed(1)}%</small>`:`<small>&nbsp;</small>`}
         <span class="qty"><button type="button" data-i="${i}" data-d="-1" aria-label="One fewer">−</button><output>${x.qty}</output><button type="button" data-i="${i}" data-d="1" aria-label="One more">+</button></span>
       </div></div>`;
   }).join("");
-  $("list").innerHTML = rows || `<div class="empty"><b>Your binder is empty</b>Scan a card or search by name, then tap Add to collection.</div>`;
+  $("list").innerHTML = rows || `<div class="empty"><b>Your binder is empty</b>Scan a card or search by name, pick its version, then tap Add to collection.</div>`;
   $("totVal").textContent = fmt(total, cur);
   const dd = total-base;
   $("totDelta").innerHTML = collection.length ? `<span class="${dd>=0?"up":"down"}">${dd>=0?"+":"−"}${fmt(Math.abs(dd),cur)}</span> since added${unpriced?` · ${unpriced} unpriced`:""}` : "";
@@ -547,20 +723,23 @@ async function refreshAll(){
   const btn=$("refreshBtn"); btn.disabled=true; let done=0, failed=0;
   const ids=[...new Set(collection.map(x=>x.id))];
   const q=[...ids];
-  async function run(){ while(q.length){ const id=q.shift(); try{ fullCache.delete(id); const c=await getCard(id); collection.filter(x=>x.id===id).forEach(x=>x.pricing=slimPricing(c.pricing)); }catch{ failed++; } done++; $("collStatus").textContent=`Updating ${done}/${ids.length}…`; } }
-  await Promise.all([run(),run(),run(),run()]);
+  async function run(){ while(q.length){ const id=q.shift(); try{ fullCache.delete(id); const c=await getCard(id); const vs=buildVariants(c);
+      collection.filter(x=>x.id===id).forEach(x=>{ const v = vs.find(v=>v.vid===x.vid) || vs.find(v=>v.label===x.label) || vs.find(v=>v.kind===x.kind && !v.stamp);
+        if(v){ x.usd=v.usd; x.eur=v.eur; x.updated=v.updated; if(x.vid!==v.vid){ x.vid=v.vid; x.key=x.id+"|"+v.vid; } } });
+    }catch{ failed++; } done++; $("collStatus").textContent=`Updating ${done}/${ids.length}…`; } }
+  await Promise.all([run(),run(),run()]);
   store.set("bs.collection",collection); store.set("bs.refreshed",Date.now()); renderCollection();
   $("collStatus").textContent = failed ? `${failed} card${failed>1?"s":""} couldn't update. Try again later.` : `Prices updated ${new Date().toLocaleTimeString([], {hour:"2-digit",minute:"2-digit"})}.`;
   btn.disabled=false;
 }
 function exportColl(){
-  const blob=new Blob([JSON.stringify({app:"binder-scan",v:1,collection},null,1)],{type:"application/json"});
+  const blob=new Blob([JSON.stringify({app:"binder-scan",v:2,collection},null,1)],{type:"application/json"});
   const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=`binder-${new Date().toISOString().slice(0,10)}.json`; a.click();
   setTimeout(()=>URL.revokeObjectURL(a.href),4000);
 }
 async function importColl(file){
   try{ const d=JSON.parse(await file.text()); const list=Array.isArray(d)?d:d.collection; if(!Array.isArray(list)) throw 0;
-    for(const x of list){ if(!x||!x.key) continue; const ex=collection.find(y=>y.key===x.key); if(ex) ex.qty=Math.max(ex.qty,x.qty||1); else collection.push(x); }
+    for(const raw of list){ if(!raw||!raw.id) continue; const x=migrate(raw); const ex=collection.find(y=>y.key===x.key); if(ex) ex.qty=Math.max(ex.qty,x.qty||1); else collection.push(x); }
     save(); $("collStatus").textContent=`Imported ${list.length} entries.`;
   }catch{ $("collStatus").textContent="That file isn't a Binder Scan export."; }
 }
@@ -576,8 +755,15 @@ $("tabScan").onclick=()=>showTab("scan");
 $("tabColl").onclick=()=>showTab("coll");
 $("camBtn").onclick=startCamera;
 $("stopBtn").onclick=stopCamera;
-$("shutter").onclick=async()=>{ if(!stream) return; $("shutter").disabled=true; const c=grabFrame(); await scan(c); $("shutter").disabled=!stream; };
-$("fileIn").onchange=async e=>{ const f=e.target.files[0]; e.target.value=""; if(!f) return; stopCamera(); try{ const c=await imageToCanvas(f); await scan(c); }catch(err){ setStatus(esc(err.message)); } };
+$("finder").addEventListener("click", tapFocus);
+$("zoom").oninput=e=>{ if(track) track.applyConstraints({advanced:[{zoom:+e.target.value}]}).catch(()=>{}); };
+$("shutter").onclick=async()=>{
+  if(!stream) return; $("shutter").disabled=true;
+  setStatus("Hold still…", true);
+  const { card } = await captureSharpest();
+  await scan(card, true); $("shutter").disabled=!stream;
+};
+$("fileIn").onchange=async e=>{ const f=e.target.files[0]; e.target.value=""; if(!f) return; stopCamera(); try{ const c=await imageToCanvas(f); await scan(c, false); }catch(err){ setStatus(esc(err.message)); } };
 $("searchForm").onsubmit=e=>{ e.preventDefault(); const q=$("q").value.trim(); if(q) textSearch(q); };
 $("cands").onclick=e=>{ const b=e.target.closest(".cand"); if(b) selectCard(b.dataset.id); };
 $("list").onclick=e=>{ const b=e.target.closest("button[data-i]"); if(!b) return; const x=collection[+b.dataset.i]; x.qty+= +b.dataset.d; if(x.qty<=0) collection.splice(+b.dataset.i,1); save(); };
