@@ -1,0 +1,77 @@
+name: Update prices
+
+# Copies TCGplayer prices for every Pokémon set from TCGCSV (https://tcgcsv.com) into prices/,
+# so Binder Scan can price cards that TCGdex doesn't cover yet. TCGCSV refreshes once a day.
+on:
+  schedule:
+    - cron: "23 21 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  prices:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download prices from TCGCSV
+        run: |
+          cat > /tmp/prices.mjs <<'EOF'
+          import fs from "node:fs";
+          const HEAD = { "User-Agent": "BinderScan/1.0 (+https://github.com/claudeboxpsyc-tech/binder-scan)" };
+          const sleep = ms => new Promise(r => setTimeout(r, ms));
+          async function get(url) {
+            for (let i = 0; i < 4; i++) {
+              try { const r = await fetch(url, { headers: HEAD }); if (r.ok) return await r.json(); } catch {}
+              await sleep(1500 * (i + 1));
+            }
+            throw new Error("failed " + url);
+          }
+          fs.mkdirSync("prices", { recursive: true });
+          const groups = (await get("https://tcgcsv.com/tcgplayer/3/groups")).results || [];
+          const index = [];
+          for (const g of groups) {
+            try {
+              const products = (await get(`https://tcgcsv.com/tcgplayer/3/${g.groupId}/products`)).results || [];
+              await sleep(250);
+              const prices = (await get(`https://tcgcsv.com/tcgplayer/3/${g.groupId}/prices`)).results || [];
+              await sleep(250);
+              const byId = new Map();
+              for (const p of prices) {
+                const v = p.marketPrice ?? p.midPrice ?? p.lowPrice;
+                if (v == null) continue;
+                if (!byId.has(p.productId)) byId.set(p.productId, {});
+                byId.get(p.productId)[p.subTypeName] = v;
+              }
+              const cards = {};
+              for (const p of products) {
+                const num = (p.extendedData || []).find(e => e.name === "Number");
+                const pr = byId.get(p.productId);
+                if (!num || !pr) continue;
+                (cards[num.value] ||= []).push({ i: p.productId, n: p.name, p: pr });
+              }
+              const keys = Object.keys(cards).sort();
+              if (!keys.length) continue;
+              // one card number per line keeps the daily git diff small
+              fs.writeFileSync(`prices/${g.groupId}.json`,
+                "{\n" + keys.map(k => JSON.stringify(k) + ":" + JSON.stringify(cards[k])).join(",\n") + "\n}\n");
+              index.push({ g: g.groupId, n: g.name, a: g.abbreviation || "", d: (g.publishedOn || "").slice(0, 10) });
+            } catch (e) { console.log("skipped", g.groupId, g.name, e.message); }
+          }
+          fs.writeFileSync("prices/index.json",
+            JSON.stringify({ u: new Date().toISOString(), src: "TCGCSV / TCGplayer", groups: index }, null, 0) + "\n");
+          console.log(`wrote ${index.length} sets`);
+          EOF
+          node /tmp/prices.mjs
+
+      - name: Commit updated prices
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git add prices
+          if git diff --cached --quiet; then echo "No changes"; exit 0; fi
+          git commit -m "Update prices from TCGCSV"
+          git push
