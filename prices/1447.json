@@ -1,0 +1,19 @@
+{
+"001/017":[{"i":85271,"n":"Entei","p":{"Normal":46.75,"Holofoil":60.44}}],
+"002/017":[{"i":88032,"n":"Pidgeot","p":{"Normal":17.1,"Holofoil":9.69}}],
+"003/017":[{"i":88533,"n":"Raikou","p":{"Normal":30.12,"Holofoil":49.52}}],
+"004/017":[{"i":89602,"n":"Suicune","p":{"Normal":49.25,"Holofoil":49.09}}],
+"005/017":[{"i":89762,"n":"Tauros","p":{"Normal":4.55,"Holofoil":6.21}}],
+"006/017":[{"i":90317,"n":"Venusaur","p":{"Normal":26.64,"Holofoil":33.96}}],
+"007/017":[{"i":86298,"n":"Ivysaur","p":{"Normal":55.8}}],
+"008/017":[{"i":87586,"n":"Mr. Briney's Compassion","p":{"Normal":15.4}}],
+"009/017":[{"i":87636,"n":"Multi Technical Machine 01","p":{"Normal":3.53}}],
+"010/017":[{"i":88231,"n":"Pokemon Park","p":{"Normal":49.66}}],
+"011/017":[{"i":90084,"n":"TV Reporter","p":{"Normal":8.21}}],
+"012/17":[{"i":84031,"n":"Bulbasaur","p":{"Normal":49.79}}],
+"013/017":[{"i":84072,"n":"Cacnea","p":{"Normal":1.17}}],
+"014/017":[{"i":86934,"n":"Luvdisc","p":{"Normal":3.16}}],
+"015/017":[{"i":88000,"n":"Phanpy","p":{"Normal":19.27}}],
+"016/017":[{"i":88081,"n":"Pikachu","p":{"Normal":63.29}}],
+"017/017":[{"i":84151,"n":"Celebi ex (Non-Holo)","p":{"Normal":71.49}},{"i":97808,"n":"Celebi ex (Holo)","p":{"Holofoil":185.12}}]
+}
