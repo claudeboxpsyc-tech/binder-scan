@@ -1,7 +1,7 @@
 {
 "1/30":[{"i":98147,"n":"Fletchling","p":{"Normal":3.78}},{"i":98177,"n":"Swirlix (#1)","p":{"Normal":5}}],
 "11/30":[{"i":98160,"n":"Honedge (#11)","p":{"Normal":0.55}},{"i":98191,"n":"Pidgey (#11)","p":{"Normal":0.2}}],
-"12/30":[{"i":98192,"n":"Jigglypuff (#12)","p":{"Normal":5}}],
+"12/30":[{"i":98161,"n":"Bidoof","p":{"Normal":7.39}},{"i":98192,"n":"Jigglypuff (#12)","p":{"Normal":5}}],
 "13/30":[{"i":98162,"n":"Pawniard (#13)","p":{"Normal":0.52}},{"i":98193,"n":"Clefairy (#13)","p":{"Normal":9.75}}],
 "14/30":[{"i":98163,"n":"Doublade (#14)","p":{"Normal":2}},{"i":98194,"n":"Wigglytuff (#14 Non-Holo)","p":{"Normal":6.57}}],
 "15/30":[{"i":98164,"n":"Slakoth (#15)","p":{"Normal":9.15}},{"i":98196,"n":"Potion (#15 - Wigglytuff)","p":{"Normal":0.79}}],
@@ -25,6 +25,6 @@
 "4/30":[{"i":98159,"n":"Vigoroth (#4)","p":{"Normal":0.39}},{"i":98190,"n":"Sentret","p":{"Normal":1.82}}],
 "5/30":[{"i":98150,"n":"Metal Energy (#5)","p":{"Normal":0.75}}],
 "6/30":[{"i":98151,"n":"Metal Energy (#6)","p":{"Normal":0.21}}],
-"8/30":[{"i":98153,"n":"Metal Energy (#8)","p":{"Normal":1}},{"i":98183,"n":"Fairy Energy (#8)","p":{"Normal":2}}],
+"8/30":[{"i":98183,"n":"Fairy Energy (#8)","p":{"Normal":2}}],
 "9/30":[{"i":98154,"n":"Metal Energy (#9)","p":{"Normal":1}}]
 }
