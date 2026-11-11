@@ -1,7 +1,7 @@
 {
 "1/30":[{"i":98318,"n":"Grass Energy (#1)","p":{"Normal":0.25}},{"i":98347,"n":"Skitty (#1)","p":{"Normal":4.81}}],
 "10/30":[{"i":98325,"n":"Psychic Energy (#10 - Latias)","p":{"Normal":0.05}},{"i":98358,"n":"Fighting Energy (#10)","p":{"Normal":0.25}}],
-"11/30":[{"i":98332,"n":"Lotad (#11)","p":{"Normal":0.62}},{"i":98363,"n":"Machop (#11)","p":{"Normal":0.75}}],
+"11/30":[{"i":98332,"n":"Lotad (#11)","p":{"Normal":0.62}},{"i":98363,"n":"Machop (#11)","p":{"Normal":0.78}}],
 "12/30":[{"i":98333,"n":"Tangrowth (#12)","p":{"Normal":0.42}},{"i":98365,"n":"Solrock (#12)","p":{"Normal":0.19}}],
 "13/30":[{"i":98334,"n":"Tangela (#13)","p":{"Normal":0.38}},{"i":98367,"n":"Latios (#13 Non-Holo)","p":{"Normal":0.54}}],
 "14/30":[{"i":98335,"n":"Latias (#14 Non-Holo)","p":{"Normal":0.45}},{"i":98369,"n":"Machoke (#14)","p":{"Normal":0.78}}],
@@ -18,7 +18,7 @@
 "24/30":[{"i":98341,"n":"Treecko (#24)","p":{"Normal":0.38}},{"i":98374,"n":"Delcatty (#24)","p":{"Normal":0.88}}],
 "25/30":[{"i":98342,"n":"Tangrowth (#25)","p":{"Normal":0.43}},{"i":98350,"n":"Rhydon (#25)","p":{"Normal":1.75}}],
 "26/30":[{"i":98343,"n":"Tangela (#26)","p":{"Normal":0.42}},{"i":98366,"n":"Solrock (#26)","p":{"Normal":0.36}}],
-"27/30":[{"i":98344,"n":"Grovyle (#27)","p":{"Normal":0.29}},{"i":98348,"n":"Skitty (#27)","p":{"Normal":0.57}}],
+"27/30":[{"i":98344,"n":"Grovyle (#27)","p":{"Normal":0.29}},{"i":98348,"n":"Skitty (#27)","p":{"Normal":0.56}}],
 "28/30":[{"i":98328,"n":"Psychic Energy (#28 - Latias)","p":{"Normal":0.07}},{"i":98364,"n":"Machop (#28)","p":{"Normal":0.32}}],
 "29/30":[{"i":98345,"n":"Acro Bike (#29 Latias)","p":{"Normal":0.33}},{"i":98362,"n":"Psychic Energy (#29 - Latios)","p":{"Normal":0.16}}],
 "3/30":[{"i":98320,"n":"Grass Energy (#3)","p":{"Normal":0.35}},{"i":98352,"n":"Fighting Energy (#3)","p":{"Normal":0.23}}],
