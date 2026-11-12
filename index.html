@@ -133,6 +133,7 @@ details.guide p{margin:8px 0 10px;font-size:13px;color:var(--muted)}
 .add{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .links{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px}
 .links a{color:var(--muted)}
+.in-app .links,.in-app .note a{display:none}
 @media (max-width:420px){.detail{grid-template-columns:96px 1fr}.detail > img{width:96px}.big{font-size:26px}}
 
 /* collection */
@@ -249,6 +250,9 @@ nav.tabs button em{font-style:normal;font-family:var(--mono);font-size:11px;colo
 "use strict";
 const API = "https://api.tcgdex.net/v2/en";
 const $ = id => document.getElementById(id);
+// Running inside the Android app (no browser): hide links that lead off-site
+const IN_APP = /BinderScanApp/.test(navigator.userAgent);
+if(IN_APP) document.documentElement.classList.add("in-app");
 const store = {
   get(k, d){ try{ const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; }catch{ return d; } },
   set(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch{} }
@@ -903,8 +907,10 @@ async function refreshAll(){
   btn.disabled=false;
 }
 function exportColl(){
-  const blob=new Blob([JSON.stringify({app:"binder-scan",v:2,collection},null,1)],{type:"application/json"});
-  const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=`binder-${new Date().toISOString().slice(0,10)}.json`; a.click();
+  const name=`binder-${new Date().toISOString().slice(0,10)}.json`, json=JSON.stringify({app:"binder-scan",v:2,collection},null,1);
+  if(window.BinderScanAndroid){ const ok=window.BinderScanAndroid.saveFile(name,json); $("collStatus").textContent = ok ? `Backup saved to Downloads as ${name}.` : "Couldn't save the backup."; return; }
+  const blob=new Blob([json],{type:"application/json"});
+  const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=name; a.click();
   setTimeout(()=>URL.revokeObjectURL(a.href),4000);
 }
 async function importColl(file){
