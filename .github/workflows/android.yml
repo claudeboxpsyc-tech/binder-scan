@@ -1,0 +1,40 @@
+name: Build Android app
+
+# Builds BinderScan.apk (a browser-free app wrapper for the web app) and publishes it
+# as the "android" release: https://github.com/claudeboxpsyc-tech/binder-scan/releases/tag/android
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - build-android.sh
+      - .github/workflows/android.yml
+
+permissions:
+  contents: write
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.9"
+      - name: Build APK
+        env:
+          KEYSTORE_B64: ${{ secrets.KEYSTORE_B64 }}
+          KS_PASS: ${{ secrets.KS_PASS }}
+        run: bash build-android.sh
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete android --yes --cleanup-tag || true
+          gh release create android dist/BinderScan.apk \
+            --title "Binder Scan for Android" \
+            --notes "Install BinderScan.apk on the phone. Build ${{ github.run_number }}."
