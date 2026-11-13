@@ -5,7 +5,7 @@
 "HGSS01":[{"i":86125,"n":"Ho-Oh - HGSS01","p":{"Holofoil":123.13}}],
 "HGSS02":[{"i":86909,"n":"Lugia - HGSS02","p":{"Holofoil":485.99}}],
 "HGSS03":[{"i":88098,"n":"Pikachu - HGSS03","p":{"Holofoil":59.73}}],
-"HGSS04":[{"i":90622,"n":"Wobbuffet - HGSS04","p":{"Holofoil":16.16}}],
+"HGSS04":[{"i":90622,"n":"Wobbuffet - HGSS04","p":{"Holofoil":15.31}}],
 "HGSS05":[{"i":86174,"n":"Hoothoot - HGSS05","p":{"Holofoil":16.25}}],
 "HGSS06":[{"i":87795,"n":"Noctowl - HGSS06","p":{"Holofoil":13.34}}],
 "HGSS07":[{"i":85421,"n":"Feraligatr (Prime) - HGSS07","p":{"Holofoil":82.83}}],
@@ -22,9 +22,9 @@
 "HGSS18":[{"i":97703,"n":"Tropical Tidal Wave - HGSS18 (Worlds 10) [Staff]","p":{"Normal":1400}}],
 "HGSS19":[{"i":88535,"n":"Raikou - HGSS19","p":{"Holofoil":59.21}}],
 "HGSS20":[{"i":85273,"n":"Entei - HGSS20","p":{"Holofoil":91.35}}],
-"HGSS21":[{"i":89605,"n":"Suicune - HGSS21","p":{"Holofoil":71.28}}],
+"HGSS21":[{"i":89605,"n":"Suicune - HGSS21","p":{"Holofoil":72.42}}],
 "HGSS22":[{"i":88313,"n":"Porygon - HGSS22","p":{"Holofoil":21.63}}],
-"HGSS23":[{"i":88328,"n":"Porygon2 - HGSS23","p":{"Holofoil":22.47}}],
+"HGSS23":[{"i":88328,"n":"Porygon2 - HGSS23","p":{"Holofoil":20.5}}],
 "HGSS24":[{"i":86097,"n":"Hitmonchan - HGSS24","p":{"Holofoil":20.37}}],
 "HGSS25":[{"i":86109,"n":"Hitmonlee - HGSS25","p":{"Holofoil":18.87}}]
 }
