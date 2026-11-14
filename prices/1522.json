@@ -4,7 +4,7 @@
 "11/39":[{"i":87931,"n":"Panpour","p":{"Normal":0.9}}],
 "12/39":[{"i":85569,"n":"Froakie","p":{"Normal":0.52,"Holofoil":1.85}}],
 "13/39":[{"i":85571,"n":"Frogadier","p":{"Normal":0.61,"Holofoil":2.59}}],
-"14/39":[{"i":85903,"n":"Greninja","p":{"Normal":5.58,"Holofoil":17.08}}],
+"14/39":[{"i":85903,"n":"Greninja","p":{"Normal":5.58,"Holofoil":17.19}}],
 "15/39":[{"i":84326,"n":"Clauncher","p":{"Normal":0.47}}],
 "16/39":[{"i":88302,"n":"Poochyena","p":{"Normal":0.73}}],
 "17/39":[{"i":87449,"n":"Mightyena","p":{"Normal":1.84}}],
@@ -37,5 +37,5 @@
 "6/39":[{"i":89348,"n":"Slugma","p":{"Normal":1.05}}],
 "7/39":[{"i":87946,"n":"Pansear","p":{"Normal":0.58}}],
 "8/39":[{"i":85411,"n":"Fennekin","p":{"Normal":0.26,"Holofoil":4.87}}],
-"9/39":[{"i":83949,"n":"Braixen","p":{"Normal":0.42,"Holofoil":1.09}}]
+"9/39":[{"i":83949,"n":"Braixen","p":{"Normal":0.44,"Holofoil":1.09}}]
 }
