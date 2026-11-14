@@ -1,0 +1,83 @@
+name: Update Japanese prices
+
+# Copies TCGplayer prices for Japanese Pokémon sets (TCGCSV category 85) into prices/jp/,
+# plus names.json: the English card names TCGplayer uses, so Japanese cards can be found by English name.
+on:
+  schedule:
+    - cron: "53 21 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  prices:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download Japanese prices from TCGCSV
+        run: |
+          cat > /tmp/prices-jp.mjs <<'EOF'
+          import fs from "node:fs";
+          const HEAD = { "User-Agent": "BinderScan/1.0 (+https://github.com/claudeboxpsyc-tech/binder-scan)" };
+          const sleep = ms => new Promise(r => setTimeout(r, ms));
+          async function get(url) {
+            for (let i = 0; i < 4; i++) {
+              try { const r = await fetch(url, { headers: HEAD }); if (r.ok) return await r.json(); } catch {}
+              await sleep(1500 * (i + 1));
+            }
+            throw new Error("failed " + url);
+          }
+          const DIR = "prices/jp";
+          fs.mkdirSync(DIR, { recursive: true });
+          const groups = (await get("https://tcgcsv.com/tcgplayer/85/groups")).results || [];
+          const index = [], names = {};
+          for (const g of groups) {
+            try {
+              const products = (await get(`https://tcgcsv.com/tcgplayer/85/${g.groupId}/products`)).results || [];
+              await sleep(250);
+              const prices = (await get(`https://tcgcsv.com/tcgplayer/85/${g.groupId}/prices`)).results || [];
+              await sleep(250);
+              const byId = new Map();
+              for (const p of prices) {
+                const v = p.marketPrice ?? p.midPrice ?? p.lowPrice;
+                if (v == null) continue;
+                if (!byId.has(p.productId)) byId.set(p.productId, {});
+                byId.get(p.productId)[p.subTypeName] = v;
+              }
+              const cards = {}, nm = {};
+              for (const p of products) {
+                const num = (p.extendedData || []).find(e => e.name === "Number");
+                if (!num) continue;
+                nm[num.value] ??= p.name.split(" - ")[0].trim();
+                const pr = byId.get(p.productId);
+                if (pr) (cards[num.value] ||= []).push({ i: p.productId, n: p.name, p: pr });
+              }
+              const abbr = (g.abbreviation || "").trim();
+              if (abbr && Object.keys(nm).length) names[abbr.toLowerCase()] = nm;
+              const keys = Object.keys(cards).sort();
+              if (!keys.length) continue;
+              fs.writeFileSync(`${DIR}/${g.groupId}.json`,
+                "{\n" + keys.map(k => JSON.stringify(k) + ":" + JSON.stringify(cards[k])).join(",\n") + "\n}\n");
+              index.push({ g: g.groupId, n: g.name, a: abbr, d: (g.publishedOn || "").slice(0, 10) });
+            } catch (e) { console.log("skipped", g.groupId, g.name, e.message); }
+          }
+          fs.writeFileSync(`${DIR}/index.json`,
+            JSON.stringify({ u: new Date().toISOString(), src: "TCGCSV / TCGplayer Japan", groups: index }) + "\n");
+          fs.writeFileSync(`${DIR}/names.json`,
+            "{\n" + Object.keys(names).sort().map(k => JSON.stringify(k) + ":" + JSON.stringify(names[k])).join(",\n") + "\n}\n");
+          console.log(`wrote ${index.length} Japanese sets`);
+          EOF
+          node /tmp/prices-jp.mjs
+
+      - name: Commit updated prices
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git add prices/jp
+          if git diff --cached --quiet; then echo "No changes"; exit 0; fi
+          git commit -m "Update Japanese prices from TCGCSV"
+          git pull --rebase
+          git push

@@ -72,6 +72,9 @@ h2{font:700 13px/1.2 var(--display);font-stretch:110%;letter-spacing:.08em;text-
 .shutter span{width:44px;height:44px;border-radius:50%;background:var(--accent)}
 .shutter:disabled{opacity:.4}
 .search{display:flex;gap:8px;margin-top:12px}
+.langrow{margin-top:14px}
+.langrow .seg button{padding:8px 14px}
+.lang{display:inline-block;font:600 10px/1 var(--mono);letter-spacing:.04em;padding:2px 5px;border-radius:4px;background:var(--accent);color:var(--accent-ink);vertical-align:2px;margin-left:4px}
 .search input{flex:1;min-width:0;border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:11px 14px}
 .status{margin-top:12px;font-size:14px;color:var(--muted);min-height:20px}
 .status code{font:12px/1.4 var(--mono);color:var(--ink);background:var(--surface);border:1px solid var(--line);padding:1px 6px;border-radius:6px}
@@ -198,6 +201,12 @@ nav.tabs button em{font-style:normal;font-family:var(--mono);font-size:11px;colo
       <button class="shutter" id="shutter" type="button" aria-label="Scan card" disabled><span></span></button>
       <button class="btn" id="stopBtn" type="button" disabled>Stop</button>
     </div>
+    <div class="langrow">
+      <div class="seg" role="group" aria-label="Card language">
+        <button type="button" data-lang="en" aria-pressed="true">English cards</button>
+        <button type="button" data-lang="ja" aria-pressed="false">Japanese cards</button>
+      </div>
+    </div>
     <form class="search" id="searchForm">
       <input id="q" type="search" placeholder="Name or number, e.g. Charizard ex or 005/128" autocomplete="off" enterkeyhint="search">
       <button class="btn primary" type="submit">Find</button>
@@ -248,7 +257,9 @@ nav.tabs button em{font-style:normal;font-family:var(--mono);font-size:11px;colo
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5.1.1/dist/tesseract.min.js"></script>
 <script>
 "use strict";
-const API = "https://api.tcgdex.net/v2/en";
+// Card language: "en" (international English prints) or "ja" (Japanese prints)
+let LANG = "en";
+const apiFor = l => "https://api.tcgdex.net/v2/" + (l === "ja" ? "ja" : "en");
 const $ = id => document.getElementById(id);
 // Running inside the Android app (no browser): hide links that lead off-site
 const IN_APP = /BinderScanApp/.test(navigator.userAgent);
@@ -267,8 +278,9 @@ let stream = null, track = null, worker = null, current = null;
 
 /* ---------- text helpers (pure) ---------- */
 function norm(s){
-  return String(s||"").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase()
-    .replace(/[’'`]/g,"").replace(/[^a-z0-9 ]+/g," ").replace(/\s+/g," ").trim();
+  // keeps letters of any script (so Japanese names search too); folds accents and full-width characters
+  return String(s||"").normalize("NFKD").replace(/[̀-ͯ]/g,"").normalize("NFC").toLowerCase()
+    .replace(/[’'`]/g,"").replace(/[^\p{L}\p{N} ]+/gu," ").replace(/\s+/g," ").trim();
 }
 function lev(a,b){
   if(a===b) return 0; const m=a.length,n=b.length; if(!m) return n; if(!n) return m;
@@ -444,15 +456,69 @@ async function getJSON(url){
 }
 let sets = null, setById = new Map();
 const setIdOf = id => id.slice(0, id.lastIndexOf("-"));
+const langData = {};   // per language: {index, nameMap, sets, setById}
 async function loadIndex(){
   if(index) return;
-  setStatus("Loading the card list (first scan only)…", true);
-  const [list, sl] = await Promise.all([getJSON(API+"/cards"), getJSON(API+"/sets").catch(()=>[])]);
-  index = list.filter(c=>c && c.name);
-  nameMap = new Map();
-  for(const c of index){ const k=norm(c.name); if(!nameMap.has(k)) nameMap.set(k,[]); nameMap.get(k).push(c); }
-  sets = Array.isArray(sl) ? sl : [];
-  setById = new Map(sets.map(s=>[s.id,s]));
+  const l = LANG;
+  if(!langData[l]){
+    setStatus(`Loading the ${l==="ja"?"Japanese ":""}card list (first time only)…`, true);
+    const api = apiFor(l);
+    const [list, sl] = await Promise.all([getJSON(api+"/cards"), getJSON(api+"/sets").catch(()=>[])]);
+    const idx = list.filter(c=>c && c.name);
+    const nm = new Map();
+    for(const c of idx){ const k=norm(c.name); if(!nm.has(k)) nm.set(k,[]); nm.get(k).push(c); }
+    const ss = Array.isArray(sl) ? sl : [];
+    langData[l] = { index:idx, nameMap:nm, sets:ss, setById:new Map(ss.map(s=>[s.id,s])) };
+  }
+  if(l !== LANG) return loadIndex();   // language switched while loading
+  ({ index, nameMap, sets, setById } = langData[l]);
+}
+function setLang(l){
+  LANG = l === "ja" ? "ja" : "en";
+  store.set("bs.lang", LANG);
+  const d = langData[LANG];
+  ({ index, nameMap, sets, setById } = d || { index:null, nameMap:null, sets:null, setById:new Map() });
+  document.querySelectorAll(".langrow button").forEach(b=>b.setAttribute("aria-pressed", String(b.dataset.lang===LANG)));
+  $("q").placeholder = LANG==="ja" ? "Number, set code, or name, e.g. 006/165 · SV2a 006 · Charizard" : "Name or number, e.g. Charizard ex or 005/128";
+  document.querySelector(".frame b.n").textContent = LANG==="ja" ? "Japanese card" : "name";
+  document.querySelector(".frame b.c").textContent = LANG==="ja" ? "set code + no. SV2a 006/165" : "no. 136/189";
+  clearResults(); setStatus("");
+}
+// Japanese cards: English names come from TCGplayer's listing (prices/jp/names.json), keyed by set code and number
+let jpNames = null;
+async function jpByEnglishName(nq){
+  if(!jpNames) jpNames = (await tcGet("jp/names.json")) || {};
+  const out = [];
+  const bySetLower = new Map(sets.map(s=>[s.id.toLowerCase(), s.id]));
+  for(const [abbr, nums] of Object.entries(jpNames)){
+    const sid = bySetLower.get(abbr); if(!sid) continue;
+    for(const [num, name] of Object.entries(nums)){
+      const n = norm(name); if(!n.includes(nq)) continue;
+      const local = num.split("/")[0];
+      const c = index.find(x=>setIdOf(x.id)===sid && sameLocal(x.localId, local));
+      if(c) out.push({ c, m:n===nq, s:(n===nq?2:1) - n.length/100, en:name });
+    }
+  }
+  out.forEach((o,i)=>o.order=i);
+  return out.sort((a,b)=>b.s-a.s || b.order-a.order).slice(0,40);
+}
+// set codes printed bottom-left on Japanese cards (SV2a, M6a, s12a…) found in OCR text
+function jpSetCodes(text){
+  const ids = new Map(sets.map(s=>[s.id.toLowerCase().replace(/[^a-z0-9]/g,""), s.id]));
+  const found = new Set();
+  for(const tok of String(text).split(/[^A-Za-z0-9-]+/)){
+    const t = tok.toLowerCase().replace(/[^a-z0-9]/g,"");
+    if(t.length>=2 && ids.has(t)) found.add(ids.get(t));
+  }
+  return [...found];
+}
+function jpCandidates(num, codes){
+  if(!num) return [];
+  if(codes.length){
+    const hit = index.filter(c=>codes.includes(setIdOf(c.id)) && sameLocal(c.localId, num.local));
+    if(hit.length) return hit.map((c,i)=>({c, m:true, s:0, order:i}));
+  }
+  return byNumber(num);
 }
 // sets whose printed total ("/128") matches; Trainer/Galarian Gallery totals carry their prefix ("TG30")
 function setsWithTotal(total){
@@ -473,25 +539,33 @@ function byNumber(num){
 /* Second price source: a daily GitHub Action copies TCGplayer prices from TCGCSV into prices/ in this repo.
    Used when TCGdex has no price (e.g. sets from the last few months). */
 const PRICE_BASES = ["prices/", "https://raw.githubusercontent.com/claudeboxpsyc-tech/binder-scan/main/prices/"];
-let tcIndex = null; const tcFiles = new Map();
+const tcIndexes = {}; const tcFiles = new Map();
 async function tcGet(file){
   for(const b of PRICE_BASES){ try{ const r = await fetch(b+file); if(r.ok) return await r.json(); }catch{} }
   return null;
 }
 const stripPre = s => norm(String(s).replace(/^[A-Za-z]{1,6}\d*(\.\d+)?[a-z]?\s*:\s*/,""));
 async function tcVariants(card){
-  if(!card.set || !card.set.name) return null;
-  if(!tcIndex) tcIndex = (await tcGet("index.json")) || { groups:[] };
-  const want = norm(card.set.name), gs = tcIndex.groups || [];
-  const g = gs.find(x=>stripPre(x.n)===want) || gs.find(x=>norm(x.n)===want) || gs.find(x=>stripPre(x.n).endsWith(" "+want));
+  if(!card.set) return null;
+  const ja = card._lang === "ja", dir = ja ? "jp/" : "";
+  if(!tcIndexes[dir]) tcIndexes[dir] = (await tcGet(dir+"index.json")) || { groups:[] };
+  const ix = tcIndexes[dir], gs = ix.groups || [];
+  let g;
+  if(ja){ const id = String(card.set.id||"").toLowerCase(); g = gs.find(x=>(x.a||"").toLowerCase()===id); }   // Japanese: match by set code
+  else {
+    if(!card.set.name) return null;
+    const want = norm(card.set.name);
+    g = gs.find(x=>stripPre(x.n)===want) || gs.find(x=>norm(x.n)===want) || gs.find(x=>stripPre(x.n).endsWith(" "+want));
+  }
   if(!g) return null;
-  if(!tcFiles.has(g.g)) tcFiles.set(g.g, await tcGet(g.g+".json"));
-  const cards = tcFiles.get(g.g); if(!cards) return null;
+  const key = dir+g.g;
+  if(!tcFiles.has(key)) tcFiles.set(key, await tcGet(dir+g.g+".json"));
+  const cards = tcFiles.get(key); if(!cards) return null;
   let list = [];
   for(const [num, arr] of Object.entries(cards)) if(sameLocal(num.split("/")[0], card.localId)) list.push(...arr);
   const named = list.filter(p=>norm(p.n).startsWith(norm(card.name)));
   if(named.length) list = named;
-  return list.length ? tcToVariants(list, tcIndex.u) : null;
+  return list.length ? tcToVariants(list, ix.u) : null;
 }
 async function variantsFor(card){
   const vs = buildVariants(card);
@@ -502,10 +576,12 @@ async function variantsFor(card){
   return tc;
 }
 const fullCache = new Map();
-async function getCard(id){
-  if(fullCache.has(id)) return fullCache.get(id);
-  const c = await getJSON(API+"/cards/"+encodeURIComponent(id));
-  fullCache.set(id,c); return c;
+async function getCard(id, lang=LANG){
+  const key = lang+"|"+id;
+  if(fullCache.has(key)) return fullCache.get(key);
+  const c = await getJSON(apiFor(lang)+"/cards/"+encodeURIComponent(id));
+  c._lang = lang;
+  fullCache.set(key,c); return c;
 }
 const img = (c, q="low") => c && c.image ? `${c.image}/${q}.webp` : null;
 
@@ -694,6 +770,7 @@ async function scan(card, framed){
   try{
     if(typeof Tesseract==="undefined") throw new Error("The text reader didn't load. Check your connection and reload.");
     await loadIndex();
+    if(LANG==="ja") return scanJapanese(card, framed);
     const names = [...nameMap.keys()];
     let found=[], num=null, seen="";
     if(framed){
@@ -719,6 +796,22 @@ async function scan(card, framed){
     showCandidates(found, num, read);
   }catch(e){ setStatus(esc(e.message||"Scan failed.")); }
 }
+// Japanese cards: names are in Japanese, so read the set code and number printed at the bottom
+async function scanJapanese(card, framed){
+  setStatus("Reading the set code and number…", true);
+  let text = framed ? ((await ocr(band(card,0.86,0.99), 11)).text||"") : "";
+  let num = parseNumber(text), codes = jpSetCodes(text);
+  if(!num){
+    setStatus(framed ? "Number was hard to read — checking the whole card…" : "Reading the photo…", true);
+    text = (await ocr(band(card,0,1,0,1,framed?1100:0), 11)).text||"";
+    num = parseNumber(text); codes = codes.length ? codes : jpSetCodes(text);
+  }
+  const read = `Read: ${codes.length?`set <code>${esc(codes.join(", "))}</code> · `:""}${num?`no. <code>${esc(num.local)}${num.total?"/"+esc(num.total):""}</code>`:"<code>—</code>"}`;
+  const r = jpCandidates(num, codes);
+  if(!r.length){ setStatus(read+"<br>Couldn't match the number. Keep the bottom edge of the card sharp and well lit, or type the number (e.g. <code>006/165</code>) below."); return; }
+  setStatus(read+`<br>${r.length===1?"Found it — now pick the version that matches your card.":r.length+" cards have this number. Tap yours."}`);
+  renderCands(r); if(r.length===1) selectCard(r[0].c.id);
+}
 function rankCandidates(names, num){
   const out=[];
   const tot = num && setsWithTotal(num.total);
@@ -741,8 +834,10 @@ function showCandidates(names, num, seen){
 }
 function renderCands(ranked){
   $("candWrap").hidden = !ranked.length;
-  $("cands").innerHTML = ranked.map(({c,m})=>{ const s=setById.get(setIdOf(c.id));
-    return `<button class="cand${m?" match":""}" type="button" data-id="${esc(c.id)}" aria-pressed="false" title="${esc(c.name)} · ${esc(s?s.name:setIdOf(c.id))} ${esc(c.localId)}">${thumb(img(c),c.name)}<small>${esc(c.name)}</small><small>${esc(s?s.name:setIdOf(c.id))} · ${esc(c.localId)}</small></button>`; }).join("");
+  $("cands").innerHTML = ranked.map(({c,m,en})=>{ const s=setById.get(setIdOf(c.id));
+    const setTxt = LANG==="ja" ? setIdOf(c.id) : (s?s.name:setIdOf(c.id));
+    const nameTxt = en ? `${c.name} · ${en}` : c.name;
+    return `<button class="cand${m?" match":""}" type="button" data-id="${esc(c.id)}" aria-pressed="false" title="${esc(nameTxt)} · ${esc(s?s.name:setIdOf(c.id))} ${esc(c.localId)}">${thumb(img(c),c.name)}<small>${esc(nameTxt)}</small><small>${esc(setTxt)} · ${esc(c.localId)}</small></button>`; }).join("");
 }
 function clearResults(){ $("candWrap").hidden=true; $("detailWrap").hidden=true; $("cands").innerHTML=""; current=null; }
 
@@ -750,6 +845,15 @@ async function textSearch(q){
   clearResults();
   try{
     await loadIndex();
+    if(LANG==="ja"){
+      // "SV2a 006", "SV2a 006/165" or "006 SV2a": set code plus number
+      const toks = q.trim().split(/\s+/), codes = jpSetCodes(q), numTok = toks.find(t=>/\d/.test(t) && !codes.some(c=>c.toLowerCase()===t.toLowerCase().replace(/[^a-z0-9-]/g,"")));
+      if(codes.length && numTok){
+        const num = parseNumber(numTok.includes("/")?numTok:numTok+"/0") || {local:numTok};
+        const r = jpCandidates(num, codes);
+        if(r.length){ setStatus(`${r.length} card${r.length===1?"":"s"} in <code>${esc(codes.join(", "))}</code> numbered <code>${esc(num.local)}</code>. ${r.length===1?"Pick the version below.":"Tap yours."}`); renderCands(r); if(r.length===1) selectCard(r[0].c.id); return; }
+      }
+    }
     const only = q.trim().match(/^#?\s*([A-Za-z]{0,4}\s?\d{1,3}[A-Za-z]?)\s*(?:\/\s*([A-Za-z]{0,4}\s?\d{1,3}))?$/);
     if(only && (only[2] || /[A-Za-z]/.test(only[1]))){
       const num = { local: only[1].replace(/\s/g,"").toUpperCase(), total: only[2] ? only[2].replace(/\s/g,"").toUpperCase() : null };
@@ -764,6 +868,14 @@ async function textSearch(q){
     if(parts.length>1 && /\d/.test(last)){ num = parseNumber(last.includes("/")?last:last+"/0") || {local:last}; parts.pop(); }
     const nq = norm(parts.join(" "));
     let names = [...nameMap.keys()].filter(n=>n.includes(nq)).map(n=>[n, n===nq?1:0.9 - (n.length-nq.length)/100]);
+    if(LANG==="ja" && !names.length && /[a-z]/.test(nq)){
+      // English name typed in Japanese mode: use TCGplayer's English names for Japanese cards
+      setStatus("Searching Japanese cards by English name…", true);
+      let r = await jpByEnglishName(nq);
+      if(num) r = r.filter(o=>sameLocal(o.c.localId, num.local));
+      if(r.length){ setStatus(`${r.length} Japanese card${r.length===1?"":"s"} found. Tap yours.`); renderCands(r); if(r.length===1) selectCard(r[0].c.id); return; }
+      setStatus("No Japanese card by that name. Try the number from the bottom of the card, e.g. <code>006/165</code>."); return;
+    }
     if(!names.length) names = bestNames(nq, nameMap.keys(), 6);
     names.sort((a,b)=>b[1]-a[1]); names = names.slice(0,8);
     if(!names.length){ setStatus("No card by that name. Check the spelling."); return; }
@@ -802,13 +914,18 @@ async function selectCard(id){
               { vid:"x-holo", type:"holo", foil:null, kind:"holo", stamp:false, label:"Holo", how:HOW.holo, usd:null, eur:null, updated:null });
     }
     const first = vs.find(v=>v.usd!=null||v.eur!=null) || vs[0];
-    const q = encodeURIComponent(`${c.name} ${c.set&&c.set.name?c.set.name+" ":""}${c.localId}${c.set&&c.set.cardCount&&c.set.cardCount.official?"/"+c.set.cardCount.official:""}`);
+    const isJa = c._lang==="ja";
+    const total = c.set&&c.set.cardCount&&c.set.cardCount.official ? "/"+c.set.cardCount.official : "";
+    const enName = isJa && jpNames && c.set ? ((jpNames[String(c.set.id).toLowerCase()]||{})[Object.keys(jpNames[String(c.set.id).toLowerCase()]||{}).find(k=>sameLocal(k.split("/")[0], c.localId))]||"") : "";
+    const q = encodeURIComponent(isJa ? `${enName||""} ${c.set?c.set.id:""} ${c.localId}${total} japanese`.trim()
+                                      : `${c.name} ${c.set&&c.set.name?c.set.name+" ":""}${c.localId}${total}`);
     const upd = first && first.updated;
     $("detail").innerHTML = `
       ${img(c,"high")?`<img src="${esc(img(c,"high"))}" alt="${esc(c.name)}">`:`<div class="ph">no image</div>`}
       <div class="meta">
-        <h3>${esc(c.name)}</h3>
-        <div class="sub">${esc(c.set?c.set.name:"")} · ${esc(c.localId)}${c.set&&c.set.cardCount?"/"+esc(c.set.cardCount.official):""}${c.rarity?"<br>"+esc(c.rarity):""}</div>
+        <h3>${esc(c.name)}${isJa?`<span class="lang">JP</span>`:""}</h3>
+        ${enName?`<div class="sub">${esc(enName)}</div>`:""}
+        <div class="sub">${esc(c.set?c.set.name:"")}${isJa&&c.set?` (${esc(c.set.id)})`:""} · ${esc(c.localId)}${c.set&&c.set.cardCount?"/"+esc(c.set.cardCount.official):""}${c.rarity?"<br>"+esc(c.rarity):""}</div>
         <div class="big" id="bigVal"></div>
         <div class="bigLbl" id="bigLbl"></div>
         <div class="sub">${upd?(viaTc?"TCGplayer via TCGCSV · ":"")+"updated "+new Date(upd).toLocaleDateString():""}</div>
@@ -846,11 +963,14 @@ async function selectCard(id){
 }
 
 /* ---------- collection ---------- */
+const keyOf = (lang, id, vid) => (lang==="ja"?"ja:":"") + id + "|" + vid;
 function addToCollection(c, v){
-  const key = c.id+"|"+v.vid;
+  const lang = c._lang || "en";
+  const key = keyOf(lang, c.id, v.vid);
   const ex = collection.find(x=>x.key===key);
   if(ex) ex.qty++;
-  else collection.unshift({ key, id:c.id, vid:v.vid, label:v.label, kind:v.kind, stamp:v.stamp, name:c.name, set:c.set?c.set.name:"",
+  else collection.unshift({ key, lang, id:c.id, vid:v.vid, label:v.label, kind:v.kind, stamp:v.stamp, name:c.name,
+    set:c.set ? (lang==="ja" ? `${c.set.name} (${c.set.id})` : c.set.name) : "",
     num:c.localId + (c.set&&c.set.cardCount?"/"+c.set.cardCount.official:""), image:c.image||null, qty:1,
     usd:v.usd, eur:v.eur, updated:v.updated, added:{ tcg:v.usd, cm:v.eur }, addedAt:Date.now() });
   save(); toast(ex?`${c.name} ×${ex.qty}`:`Added ${c.name} (${v.label})`);
@@ -868,7 +988,7 @@ function renderCollection(){
   const cur = CUR();
   $("collCount").textContent = collection.length ? collection.reduce((s,x)=>s+x.qty,0) : "";
   $("srcLabel").textContent = source==="cm" ? "Cardmarket · EUR" : "TCGplayer · USD";
-  document.querySelectorAll(".seg button").forEach(b=>b.setAttribute("aria-pressed", String(b.dataset.src===source)));
+  document.querySelectorAll(".seg button[data-src]").forEach(b=>b.setAttribute("aria-pressed", String(b.dataset.src===source)));
   let total=0, base=0, unpriced=0;
   const rows = collection.map((x,i)=>{
     const v = valOf(x);
@@ -877,7 +997,7 @@ function renderCollection(){
     const d = v!=null && a!=null && a>0 ? (v-a)/a*100 : null;
     return `<div class="row">
       ${x.image?`<img src="${esc(x.image)}/low.webp" alt="" loading="lazy">`:`<div class="ph">—</div>`}
-      <div class="t"><b>${esc(x.name)}</b><span>${esc(x.set)} · ${esc(x.num)}</span><span>${esc(x.label)}</span></div>
+      <div class="t"><b>${esc(x.name)}${x.lang==="ja"?`<span class="lang">JP</span>`:""}</b><span>${esc(x.set)} · ${esc(x.num)}</span><span>${esc(x.label)}</span></div>
       <div class="v">${fmt(v==null?null:v*x.qty,cur)}
         ${d!=null&&Math.abs(d)>=0.5?`<small class="${d>0?"up":"down"}">${d>0?"▲":"▼"} ${Math.abs(d).toFixed(1)}%</small>`:`<small>&nbsp;</small>`}
         <span class="qty"><button type="button" data-i="${i}" data-d="-1" aria-label="One fewer">−</button><output>${x.qty}</output><button type="button" data-i="${i}" data-d="1" aria-label="One more">+</button></span>
@@ -891,15 +1011,16 @@ function renderCollection(){
 async function refreshAll(){
   if(!collection.length) return;
   const btn=$("refreshBtn"); btn.disabled=true; let done=0, failed=0;
-  const ids=[...new Set(collection.map(x=>x.id))];
+  const ids=[...new Set(collection.map(x=>(x.lang||"en")+"|"+x.id))];
   const q=[...ids];
-  async function run(){ while(q.length){ const id=q.shift(); try{ fullCache.delete(id); const c=await getCard(id); const vs=await variantsFor(c);
-      collection.filter(x=>x.id===id).forEach(x=>{
+  async function run(){ while(q.length){ const lk=q.shift(), lang=lk.slice(0,lk.indexOf("|")), id=lk.slice(lk.indexOf("|")+1);
+    try{ fullCache.delete(lk); const c=await getCard(id, lang); const vs=await variantsFor(c);
+      collection.filter(x=>x.id===id && (x.lang||"en")===lang).forEach(x=>{
         // single-print cards: a placeholder "Normal" saved earlier becomes the one real version
         const v = vs.find(v=>v.vid===x.vid) || vs.find(v=>v.label===x.label) || vs.find(v=>v.kind===x.kind && !v.stamp) || (vs.length===1 ? vs[0] : null);
         if(v){ x.usd=v.usd; x.eur=v.eur; x.updated=v.updated;
           if(x.added){ if(x.added.tcg==null) x.added.tcg=v.usd; if(x.added.cm==null) x.added.cm=v.eur; }
-          if(x.vid!==v.vid){ x.vid=v.vid; x.key=x.id+"|"+v.vid; x.label=v.label; x.kind=v.kind; x.stamp=v.stamp; } } });
+          if(x.vid!==v.vid){ x.vid=v.vid; x.key=keyOf(lang, x.id, v.vid); x.label=v.label; x.kind=v.kind; x.stamp=v.stamp; } } });
     }catch{ failed++; } done++; $("collStatus").textContent=`Updating ${done}/${ids.length}…`; } }
   await Promise.all([run(),run(),run()]);
   store.set("bs.collection",collection); store.set("bs.refreshed",Date.now()); renderCollection();
@@ -944,7 +1065,9 @@ $("fileIn").onchange=async e=>{ const f=e.target.files[0]; e.target.value=""; if
 $("searchForm").onsubmit=e=>{ e.preventDefault(); const q=$("q").value.trim(); if(q) textSearch(q); };
 $("cands").onclick=e=>{ const b=e.target.closest(".cand"); if(b) selectCard(b.dataset.id); };
 $("list").onclick=e=>{ const b=e.target.closest("button[data-i]"); if(!b) return; const x=collection[+b.dataset.i]; x.qty+= +b.dataset.d; if(x.qty<=0) collection.splice(+b.dataset.i,1); save(); };
-document.querySelectorAll(".seg button").forEach(b=>b.onclick=()=>{ source=b.dataset.src; store.set("bs.source",source); renderCollection(); });
+document.querySelectorAll(".seg button[data-src]").forEach(b=>b.onclick=()=>{ source=b.dataset.src; store.set("bs.source",source); renderCollection(); });
+document.querySelectorAll(".langrow button").forEach(b=>b.onclick=()=>{ if(b.dataset.lang!==LANG) setLang(b.dataset.lang); });
+setLang(store.get("bs.lang","en"));
 $("refreshBtn").onclick=refreshAll;
 $("exportBtn").onclick=exportColl;
 $("importIn").onchange=e=>{ const f=e.target.files[0]; e.target.value=""; if(f) importColl(f); };
