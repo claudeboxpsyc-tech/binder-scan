@@ -648,6 +648,7 @@ async function startCamera(){
     } else cams = list;
     await useStream(s || await openCam(cams[camIdx] && cams[camIdx].deviceId));
     setStatus("");
+    loadIndex().then(()=>{ setStatus(""); return loadHashes(); }).catch(()=>{});
   }catch(e){
     setStatus("Camera unavailable here. Use <b>Camera app</b> instead. "+(location.protocol!=="https:"?"(The live camera needs the page served over https.)":""));
   }
@@ -704,12 +705,13 @@ function stopCamera(){
   $("shutter").disabled=true; $("stopBtn").disabled=true;
 }
 // crop the card frame out of the live video (object-fit: cover mapping)
-function grabFrame(){
+function grabFrame(pad=0){
   const v=$("video"), box=$("finder").getBoundingClientRect(), fr=$("frame").getBoundingClientRect();
   const vw=v.videoWidth, vh=v.videoHeight;
   const scale=Math.max(box.width/vw, box.height/vh);
   const offX=(vw*scale-box.width)/2, offY=(vh*scale-box.height)/2;
-  const sx=(fr.left-box.left+offX)/scale, sy=(fr.top-box.top+offY)/scale, sw=fr.width/scale, sh=fr.height/scale;
+  let sx=(fr.left-box.left+offX)/scale, sy=(fr.top-box.top+offY)/scale, sw=fr.width/scale, sh=fr.height/scale;
+  sx-=sw*pad; sy-=sh*pad; sw*=1+2*pad; sh*=1+2*pad;   // pad: keep a margin around the frame for picture matching
   const c=document.createElement("canvas"); c.width=Math.round(sw); c.height=Math.round(sh);
   c.getContext("2d").drawImage(v,sx,sy,sw,sh,0,0,c.width,c.height);
   return c;
@@ -725,14 +727,75 @@ function sharpness(card){
   for(let y=1;y<h-1;y++) for(let x=1;x<w-1;x++){ const i=y*w+x; const L=4*Y[i]-Y[i-1]-Y[i+1]-Y[i-w]-Y[i+w]; s+=L; s2+=L*L; n++; }
   return n ? s2/n-(s/n)**2 : 0;
 }
+/* ---------- picture matching ----------
+   A daily job stores a 256-bit fingerprint of every card image (hashes/<lang>.bin). The scanner fingerprints
+   the camera frame the same way and finds the closest cards, so it doesn't depend on reading small text. */
+const PAD = 0.08;
+function innerCard(wide){
+  const w=wide.width/(1+2*PAD), h=wide.height/(1+2*PAD);
+  const c=document.createElement("canvas"); c.width=Math.round(w); c.height=Math.round(h);
+  c.getContext("2d").drawImage(wide,(wide.width-w)/2,(wide.height-h)/2,w,h,0,0,c.width,c.height);
+  return c;
+}
+const HASH_BASES = ["hashes/", "https://raw.githubusercontent.com/claudeboxpsyc-tech/binder-scan/main/hashes/"];
+async function hGet(file, bin){
+  for(const b of HASH_BASES){ try{ const r = await fetch(b+file); if(r.ok) return bin ? await r.arrayBuffer() : await r.json(); }catch{} }
+  return null;
+}
+async function loadHashes(){
+  const d = langData[LANG]; if(!d) return null;
+  if(d.hashP) return d.hashP;
+  return d.hashP = (async()=>{
+    const [ids, buf] = await Promise.all([hGet(LANG+".json",false), hGet(LANG+".bin",true)]);
+    if(!ids || !buf || buf.byteLength !== ids.length*32) return null;
+    return { ids, w:new Uint32Array(buf), byId:new Map(d.index.map(c=>[c.id,c])) };
+  })();
+}
+let hcv = null;
+function hashOf(src, sx, sy, sw, sh){
+  if(!hcv){ hcv=document.createElement("canvas"); hcv.width=68; hcv.height=64; }
+  const g=hcv.getContext("2d",{willReadFrequently:true}); g.imageSmoothingEnabled=true; g.imageSmoothingQuality="high";
+  g.fillStyle="#fff"; g.fillRect(0,0,68,64); g.drawImage(src,sx,sy,sw,sh,0,0,68,64);
+  const p=g.getImageData(0,0,68,64).data, v=new Float32Array(17*16);
+  for(let y=0;y<16;y++) for(let x=0;x<17;x++){ let s=0;
+    for(let j=0;j<4;j++) for(let i=0;i<4;i++){ const k=((y*4+j)*68+x*4+i)*4; s+=0.2126*p[k]+0.7152*p[k+1]+0.0722*p[k+2]; }
+    v[y*17+x]=s; }
+  const out=new Uint8Array(32);
+  for(let y=0;y<16;y++) for(let x=0;x<16;x++) if(v[y*17+x]>v[y*17+x+1]) out[(y*16+x)>>3] |= 0x80>>((y*16+x)&7);
+  return new Uint32Array(out.buffer);
+}
+const pop32 = n => { n=n-((n>>>1)&0x55555555); n=(n&0x33333333)+((n>>>2)&0x33333333); return (((n+(n>>>4))&0x0f0f0f0f)*0x01010101)>>>24; };
+// wide: camera frame with PAD margin around the card. Tries small shifts and sizes to absorb imperfect alignment.
+async function imageMatches(wide){
+  const H = await loadHashes(); if(!H) return null;
+  const cw=wide.width/(1+2*PAD), ch=wide.height/(1+2*PAD), cx=wide.width/2, cy=wide.height/2;
+  const n=H.ids.length, best=new Uint16Array(n).fill(999), w=H.w;
+  for(const s of [0.92,0.97,1.02,1.07]) for(const dx of [-0.035,0,0.035]) for(const dy of [-0.035,0,0.035]){
+    const sw=cw*s, sh=ch*s, q=hashOf(wide, cx-sw/2+dx*cw, cy-sh/2+dy*ch, sw, sh);
+    for(let i=0,o=0;i<n;i++,o+=8){
+      const d=pop32(w[o]^q[0])+pop32(w[o+1]^q[1])+pop32(w[o+2]^q[2])+pop32(w[o+3]^q[3])+pop32(w[o+4]^q[4])+pop32(w[o+5]^q[5])+pop32(w[o+6]^q[6])+pop32(w[o+7]^q[7]);
+      if(d<best[i]) best[i]=d;
+    }
+  }
+  const order=Array.from({length:n},(_,i)=>i).sort((a,b)=>best[a]-best[b]).slice(0,40);
+  const list=order.map(i=>({ c:H.byId.get(H.ids[i]), d:best[i] })).filter(x=>x.c);
+  if(!list.length) return null;
+  const dist=new Map(); for(let i=0;i<n;i++) dist.set(H.ids[i], best[i]);
+  // sure: clearly closer than the nearest card with a different picture
+  const d0=list[0].d, other=list.find(x=>x.d>=d0+6);
+  const sure = d0<=70 && (!other || other.d-d0>=14) && list.filter(x=>x.d<d0+6).length===1;
+  return { list, dist, sure };
+}
+let scanVis = null;   // picture-match result for the scan in progress; used to order candidates
+const visCands = (vis, k=12) => vis.list.slice(0,k).map((x,i)=>({ c:x.c, m:i===0&&vis.list[0].d<=80, s:-x.d, order:i }));
 async function captureSharpest(){
-  let best=null, bs=-1;
+  let best=null, bestWide=null, bs=-1;
   for(let i=0;i<8;i++){
-    const c=grabFrame(), s=sharpness(c);
-    if(s>bs){ bs=s; best=c; }
+    const wide=grabFrame(PAD), c=innerCard(wide), s=sharpness(c);
+    if(s>bs){ bs=s; best=c; bestWide=wide; }
     await sleep(110);
   }
-  return { card: best, score: bs };
+  return { card: best, wide: bestWide, score: bs };
 }
 function imageToCanvas(file){
   return new Promise((res,rej)=>{
@@ -765,11 +828,19 @@ async function ocr(canvas, psm){
   return data;
 }
 // framed = image is already cropped to the card (live camera); otherwise it's a whole photo
-async function scan(card, framed){
-  clearResults();
+async function scan(card, framed, wide){
+  clearResults(); scanVis=null;
   try{
     if(typeof Tesseract==="undefined") throw new Error("The text reader didn't load. Check your connection and reload.");
     await loadIndex();
+    if(wide){
+      setStatus("Matching the picture…", true);
+      scanVis = await imageMatches(wide).catch(()=>null);
+      if(scanVis && scanVis.sure){
+        setStatus("Recognized by its picture. Check it's your card, then pick the version.");
+        renderCands(visCands(scanVis, 6)); selectCard(scanVis.list[0].c.id); return;
+      }
+    }
     if(LANG==="ja") return scanJapanese(card, framed);
     const names = [...nameMap.keys()];
     let found=[], num=null, seen="";
@@ -788,15 +859,27 @@ async function scan(card, framed){
       if(!seen) seen = (found[0]&&found[0][0]) || "";
     }
     const read = `Read: <code>${esc(seen||"—")}</code>${num?` · no. <code>${esc(num.local)}${num.total?"/"+esc(num.total):""}</code>`:""}`;
+    if(visAgree(num, read)) return;
     if(!found.length && num && num.total){
       const r = byNumber(num);
       if(r.length){ setStatus(read+`<br>Couldn't read the name, so I matched the number. ${r.length===1?"Pick the version below.":"Tap your card."}`); renderCands(r); if(r.length===1) selectCard(r[0].c.id); return; }
     }
+    if(!found.length && scanVis){ setStatus(read+"<br>Couldn't read the text, so here are the cards that look most like yours. Tap yours."); renderCands(visCands(scanVis)); return; }
     if(!found.length){ setStatus(read+"<br>Couldn't match a card name. If the preview looks blurry, move the phone back a little and tap the card to focus — or use <b>Camera app</b>, or type the name below."); return; }
     showCandidates(found, num, read);
   }catch(e){ setStatus(esc(e.message||"Scan failed.")); }
 }
 // Japanese cards: names are in Japanese, so read the set code and number printed at the bottom
+// the number read from the card matches one of the best-looking candidates → that's the card
+function visAgree(num, read){
+  if(!scanVis || !num) return false;
+  const hit = scanVis.list.slice(0,10).filter(x=>sameLocal(x.c.localId, num.local));
+  if(!hit.length) return false;
+  const tot = setsWithTotal(num.total), pick = (tot&&tot.size&&hit.find(x=>tot.has(setIdOf(x.c.id)))) || hit[0];
+  setStatus(read+"<br>Picture and number agree. Pick the version that matches your card.");
+  renderCands([{c:pick.c,m:true,s:0,order:0}, ...visCands(scanVis,6).filter(o=>o.c.id!==pick.c.id).map(o=>({...o,m:false}))]);
+  selectCard(pick.c.id); return true;
+}
 async function scanJapanese(card, framed){
   setStatus("Reading the set code and number…", true);
   let text = framed ? ((await ocr(band(card,0.86,0.99), 11)).text||"") : "";
@@ -807,7 +890,9 @@ async function scanJapanese(card, framed){
     num = parseNumber(text); codes = codes.length ? codes : jpSetCodes(text);
   }
   const read = `Read: ${codes.length?`set <code>${esc(codes.join(", "))}</code> · `:""}${num?`no. <code>${esc(num.local)}${num.total?"/"+esc(num.total):""}</code>`:"<code>—</code>"}`;
+  if(visAgree(num, read)) return;
   const r = jpCandidates(num, codes);
+  if(!r.length && scanVis){ setStatus(read+"<br>Couldn't read the number, so here are the cards that look most like yours. Tap yours."); renderCands(visCands(scanVis)); return; }
   if(!r.length){ setStatus(read+"<br>Couldn't match the number. Keep the bottom edge of the card sharp and well lit, or type the number (e.g. <code>006/165</code>) below."); return; }
   setStatus(read+`<br>${r.length===1?"Found it — now pick the version that matches your card.":r.length+" cards have this number. Tap yours."}`);
   renderCands(r); if(r.length===1) selectCard(r[0].c.id);
@@ -833,6 +918,10 @@ function showCandidates(names, num, seen){
   if(matches.length===1) selectCard(matches[0].c.id);
 }
 function renderCands(ranked){
+  if(scanVis && ranked.length>1 && ranked.some(r=>r.s>=0)){   // text candidates: number matches first, then closest-looking
+    const d = r => scanVis.dist.get(r.c.id) ?? 999;
+    ranked = ranked.slice().sort((a,b)=>(b.m?1:0)-(a.m?1:0) || d(a)-d(b));
+  }
   $("candWrap").hidden = !ranked.length;
   $("cands").innerHTML = ranked.map(({c,m,en})=>{ const s=setById.get(setIdOf(c.id));
     const setTxt = LANG==="ja" ? setIdOf(c.id) : (s?s.name:setIdOf(c.id));
@@ -842,7 +931,7 @@ function renderCands(ranked){
 function clearResults(){ $("candWrap").hidden=true; $("detailWrap").hidden=true; $("cands").innerHTML=""; current=null; }
 
 async function textSearch(q){
-  clearResults();
+  clearResults(); scanVis=null;
   try{
     await loadIndex();
     if(LANG==="ja"){
@@ -1058,8 +1147,8 @@ $("zoom").oninput=e=>{ if(track) track.applyConstraints({advanced:[{zoom:+e.targ
 $("shutter").onclick=async()=>{
   if(!stream) return; $("shutter").disabled=true;
   setStatus("Hold still…", true);
-  const { card } = await captureSharpest();
-  await scan(card, true); $("shutter").disabled=!stream;
+  const { card, wide } = await captureSharpest();
+  await scan(card, true, wide); $("shutter").disabled=!stream;
 };
 $("fileIn").onchange=async e=>{ const f=e.target.files[0]; e.target.value=""; if(!f) return; stopCamera(); try{ const c=await imageToCanvas(f); await scan(c, false); }catch(err){ setStatus(esc(err.message)); } };
 $("searchForm").onsubmit=e=>{ e.preventDefault(); const q=$("q").value.trim(); if(q) textSearch(q); };
