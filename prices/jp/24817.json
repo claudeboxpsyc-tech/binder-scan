@@ -1,0 +1,6 @@
+{
+"DAR":[{"i":711331,"n":"Basic Darkness Energy","p":{"Normal":11.35}},{"i":711332,"n":"Basic Darkness Energy (VStar Era)","p":{"Normal":0.39}}],
+"FIG":[{"i":711334,"n":"Basic Fighting Energy","p":{"Normal":0.5}},{"i":711335,"n":"Basic Fighting Energy (VStar Era)","p":{"Normal":0.5}}],
+"FIR":[{"i":711336,"n":"Basic Fire Energy","p":{"Normal":0.5}},{"i":711337,"n":"Basic Fire Energy (VStar Era)","p":{"Normal":0.5}}],
+"MET":[{"i":711342,"n":"Basic Metal Energy","p":{"Normal":11.35}},{"i":711343,"n":"Basic Metal Energy (VStar Era)","p":{"Normal":0.5}}]
+}

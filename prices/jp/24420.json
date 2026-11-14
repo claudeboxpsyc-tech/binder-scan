@@ -1,0 +1,7 @@
+{
+"FIR":[{"i":589074,"n":"Basic Fire Energy (Terastal Pattern)","p":{"Normal":0.25}}],
+"LIG":[{"i":589071,"n":"Basic Lightning Energy (Terastal Pattern)","p":{"Normal":1}}],
+"MET":[{"i":589075,"n":"Basic Metal Energy (Terastal Pattern)","p":{"Normal":1}}],
+"PSY":[{"i":589073,"n":"Basic Psychic Energy (Terastal Pattern)","p":{"Normal":1}}],
+"WAT":[{"i":589070,"n":"Basic Water Energy (Terastal Pattern)","p":{"Normal":0.75}}]
+}
