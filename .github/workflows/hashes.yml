@@ -1,0 +1,30 @@
+name: Update card fingerprints
+
+# Builds picture fingerprints for new cards so the scanner can recognise cards by image.
+on:
+  schedule:
+    - cron: "23 22 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  hashes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install image library
+        run: npm install --prefix /tmp/h sharp@0.33.5
+      - name: Build fingerprints
+        run: NODE_PATH=/tmp/h/node_modules node tools/hashes.cjs
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git add hashes
+          if git diff --cached --quiet; then echo "No changes"; exit 0; fi
+          git commit -m "Update card fingerprints"
+          git pull --rebase
+          git push
