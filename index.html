@@ -783,7 +783,7 @@ async function imageMatches(wide){
   const dist=new Map(); for(let i=0;i<n;i++) dist.set(H.ids[i], best[i]);
   // sure: clearly closer than the nearest card with a different picture
   const d0=list[0].d, other=list.find(x=>x.d>=d0+6);
-  const sure = d0<=70 && (!other || other.d-d0>=14) && list.filter(x=>x.d<d0+6).length===1;
+  const sure = d0<=76 && (!other || other.d-d0>=11) && list.filter(x=>x.d<d0+6).length===1;
   return { list, dist, sure };
 }
 let scanVis = null;   // picture-match result for the scan in progress; used to order candidates
@@ -920,7 +920,8 @@ function showCandidates(names, num, seen){
 function renderCands(ranked){
   if(scanVis && ranked.length>1 && ranked.some(r=>r.s>=0)){   // text candidates: number matches first, then closest-looking
     const d = r => scanVis.dist.get(r.c.id) ?? 999;
-    ranked = ranked.slice().sort((a,b)=>(b.m?1:0)-(a.m?1:0) || d(a)-d(b));
+    const have = new Set(ranked.map(r=>r.c.id));   // also offer the closest-looking cards, in case the text was misread
+    ranked = ranked.concat(visCands(scanVis,4).filter(o=>!have.has(o.c.id)).map(o=>({...o,m:false,s:0}))).sort((a,b)=>(b.m?1:0)-(a.m?1:0) || d(a)-d(b));
   }
   $("candWrap").hidden = !ranked.length;
   $("cands").innerHTML = ranked.map(({c,m,en})=>{ const s=setById.get(setIdOf(c.id));
