@@ -1,9 +1,9 @@
 {
-"001/030":[{"i":594016,"n":"Charizard V","p":{"Holofoil":6.17}}],
-"002/030":[{"i":594017,"n":"Charizard VSTAR","p":{"Holofoil":16.21}}],
+"001/030":[{"i":594016,"n":"Charizard V","p":{"Holofoil":6.43}}],
+"002/030":[{"i":594017,"n":"Charizard VSTAR","p":{"Holofoil":16.27}}],
 "003/030":[{"i":594008,"n":"Vulpix","p":{"Holofoil":2.99}}],
 "005/030":[{"i":594010,"n":"Growlithe","p":{"Holofoil":5.24}}],
-"006/030":[{"i":594011,"n":"Arcanine","p":{"Holofoil":9.26}}],
+"006/030":[{"i":594011,"n":"Arcanine","p":{"Holofoil":10.71}}],
 "007/030":[{"i":594018,"n":"Moltres","p":{"Holofoil":39.99}}],
 "009/030":[{"i":594003,"n":"Mareep","p":{"Holofoil":4.99}}],
 "010/030":[{"i":594002,"n":"Flaaffy","p":{"Holofoil":1.25}}],
@@ -19,10 +19,10 @@
 "022/030":[{"i":593995,"n":"Level Ball","p":{"Holofoil":4.99}}],
 "023/030":[{"i":594014,"n":"Kindler","p":{"Holofoil":4.99}}],
 "024/030":[{"i":593994,"n":"Judge","p":{"Holofoil":5}}],
-"025/030":[{"i":594019,"n":"Barry","p":{"Holofoil":4.99}}],
+"025/030":[{"i":594019,"n":"Barry","p":{"Holofoil":2.19}}],
 "026/030":[{"i":593997,"n":"Professor's Research","p":{"Holofoil":4.89}}],
 "027/030":[{"i":594006,"n":"Zinnia's Resolve","p":{"Holofoil":4.99}}],
 "028/030":[{"i":593998,"n":"Boss's Orders","p":{"Holofoil":4.99}}],
 "029/030":[{"i":594007,"n":"Stormy Mountains","p":{"Holofoil":3.97}}],
-"030/030":[{"i":594015,"n":"Magma Basin","p":{"Holofoil":4.99}}]
+"030/030":[{"i":594015,"n":"Magma Basin","p":{"Holofoil":3.99}}]
 }

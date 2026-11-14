@@ -10,8 +10,7 @@
 "010/054":[{"i":603243,"n":"Pyroar BREAK","p":{"1st Edition Holofoil":7.7}}],
 "011/054":[{"i":603258,"n":"Volcanion","p":{"1st Edition Holofoil":4}}],
 "012/054":[{"i":603259,"n":"Volcanion EX - 012/054","p":{"1st Edition Holofoil":4.39}}],
-"013/054":[{"i":603247,"n":"Shellos","p":{"1st Edition":1.8}}],
-"015/054":[{"i":603237,"n":"Oshawott","p":{"1st Edition":3.66}}],
+"015/054":[{"i":603237,"n":"Oshawott","p":{"1st Edition":4}}],
 "016/054":[{"i":603216,"n":"Dewott","p":{"1st Edition":1.99}}],
 "017/054":[{"i":603245,"n":"Samurott","p":{"1st Edition":3.18}}],
 "018/054":[{"i":603211,"n":"Clauncher","p":{"1st Edition":1.99,"Unlimited":1}}],
@@ -21,7 +20,7 @@
 "022/054":[{"i":603223,"n":"Galvantula","p":{"1st Edition":2.58}}],
 "023/054":[{"i":603218,"n":"Drifloon","p":{"1st Edition":0.79}}],
 "024/054":[{"i":603217,"n":"Drifblim","p":{"1st Edition":1.08,"Unlimited":4.95}}],
-"025/054":[{"i":603233,"n":"Litwick","p":{"1st Edition":3.48}}],
+"025/054":[{"i":603233,"n":"Litwick","p":{"1st Edition":4.95}}],
 "026/054":[{"i":603231,"n":"Lampent","p":{"1st Edition":1.98}}],
 "027/054":[{"i":603210,"n":"Chandelure","p":{"1st Edition Holofoil":13.94,"Unlimited Holofoil":13.74}}],
 "028/054":[{"i":603235,"n":"Nosepass","p":{"1st Edition":1.55}}],
@@ -40,7 +39,7 @@
 "042/054":[{"i":603263,"n":"Xerneas BREAK","p":{"1st Edition Holofoil":14.99}}],
 "043/054":[{"i":603219,"n":"Druddigon","p":{"1st Edition":1.5}}],
 "044/054":[{"i":603205,"n":"Aipom","p":{"Unlimited":0.99,"1st Edition":1.99}}],
-"045/054":[{"i":603206,"n":"Ambipom","p":{"1st Edition":1.99,"Unlimited":1.99}}],
+"045/054":[{"i":603206,"n":"Ambipom","p":{"1st Edition":2.32,"Unlimited":1.99}}],
 "046/054":[{"i":603221,"n":"Fletchling","p":{"Unlimited":0.25,"1st Edition":1.03}}],
 "047/054":[{"i":603220,"n":"Fletchinder","p":{"1st Edition":1.99}}],
 "048/054":[{"i":603256,"n":"Talonflame","p":{"1st Edition":1.97}}],
@@ -50,5 +49,5 @@
 "053/054":[{"i":603234,"n":"Ninja Boy","p":{"1st Edition":5.4}}],
 "054/054":[{"i":603238,"n":"Pokemon Ranger - 054/054","p":{"1st Edition":0.8,"Unlimited":1.5}}],
 "057/054":[{"i":603252,"n":"Steelix - 057/054","p":{"1st Edition Holofoil":75}}],
-"058/054":[{"i":603239,"n":"Pokemon Ranger - 058/054","p":{"1st Edition Holofoil":140}}]
+"058/054":[{"i":603239,"n":"Pokemon Ranger - 058/054","p":{"1st Edition Holofoil":149.99}}]
 }

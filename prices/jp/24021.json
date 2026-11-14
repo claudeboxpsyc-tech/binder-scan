@@ -5,9 +5,10 @@
 "004/080":[{"i":608798,"n":"Bellossom","p":{"1st Edition":11}}],
 "005/080":[{"i":608799,"n":"Scyther","p":{"1st Edition":6.79}},{"i":608880,"n":"Scyther (Reverse Holofoil)","p":{"1st Edition Holofoil":39.99}}],
 "006/080":[{"i":608800,"n":"Pineco","p":{"1st Edition":1.2}},{"i":608881,"n":"Pineco (Reverse Holofoil)","p":{"1st Edition Holofoil":5.5}}],
-"007/080":[{"i":608801,"n":"Combee","p":{"1st Edition":2}}],
+"007/080":[{"i":608801,"n":"Combee","p":{"1st Edition":1.5}}],
 "008/080":[{"i":608802,"n":"Vespiquen","p":{"1st Edition":2,"Unlimited":10}}],
 "009/080":[{"i":608803,"n":"Flareon","p":{"1st Edition":22}}],
+"010/080":[{"i":608804,"n":"Slugma","p":{"1st Edition":5.31}}],
 "011/080":[{"i":608805,"n":"Magcargo","p":{"1st Edition Holofoil":19.5}}],
 "012/080":[{"i":608806,"n":"Horsea","p":{"1st Edition":1.42}},{"i":608887,"n":"Horsea (Reverse Holofoil)","p":{"1st Edition Holofoil":10}}],
 "013/080":[{"i":608807,"n":"Seadra","p":{"1st Edition Holofoil":3.99}},{"i":608888,"n":"Seadra (Reverse Holofoil)","p":{"1st Edition Holofoil":16.5}}],
@@ -37,7 +38,6 @@
 "038/080":[{"i":608832,"n":"Murkrow","p":{"Unlimited":1.99,"1st Edition":3}}],
 "039/080":[{"i":608833,"n":"Honchkrow","p":{"1st Edition":6}},{"i":608914,"n":"Honchkrow (Reverse Holofoil)","p":{"1st Edition Holofoil":7.99}}],
 "040/080":[{"i":608834,"n":"Sneasel","p":{"1st Edition":10}}],
-"041/080":[{"i":608835,"n":"Weavile","p":{"1st Edition":2}}],
 "042/080":[{"i":608836,"n":"Houndour","p":{"1st Edition":2}},{"i":608917,"n":"Houndour (Reverse Holofoil)","p":{"1st Edition Holofoil":29}}],
 "043/080":[{"i":608837,"n":"Houndoom","p":{"1st Edition Holofoil":17}}],
 "044/080":[{"i":608838,"n":"Tyranitar","p":{"1st Edition Holofoil":60}}],
@@ -73,6 +73,6 @@
 "077/080":[{"i":608871,"n":"Ruins of Alph","p":{"1st Edition":6}}],
 "078/080":[{"i":608872,"n":"Burned Tower","p":{"1st Edition":14}}],
 "079/080":[{"i":608873,"n":"Darkness Energy","p":{"1st Edition":2.09}},{"i":608954,"n":"Darkness Energy (Reverse Holofoil)","p":{"1st Edition Holofoil":1}}],
-"080/080":[{"i":608874,"n":"Metal Energy","p":{"1st Edition":3.99}},{"i":608955,"n":"Metal Energy (Reverse Holofoil)","p":{"1st Edition Holofoil":2}}],
+"080/080":[{"i":608874,"n":"Metal Energy","p":{"1st Edition":3.99}}],
 "081/080":[{"i":608875,"n":"Alph Lithograph","p":{"1st Edition Holofoil":60}}]
 }

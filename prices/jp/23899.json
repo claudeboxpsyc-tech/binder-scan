@@ -13,7 +13,7 @@
 "012/050":[{"i":601468,"n":"Wailord","p":{"Unlimited Holofoil":6,"1st Edition Holofoil":6.39}}],
 "013/050":[{"i":601441,"n":"Buizel","p":{"1st Edition":3}}],
 "014/050":[{"i":601482,"n":"Floatzel","p":{"1st Edition":1,"Unlimited":5.29}}],
-"015/050":[{"i":601454,"n":"Tympole","p":{"Unlimited":137.74,"1st Edition":0.35}}],
+"015/050":[{"i":601454,"n":"Tympole","p":{"Unlimited":154.27,"1st Edition":0.35}}],
 "016/050":[{"i":601484,"n":"Palpitoad","p":{"1st Edition":2,"Unlimited":1}}],
 "017/050":[{"i":601487,"n":"Seismitoad","p":{"Unlimited":0.99,"1st Edition":2}}],
 "018/050":[{"i":601436,"n":"Alomomola","p":{"1st Edition":1.2}}],
@@ -44,12 +44,11 @@
 "044/050":[{"i":601474,"n":"Ambipom","p":{"Unlimited":4,"1st Edition":1}}],
 "045/050":[{"i":601440,"n":"Bidoof","p":{"1st Edition":5}}],
 "046/050":[{"i":601476,"n":"Bibarel","p":{"1st Edition":1.25}}],
-"047/050":[{"i":601438,"n":"Audino","p":{"1st Edition":7.34}}],
 "048/050":[{"i":601479,"n":"Devolution Spray","p":{"1st Edition":2}}],
 "049/050":[{"i":601485,"n":"Rescue Scarf","p":{"1st Edition":2,"Unlimited":2.73}}],
 "050/050":[{"i":601477,"n":"Blend Energy GRPD","p":{"1st Edition":1.55}}],
 "051/050":[{"i":601470,"n":"Mew EX - 051/050","p":{"1st Edition Holofoil":225}}],
-"052/050":[{"i":601471,"n":"Terrakion EX - 052/050","p":{"1st Edition Holofoil":45}}],
+"052/050":[{"i":601471,"n":"Terrakion EX - 052/050","p":{"1st Edition Holofoil":47.5}}],
 "053/050":[{"i":601469,"n":"Giratina EX - 053/050","p":{"1st Edition Holofoil":150,"Unlimited Holofoil":86.19}}],
 "055/050":[{"i":601472,"n":"Rayquaza","p":{"1st Edition Holofoil":609.02}}]
 }

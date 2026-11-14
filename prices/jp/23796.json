@@ -2,7 +2,7 @@
 "001/021":[{"i":588643,"n":"Charmander","p":{"Normal":4.78}}],
 "002/021":[{"i":588626,"n":"Charmeleon","p":{"Normal":5}}],
 "003/021":[{"i":588627,"n":"Radiant Charizard","p":{"Holofoil":13.73}}],
-"004/021":[{"i":588623,"n":"Moltres","p":{"Normal":2.5}}],
+"004/021":[{"i":588623,"n":"Moltres","p":{"Normal":2.39}}],
 "005/021":[{"i":588624,"n":"Entei","p":{"Normal":1}}],
 "006/021":[{"i":588625,"n":"Charizard ex","p":{"Holofoil":6.39}}],
 "007/021":[{"i":588628,"n":"Bidoof","p":{"Normal":4.75}}],
@@ -17,6 +17,6 @@
 "017/021":[{"i":588638,"n":"Iono","p":{"Normal":2}}],
 "018/021":[{"i":588639,"n":"Professor's Research","p":{"Normal":1}}],
 "019/021":[{"i":588640,"n":"Boss's Orders","p":{"Normal":2}}],
-"020/021":[{"i":588641,"n":"Artazon","p":{"Normal":2}}],
+"020/021":[{"i":588641,"n":"Artazon","p":{"Normal":1.98}}],
 "021/021":[{"i":588642,"n":"Double Turbo Energy","p":{"Normal":0.99}}]
 }

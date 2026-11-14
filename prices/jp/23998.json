@@ -1,5 +1,5 @@
 {
-"001/096":[{"i":607045,"n":"Wurmple","p":{"Unlimited":8,"1st Edition":5}}],
+"001/096":[{"i":607045,"n":"Wurmple","p":{"1st Edition":5}}],
 "002/096":[{"i":607038,"n":"Silcoon","p":{"1st Edition":1,"Unlimited":1}}],
 "003/096":[{"i":607065,"n":"Beautifly","p":{"1st Edition":4}}],
 "004/096":[{"i":607020,"n":"Cascoon","p":{"1st Edition":1.25,"Unlimited":1}}],
@@ -65,7 +65,7 @@
 "070/096":[{"i":607021,"n":"Chansey","p":{"1st Edition":5.66,"Unlimited":4}}],
 "071/096":[{"i":607066,"n":"Blissey","p":{"1st Edition":4.38,"Unlimited":5}}],
 "072/096":[{"i":607040,"n":"Slakoth","p":{"1st Edition":1.5,"Unlimited":3}}],
-"073/096":[{"i":607110,"n":"Vigoroth","p":{"Unlimited":1.75,"1st Edition":1.23}}],
+"073/096":[{"i":607110,"n":"Vigoroth","p":{"Unlimited":1.75,"1st Edition":0.25}}],
 "074/096":[{"i":607060,"n":"Slaking","p":{"1st Edition Holofoil":6,"Unlimited Holofoil":13.5}}],
 "075/096":[{"i":607039,"n":"Skitty","p":{"Unlimited":5,"1st Edition":5.99}}],
 "076/096":[{"i":607052,"n":"Delcatty","p":{"Unlimited Holofoil":9.51,"1st Edition Holofoil":9.95}}],
