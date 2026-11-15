@@ -2,14 +2,13 @@
 "001/015":[{"i":608696,"n":"Roselia","p":{"Normal":3.39}}],
 "002/015":[{"i":608697,"n":"Roserade","p":{"Normal":1.28}}],
 "003/015":[{"i":608698,"n":"Carnivine","p":{"Normal":3}}],
-"005/015":[{"i":608700,"n":"Shaymin","p":{"Holofoil":20}}],
+"005/015":[{"i":608700,"n":"Shaymin","p":{"Holofoil":21}}],
 "006/015":[{"i":608701,"n":"Torkoal","p":{"Normal":4.95}}],
 "007/015":[{"i":608702,"n":"Eevee","p":{"Normal":10.5}}],
 "008/015":[{"i":608703,"n":"Good Rod","p":{"Normal":3}}],
-"009/015":[{"i":608704,"n":"Super Scoop Up","p":{"Normal":6.26}}],
 "010/015":[{"i":608705,"n":"Dual Ball","p":{"Normal":2}}],
 "012/015":[{"i":608707,"n":"Professor Elm's Training Method","p":{"Normal":2}}],
-"013/015":[{"i":608708,"n":"Emcee's Chatter","p":{"Normal":2.37}}],
+"013/015":[{"i":608708,"n":"Emcee's Chatter","p":{"Normal":2}}],
 "014/015":[{"i":608709,"n":"Cheerleader's Cheer","p":{"Normal":1.5}}],
 "015/015":[{"i":608710,"n":"Rainbow Energy","p":{"Normal":2.8}}]
 }

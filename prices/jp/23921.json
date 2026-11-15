@@ -1,6 +1,6 @@
 {
 "001/070":[{"i":603707,"n":"Tangela","p":{"Unlimited":2.85,"1st Edition":1.83}}],
-"002/070":[{"i":603708,"n":"Tangrowth","p":{"1st Edition":5.01,"Unlimited":3.75}}],
+"002/070":[{"i":603708,"n":"Tangrowth","p":{"1st Edition":5.01,"Unlimited":4}}],
 "003/070":[{"i":603714,"n":"Treecko","p":{"Unlimited":3.2,"1st Edition":2}}],
 "004/070":[{"i":603669,"n":"Grovyle","p":{"Unlimited":5,"1st Edition":1.76}}],
 "005/070":[{"i":603698,"n":"Sceptile - 005/070","p":{"Unlimited":5,"1st Edition":8}}],
@@ -42,7 +42,7 @@
 "042/070":[{"i":603671,"n":"Hippowdon","p":{"1st Edition Holofoil":1.47,"Unlimited Holofoil":1.7}}],
 "043/070":[{"i":603660,"n":"Drilbur","p":{"Unlimited":1.3,"1st Edition":1.2}}],
 "044/070":[{"i":603658,"n":"Diggersby","p":{"1st Edition":3,"Unlimited":0.25}}],
-"045/070":[{"i":603647,"n":"Aggron EX - 045/070","p":{"Unlimited Holofoil":10,"1st Edition Holofoil":8.38}}],
+"045/070":[{"i":603647,"n":"Aggron EX - 045/070","p":{"1st Edition Holofoil":8.38}}],
 "047/070":[{"i":603691,"n":"Probopass","p":{"Unlimited":1.25,"1st Edition":4}}],
 "048/070":[{"i":603663,"n":"Excadrill - 048/070","p":{"1st Edition":2.5,"Unlimited":5}}],
 "049/070":[{"i":603664,"n":"Excadrill - 049/070","p":{"1st Edition Holofoil":3.5,"Unlimited Holofoil":1}}],

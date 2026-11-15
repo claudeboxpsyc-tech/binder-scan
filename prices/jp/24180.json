@@ -36,7 +36,7 @@
 "036/141":[{"i":630788,"n":"Chuck's Tauros","p":{"Normal":38.75}}],
 "037/141":[{"i":630789,"n":"Chuck's Granbull","p":{"Normal":18.63}}],
 "038/141":[{"i":630790,"n":"Chuck's Donphan","p":{"Normal":19.18}}],
-"039/141":[{"i":630791,"n":"Pryce's Dewgong","p":{"Normal":28.29}}],
+"039/141":[{"i":630791,"n":"Pryce's Dewgong","p":{"Normal":29.87}}],
 "040/141":[{"i":630794,"n":"Pryce's Cloyster","p":{"Normal":14.17}}],
 "041/141":[{"i":630795,"n":"Pryce's Lapras","p":{"Normal":62.19}}],
 "043/141":[{"i":630797,"n":"Pryce's Sneasel","p":{"Holofoil":89.98}}],
@@ -82,7 +82,6 @@
 "089/141":[{"i":631877,"n":"Karen's Flareon","p":{"Normal":150}}],
 "090/141":[{"i":628138,"n":"Karen's Tyranitar","p":{"Holofoil":600}}],
 "092/141":[{"i":631879,"n":"Karen's Houndoom","p":{"Normal":195}}],
-"093/141":[{"i":631881,"n":"Rocket's Wobbuffet","p":{"Holofoil":127.84}}],
 "094/141":[{"i":631883,"n":"Rocket's Raikou","p":{"Holofoil":212.5}}],
 "095/141":[{"i":631897,"n":"Rocket's Entei","p":{"Holofoil":499.99}}],
 "096/141":[{"i":631898,"n":"Rocket's Suicune","p":{"Holofoil":349.99}}],
@@ -113,6 +112,7 @@
 "122/141":[{"i":615344,"n":"Will's Technical Machine 02","p":{"Normal":7.04}}],
 "123/141":[{"i":615345,"n":"Bruno's Technical Machine 01","p":{"Normal":14.07}}],
 "124/141":[{"i":615346,"n":"Bruno's Technical Machine 02","p":{"Normal":20}}],
+"125/141":[{"i":615347,"n":"Karen's Technical Machine 01","p":{"Normal":19.59}}],
 "126/141":[{"i":615348,"n":"Karen's Technical Machine 02","p":{"Normal":20.82}}],
 "127/141":[{"i":615349,"n":"Rocket's Technical Machine 01","p":{"Normal":22}}],
 "128/141":[{"i":615350,"n":"Lance's Technical Machine 01","p":{"Normal":35}}],
@@ -127,7 +127,7 @@
 "137/141":[{"i":615319,"n":"Energy Flow","p":{"Normal":4.47}}],
 "138/141":[{"i":615353,"n":"Energy Charge","p":{"Normal":2.35}}],
 "139/141":[{"i":615317,"n":"Energy Ark","p":{"Normal":2.55}}],
-"140/141":[{"i":615322,"n":"Energy Restore","p":{"Normal":2.67}}],
+"140/141":[{"i":615322,"n":"Energy Restore","p":{"Normal":2.55}}],
 "141/141":[{"i":615320,"n":"Master Ball","p":{"Normal":9.09}}],
 "142/141":[{"i":647554,"n":"Rocket's Tyranitar","p":{"Holofoil":299.99}}]
 }

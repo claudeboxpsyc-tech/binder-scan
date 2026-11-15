@@ -42,8 +42,10 @@
 "044/050":[{"i":574485,"n":"Taillow","p":{"Normal":1.99}}],
 "045/050":[{"i":574486,"n":"Swellow","p":{"Normal":0.35}}],
 "046/050":[{"i":574487,"n":"Komala","p":{"Normal":3.25}}],
-"047/050":[{"i":574488,"n":"Energy Loto","p":{"Normal":0.75}}],
-"050/050":[{"i":574491,"n":"Aether Paradise Conservation Area","p":{"Normal":2.69}}],
+"047/050":[{"i":574488,"n":"Energy Loto","p":{"Normal":1.25}}],
+"048/050":[{"i":574489,"n":"Field Blower - 048/050","p":{"Normal":2}}],
+"049/050":[{"i":574490,"n":"Hala - 049/050","p":{"Normal":14}}],
+"050/050":[{"i":574491,"n":"Aether Paradise Conservation Area","p":{"Normal":2.85}}],
 "055/050":[{"i":574496,"n":"Hala - 055/050","p":{"Holofoil":15}}],
 "059/050":[{"i":574500,"n":"Kommo-o GX - 059/050","p":{"Holofoil":39.99}}]
 }
