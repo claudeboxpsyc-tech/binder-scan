@@ -29,7 +29,7 @@
 "029/096":[{"i":603513,"n":"Plusle","p":{"1st Edition":3.27}}],
 "030/096":[{"i":603506,"n":"Minun","p":{"1st Edition":3.49}}],
 "031/096":[{"i":603531,"n":"Thundurus","p":{"1st Edition":2.6}}],
-"032/096":[{"i":603454,"n":"Dedenne","p":{"1st Edition":2.73,"Unlimited":2.17}}],
+"032/096":[{"i":603454,"n":"Dedenne","p":{"1st Edition":2.73,"Unlimited":2.2}}],
 "033/096":[{"i":603458,"n":"Drowzee","p":{"1st Edition":1,"Unlimited":0.5}}],
 "034/096":[{"i":603483,"n":"Hypno","p":{"1st Edition":1}}],
 "035/096":[{"i":603485,"n":"Jynx","p":{"1st Edition":2.32}}],
@@ -91,11 +91,11 @@
 "092/096":[{"i":603535,"n":"Training Center","p":{"1st Edition":1.98}}],
 "093/096":[{"i":603462,"n":"Fighting Stadium","p":{"Unlimited":0.5,"1st Edition":1.87}}],
 "094/096":[{"i":603507,"n":"Mountain Ring","p":{"1st Edition":1.59}}],
-"095/096":[{"i":603479,"n":"Herbal Energy","p":{"1st Edition":1.89,"Unlimited":0.6}}],
-"096/096":[{"i":603529,"n":"Strong Energy","p":{"1st Edition":8.5,"Unlimited":2.71}}],
+"095/096":[{"i":603479,"n":"Herbal Energy","p":{"1st Edition":1.89,"Unlimited":0.61}}],
+"096/096":[{"i":603529,"n":"Strong Energy","p":{"1st Edition":8.5,"Unlimited":2.99}}],
 "098/096":[{"i":603522,"n":"Seismitoad EX - 098/096","p":{"1st Edition Holofoil":40}}],
 "099/096":[{"i":603496,"n":"Lucario EX - 099/096","p":{"Unlimited Holofoil":99.99}}],
 "100/096":[{"i":603456,"n":"Dragonite EX - 100/096","p":{"1st Edition Holofoil":129.99}}],
-"102/096":[{"i":603488,"n":"Korrina - 102/096","p":{"1st Edition Holofoil":322.53}}],
+"102/096":[{"i":603488,"n":"Korrina - 102/096","p":{"1st Edition Holofoil":322.69}}],
 "105/096":[{"i":603494,"n":"Mega Lucario EX - 105/096","p":{"1st Edition Holofoil":89.99}}]
 }

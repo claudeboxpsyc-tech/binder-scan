@@ -1,7 +1,7 @@
 {
 "001/059":[{"i":604035,"n":"Pinsir","p":{"1st Edition":2.2}}],
 "002/059":[{"i":603999,"n":"Cacnea","p":{"1st Edition":3.65}}],
-"003/059":[{"i":604033,"n":"Pansage","p":{"1st Edition":0.88}}],
+"003/059":[{"i":604033,"n":"Pansage","p":{"1st Edition":0.75}}],
 "004/059":[{"i":604043,"n":"Simisage","p":{"1st Edition":25.5}}],
 "005/059":[{"i":604001,"n":"Chespin","p":{"1st Edition":5}}],
 "006/059":[{"i":604041,"n":"Scatterbug","p":{"1st Edition":1}}],
@@ -13,6 +13,7 @@
 "012/059":[{"i":604038,"n":"Remoraid","p":{"1st Edition":2}}],
 "013/059":[{"i":604031,"n":"Octillery","p":{"1st Edition Holofoil":5.99}}],
 "014/059":[{"i":604015,"n":"Glalie EX - 014/059","p":{"1st Edition Holofoil":2.49}}],
+"015/059":[{"i":604013,"n":"Mega Glalie EX - 015/059","p":{"1st Edition Holofoil":14.8}}],
 "016/059":[{"i":604032,"n":"Panpour","p":{"1st Edition":1.5}}],
 "017/059":[{"i":604042,"n":"Simipour","p":{"1st Edition":3.2}}],
 "018/059":[{"i":604052,"n":"Vanillite","p":{"1st Edition":2.23}}],

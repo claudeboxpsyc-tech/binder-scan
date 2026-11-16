@@ -7,7 +7,7 @@
 "006/106":[{"i":611861,"n":"Ariados","p":{"1st Edition Holofoil":8,"Unlimited Holofoil":15}}],
 "007/106":[{"i":611862,"n":"Bellossom","p":{"Unlimited Holofoil":9.99}}],
 "008/106":[{"i":611849,"n":"Sunkern","p":{"1st Edition":14.95,"Unlimited":2.75}}],
-"009/106":[{"i":611874,"n":"Sunflora","p":{"1st Edition Holofoil":79.99,"Unlimited Holofoil":22.5}}],
+"009/106":[{"i":611874,"n":"Sunflora","p":{"1st Edition Holofoil":79.99}}],
 "010/106":[{"i":611937,"n":"Yanma","p":{"1st Edition":1,"Unlimited":1.5}}],
 "011/106":[{"i":611840,"n":"Pineco","p":{"Unlimited":1.5,"1st Edition":6.5}}],
 "012/106":[{"i":611890,"n":"Shuckle","p":{"1st Edition":20}}],
@@ -68,11 +68,11 @@
 "097/106":[{"i":611916,"n":"Professor Elm's Training Method","p":{"1st Edition":6.25}}],
 "098/106":[{"i":611914,"n":"Mary's Request","p":{"1st Edition":10}}],
 "099/106":[{"i":611919,"n":"Solid Rage","p":{"1st Edition":6.99,"Unlimited":1.5}}],
-"100/106":[{"i":611918,"n":"Sitrus Berry","p":{"Unlimited":6,"1st Edition":9}}],
+"100/106":[{"i":611918,"n":"Sitrus Berry","p":{"Unlimited":7,"1st Edition":9}}],
 "101/106":[{"i":611911,"n":"Energy Root","p":{"Unlimited":3,"1st Edition":3.99}}],
 "102/106":[{"i":611909,"n":"Curse Powder","p":{"1st Edition":5.49}}],
 "103/106":[{"i":611912,"n":"Fluffy Berry","p":{"1st Edition":6.49,"Unlimited":1}}],
 "104/106":[{"i":611917,"n":"Protective Orb","p":{"1st Edition":5,"Unlimited":0.25}}],
 "105/106":[{"i":611910,"n":"Cyclone Energy","p":{"1st Edition":1.99,"Unlimited":0.25}}],
-"106/106":[{"i":611936,"n":"Warp Energy","p":{"1st Edition":1.99}}]
+"106/106":[{"i":611936,"n":"Warp Energy","p":{"Unlimited":6.99,"1st Edition":1.99}}]
 }

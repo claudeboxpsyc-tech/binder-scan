@@ -1,15 +1,15 @@
 {
-"001/032":[{"i":591909,"n":"Charmander","p":{"Holofoil":24.01}}],
+"001/032":[{"i":591909,"n":"Charmander","p":{"Holofoil":24.09}}],
 "002/032":[{"i":591910,"n":"Charmeleon","p":{"Holofoil":15.25}}],
 "003/032":[{"i":591911,"n":"Charizard","p":{"Holofoil":283.01}}],
 "004/032":[{"i":591912,"n":"Ponyta","p":{"Holofoil":4.14}}],
 "005/032":[{"i":591913,"n":"Rapidash","p":{"Holofoil":3.32}}],
-"006/032":[{"i":591914,"n":"Magmar","p":{"Holofoil":4.82}}],
+"006/032":[{"i":591914,"n":"Magmar","p":{"Holofoil":4.87}}],
 "007/032":[{"i":591915,"n":"Ho-oh ex","p":{"Holofoil":1.65}}],
 "008/032":[{"i":591916,"n":"Pikachu","p":{"Holofoil":70.18}}],
 "009/032":[{"i":591917,"n":"Raichu","p":{"Holofoil":7.24}}],
 "010/032":[{"i":591918,"n":"Voltorb","p":{"Holofoil":2.78}}],
-"011/032":[{"i":591919,"n":"Electrode","p":{"Holofoil":4.1}}],
+"011/032":[{"i":591919,"n":"Electrode","p":{"Holofoil":4.12}}],
 "012/032":[{"i":591920,"n":"Zapdos","p":{"Holofoil":5.87}}],
 "013/032":[{"i":591921,"n":"Clefairy","p":{"Holofoil":10.34}}],
 "014/032":[{"i":591922,"n":"Clefable","p":{"Holofoil":7.01}}],
@@ -31,6 +31,6 @@
 "030/032":[{"i":591938,"n":"Bill (CLL)","p":{"Holofoil":0.54}}],
 "031/032":[{"i":591939,"n":"Rocket's Admin. (CLL)","p":{"Holofoil":0.93}}],
 "032/032":[{"i":591940,"n":"Double Colorless Energy (CLL)","p":{"Holofoil":1.54}}],
-"033":[{"i":591941,"n":"Basic Fire Energy","p":{"Holofoil":2.98}}],
-"034":[{"i":591942,"n":"Basic Lightning Energy","p":{"Holofoil":1.66}}]
+"033":[{"i":591941,"n":"Basic Fire Energy","p":{"Holofoil":2.96}}],
+"034":[{"i":591942,"n":"Basic Lightning Energy","p":{"Holofoil":1.69}}]
 }
