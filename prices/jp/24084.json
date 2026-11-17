@@ -5,7 +5,7 @@
 "004/052":[{"i":611331,"n":"Mankey (Delta Species)","p":{"1st Edition":3,"Unlimited":6}}],
 "005/052":[{"i":611342,"n":"Primeape (Delta Species)","p":{"1st Edition":6.5}}],
 "006/052":[{"i":611323,"n":"Horsea (Delta Species)","p":{"1st Edition":4,"Unlimited":4.34}}],
-"007/052":[{"i":611347,"n":"Seadra (Delta Species)","p":{"1st Edition":5,"Unlimited":2.75}}],
+"007/052":[{"i":611347,"n":"Seadra (Delta Species)","p":{"1st Edition":5,"Unlimited":7}}],
 "009/052":[{"i":611300,"n":"Aerodactyl (Delta Species)","p":{"1st Edition":25.17,"Unlimited":9.99}}],
 "010/052":[{"i":611327,"n":"Latias (Delta Species)","p":{"1st Edition Holofoil":20,"Unlimited Holofoil":40}}],
 "011/052":[{"i":611326,"n":"Kingdra (Delta Species)","p":{"1st Edition Holofoil":30.99,"Unlimited Holofoil":48}}],
@@ -25,7 +25,7 @@
 "027/052":[{"i":611335,"n":"Omastar (Delta Species)","p":{"1st Edition Holofoil":14.98,"Unlimited Holofoil":9.99}}],
 "028/052":[{"i":611351,"n":"Vileplume (Delta Species)","p":{"1st Edition Holofoil":99.99}}],
 "029/052":[{"i":611312,"n":"Exeggcute (Delta Species)","p":{"Unlimited":1.16,"1st Edition":2.5}}],
-"030/052":[{"i":611313,"n":"Exeggutor (Delta Species)","p":{"1st Edition":3.83,"Unlimited":1.88}}],
+"030/052":[{"i":611313,"n":"Exeggutor (Delta Species)","p":{"1st Edition":3.83,"Unlimited":5}}],
 "031/052":[{"i":611304,"n":"Carvanha (Delta Species)","p":{"Unlimited":8,"1st Edition":4}}],
 "032/052":[{"i":611348,"n":"Sharpedo (Delta Species)","p":{"1st Edition":3,"Unlimited":4}}],
 "033/052":[{"i":611302,"n":"Armaldo (Delta Species)","p":{"1st Edition Holofoil":29.99}}],
@@ -42,6 +42,6 @@
 "047/052":[{"i":611311,"n":"Deoxys (Delta Species) - 047/052","p":{"1st Edition Holofoil":115,"Unlimited Holofoil":200}}],
 "049/052":[{"i":611320,"n":"Holon Fossil","p":{"Unlimited":0.49,"1st Edition":4}}],
 "050/052":[{"i":611319,"n":"Holon Adventurer","p":{"1st Edition":1.5}}],
-"051/052":[{"i":611321,"n":"Holon Lake","p":{"Unlimited":7.47,"1st Edition":2}}],
+"051/052":[{"i":611321,"n":"Holon Lake","p":{"Unlimited":9.95,"1st Edition":2}}],
 "052/052":[{"i":611307,"n":"Delta Rainbow Energy","p":{"1st Edition":10,"Unlimited":20}}]
 }
