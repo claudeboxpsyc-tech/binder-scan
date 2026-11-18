@@ -1,5 +1,6 @@
 {
 "001/ADV-P":[{"i":613612,"n":"Kyogre ex - 001/ADV-P","p":{"Normal":14.17}}],
+"002/ADV-P":[{"i":613606,"n":"Groudon ex - 002/ADV-P","p":{"Normal":18}}],
 "003/ADV-P":[{"i":613644,"n":"Treecko - 003/ADV-P","p":{"Normal":19.99}}],
 "004/ADV-P":[{"i":613641,"n":"Torchic - 004/ADV-P","p":{"Normal":22.99}}],
 "005/ADV-P":[{"i":613626,"n":"Mudkip - 005/ADV-P","p":{"Normal":30}}],
@@ -17,7 +18,6 @@
 "021/ADV-P":[{"i":613616,"n":"Ludicolo - 021/ADV-P","p":{"Normal":10}}],
 "024/ADV-P":[{"i":613632,"n":"Pikachu - 024/ADV-P","p":{"Holofoil":199.95}}],
 "026/ADV-P":[{"i":613604,"n":"Groudon - 026/ADV-P","p":{"Normal":34}}],
-"028/ADV-P":[{"i":613620,"n":"Meowth - 028/ADV-P","p":{"Normal":40}}],
 "029/ADV-P":[{"i":613621,"n":"Meowth - 029/ADV-P","p":{"Holofoil":99.99}}],
 "030/ADV-P":[{"i":613647,"n":"Whismur - 030/ADV-P","p":{"Normal":6.01}}],
 "031/ADV-P":[{"i":613648,"n":"Whismur - 031/ADV-P","p":{"Holofoil":49.99}}],

@@ -1,7 +1,7 @@
 {
 "001/019":[{"i":619254,"n":"Marnie's Purrloin","p":{"Normal":0.96}}],
 "002/019":[{"i":619255,"n":"Marnie's Liepard","p":{"Normal":1.07}}],
-"003/019":[{"i":619256,"n":"Marnie's Scraggy","p":{"Normal":1.16}}],
+"003/019":[{"i":619256,"n":"Marnie's Scraggy","p":{"Normal":0.92}}],
 "004/019":[{"i":619257,"n":"Marnie's Scrafty","p":{"Normal":1.02}}],
 "005/019":[{"i":619258,"n":"Marnie's Impidimp","p":{"Normal":0.62}}],
 "006/019":[{"i":619259,"n":"Marnie's Morgrem","p":{"Normal":0.95}}],
@@ -18,5 +18,5 @@
 "017/019":[{"i":619270,"n":"Professor's Research","p":{"Normal":0.5}}],
 "018/019":[{"i":619271,"n":"Boss's Orders","p":{"Normal":0.49}}],
 "019/019":[{"i":619272,"n":"Spikemuth Gym","p":{"Normal":1.6}}],
-"020/019":[{"i":619273,"n":"Marnie's Morpeko - 020/019","p":{"Holofoil":33.49}}]
+"020/019":[{"i":619273,"n":"Marnie's Morpeko - 020/019","p":{"Holofoil":33.32}}]
 }

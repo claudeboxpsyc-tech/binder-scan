@@ -9,7 +9,7 @@
 "008/049":[{"i":606475,"n":"Kyogre EX","p":{"Normal":5}}],
 "010/049":[{"i":606461,"n":"Seismitoad EX","p":{"Normal":1}}],
 "012/049":[{"i":606453,"n":"Raichu","p":{"Normal":2}}],
-"013/049":[{"i":606473,"n":"Manectric EX","p":{"Normal":5}}],
+"013/049":[{"i":606473,"n":"Manectric EX","p":{"Normal":2}}],
 "014/049":[{"i":606474,"n":"M Manectric ex","p":{"Normal":11}}],
 "015/049":[{"i":606462,"n":"Dedenne","p":{"Normal":7.5}}],
 "017/049":[{"i":606448,"n":"Yveltal EX","p":{"Normal":4.99}}],
@@ -26,6 +26,5 @@
 "034/049":[{"i":606436,"n":"Switch","p":{"Normal":0.25}}],
 "039/049":[{"i":606471,"n":"Manectric Spirit Link","p":{"Normal":5}}],
 "042/049":[{"i":606449,"n":"Tierno","p":{"Normal":0.63}}],
-"043/049":[{"i":606447,"n":"Professor Sycamore","p":{"Normal":2}}],
-"045/049":[{"i":606441,"n":"Pokemon Fan Club","p":{"Normal":1.49}}]
+"043/049":[{"i":606447,"n":"Professor Sycamore","p":{"Normal":2}}]
 }

@@ -2,7 +2,7 @@
 "001/100":[{"i":607373,"n":"Bulbasaur","p":{"1st Edition":19}}],
 "002/100":[{"i":607451,"n":"Ivysaur","p":{"1st Edition":5}}],
 "003/100":[{"i":607411,"n":"Venusaur","p":{"1st Edition Holofoil":44.99}}],
-"004/100":[{"i":607413,"n":"Butterfree FB","p":{"Unlimited":2.49,"1st Edition":3.33}}],
+"004/100":[{"i":607413,"n":"Butterfree FB","p":{"1st Edition":3.33}}],
 "005/100":[{"i":607388,"n":"Paras","p":{"Unlimited":1.5,"1st Edition":2.13}}],
 "006/100":[{"i":607425,"n":"Parasect","p":{"1st Edition":3,"Unlimited":2}}],
 "007/100":[{"i":607389,"n":"Pinsir","p":{"1st Edition":4}}],
@@ -23,7 +23,7 @@
 "023/100":[{"i":607392,"n":"Seel","p":{"Unlimited":1.99,"1st Edition":2}}],
 "024/100":[{"i":607416,"n":"Dewgong","p":{"1st Edition":2.08}}],
 "025/100":[{"i":607378,"n":"Goldeen","p":{"Unlimited":1,"1st Edition":2}}],
-"026/100":[{"i":607428,"n":"Seaking","p":{"Unlimited":1.25,"1st Edition":1.65}}],
+"026/100":[{"i":607428,"n":"Seaking","p":{"Unlimited":1,"1st Edition":1.65}}],
 "028/100":[{"i":607454,"n":"Marshtomp","p":{"1st Edition":7.99}}],
 "029/100":[{"i":607410,"n":"Swampert","p":{"1st Edition Holofoil":19.96}}],
 "030/100":[{"i":607396,"n":"Wailmer","p":{"1st Edition":2,"Unlimited":2}}],
@@ -46,7 +46,7 @@
 "048/100":[{"i":607375,"n":"Chingling","p":{"1st Edition":1.95}}],
 "049/100":[{"i":607374,"n":"Chimecho","p":{"Unlimited":5.5,"1st Edition":3}}],
 "050/100":[{"i":607401,"n":"Drifblim FB","p":{"1st Edition Holofoil":9.99}}],
-"051/100":[{"i":607418,"n":"Dusknoir FB","p":{"1st Edition":1.91,"Unlimited":2.99}}],
+"051/100":[{"i":607418,"n":"Dusknoir FB","p":{"1st Edition":1.91,"Unlimited":4.49}}],
 "052/100":[{"i":607391,"n":"Sandshrew","p":{"1st Edition":3.13}}],
 "053/100":[{"i":607427,"n":"Sandslash","p":{"1st Edition":3.45}}],
 "054/100":[{"i":607381,"n":"Mankey","p":{"1st Edition":3}}],
@@ -90,6 +90,5 @@
 "096/100":[{"i":607448,"n":"Darkness Energy","p":{"1st Edition":3.5}}],
 "097/100":[{"i":607470,"n":"Metal Energy","p":{"1st Edition":3}}],
 "098/100":[{"i":607440,"n":"Moltres","p":{"1st Edition Holofoil":100}}],
-"099/100":[{"i":607439,"n":"Articuno","p":{"1st Edition Holofoil":89.99}}],
-"100/100":[{"i":607441,"n":"Zapdos","p":{"1st Edition Holofoil":74.99}}]
+"099/100":[{"i":607439,"n":"Articuno","p":{"1st Edition Holofoil":89.99}}]
 }

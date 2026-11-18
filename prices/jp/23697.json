@@ -1,7 +1,7 @@
 {
 "001/066":[{"i":573056,"n":"Bellsprout","p":{"Normal":0.42}}],
 "002/066":[{"i":573057,"n":"Weepinbell","p":{"Normal":0.47}}],
-"003/066":[{"i":573058,"n":"Victreebel","p":{"Holofoil":2.59}}],
+"003/066":[{"i":573058,"n":"Victreebel","p":{"Holofoil":2.36}}],
 "004/066":[{"i":573059,"n":"Scyther","p":{"Normal":3.4}}],
 "005/066":[{"i":573060,"n":"Spinarak","p":{"Normal":0.61}}],
 "006/066":[{"i":573061,"n":"Ariados","p":{"Holofoil":1.49}}],
@@ -65,7 +65,7 @@
 "064/066":[{"i":573119,"n":"Bill's Maintenance - 064/066","p":{"Normal":1}}],
 "065/066":[{"i":573120,"n":"Copycat - 065/066","p":{"Normal":0.98}}],
 "066/066":[{"i":573121,"n":"Rainbow Energy - 066/066","p":{"Normal":1.5}}],
-"072/066":[{"i":573127,"n":"Salamence GX - 072/066","p":{"Holofoil":10.16}}],
+"072/066":[{"i":573127,"n":"Salamence GX - 072/066","p":{"Holofoil":10}}],
 "073/066":[{"i":573128,"n":"Underground Expedition - 073/066","p":{"Holofoil":149.26}}],
 "074/066":[{"i":573129,"n":"TV Reporter - 074/066","p":{"Holofoil":90}}],
 "075/066":[{"i":573130,"n":"Apricorn Maker - 075/066","p":{"Holofoil":33}}],

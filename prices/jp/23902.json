@@ -35,10 +35,10 @@
 "036/059":[{"i":601661,"n":"Conkeldurr","p":{"1st Edition":3.13,"Unlimited":3}}],
 "037/059":[{"i":601615,"n":"Dwebble","p":{"Unlimited":2.25,"1st Edition":1.39}}],
 "038/059":[{"i":601642,"n":"Crustle","p":{"Unlimited Holofoil":6.83,"1st Edition Holofoil":6.51}}],
-"039/059":[{"i":601648,"n":"Scizor","p":{"Unlimited Holofoil":2,"1st Edition Holofoil":4.69}}],
+"039/059":[{"i":601648,"n":"Scizor","p":{"Unlimited Holofoil":2,"1st Edition Holofoil":4.5}}],
 "040/059":[{"i":601629,"n":"Skarmory","p":{"1st Edition":7.99,"Unlimited":2.5}}],
 "041/059":[{"i":601651,"n":"White Kyurem EX - 041/059","p":{"1st Edition Holofoil":5.67}}],
-"042/059":[{"i":601644,"n":"Ditto","p":{"Unlimited Holofoil":24.99}}],
+"042/059":[{"i":601644,"n":"Ditto","p":{"1st Edition Holofoil":49.95,"Unlimited Holofoil":24.99}}],
 "043/059":[{"i":601613,"n":"Dunsparce","p":{"Unlimited":1,"1st Edition":3.99}}],
 "044/059":[{"i":601637,"n":"Whismur","p":{"Unlimited":1,"1st Edition":1.85}}],
 "045/059":[{"i":601620,"n":"Loudred","p":{"Unlimited":2.99,"1st Edition":3}}],
@@ -56,5 +56,5 @@
 "058/059":[{"i":601641,"n":"Computer Search","p":{"Unlimited Holofoil":14,"1st Edition Holofoil":40}}],
 "059/059":[{"i":601643,"n":"Crystal Edge","p":{"Unlimited Holofoil":4,"1st Edition Holofoil":4.99}}],
 "060/059":[{"i":601653,"n":"Celebi EX - 060/059","p":{"1st Edition Holofoil":62}}],
-"063/059":[{"i":601652,"n":"Bianca","p":{"1st Edition Holofoil":175}}]
+"063/059":[{"i":601652,"n":"Bianca","p":{"1st Edition Holofoil":250}}]
 }

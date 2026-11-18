@@ -1,5 +1,5 @@
 {
-"001/070":[{"i":601859,"n":"Turtwig","p":{"1st Edition":4.08,"Unlimited":0.75}}],
+"001/070":[{"i":601859,"n":"Turtwig","p":{"1st Edition":4.08,"Unlimited":0.87}}],
 "002/070":[{"i":601894,"n":"Grotle","p":{"1st Edition":1.86,"Unlimited":1.99}}],
 "003/070":[{"i":601905,"n":"Torterra (Team Plasma)","p":{"Unlimited":1,"1st Edition":10.95}}],
 "004/070":[{"i":601829,"n":"Cherubi","p":{"1st Edition":1.5,"Unlimited":1.25}}],
@@ -25,7 +25,7 @@
 "024/070":[{"i":601898,"n":"Magneton","p":{"Unlimited":2,"1st Edition":1}}],
 "025/070":[{"i":601871,"n":"Magnezone (Team Plasma)","p":{"1st Edition Holofoil":10.85,"Unlimited Holofoil":5}}],
 "026/070":[{"i":601853,"n":"Rotom (Team Plasma)","p":{"Unlimited":1.19,"1st Edition":6}}],
-"027/070":[{"i":601861,"n":"Zubat","p":{"1st Edition":1.98,"Unlimited":2.95}}],
+"027/070":[{"i":601861,"n":"Zubat","p":{"1st Edition":2.5,"Unlimited":2.95}}],
 "028/070":[{"i":601893,"n":"Golbat","p":{"1st Edition":1.3,"Unlimited":1}}],
 "029/070":[{"i":601864,"n":"Crobat (Team Plasma)","p":{"1st Edition Holofoil":6.99,"Unlimited Holofoil":7.98}}],
 "030/070":[{"i":601841,"n":"Koffing","p":{"1st Edition":18.5}}],
@@ -45,7 +45,7 @@
 "044/070":[{"i":601850,"n":"Purrloin","p":{"1st Edition":1.95,"Unlimited":3}}],
 "045/070":[{"i":601842,"n":"Liepard (Team Plasma)","p":{"Unlimited":2.37,"1st Edition":1.5}}],
 "046/070":[{"i":601855,"n":"Scraggy","p":{"Unlimited":2.48,"1st Edition":3}}],
-"047/070":[{"i":601854,"n":"Scrafty (Team Plasma)","p":{"Unlimited":2,"1st Edition":2.5}}],
+"047/070":[{"i":601854,"n":"Scrafty (Team Plasma)","p":{"Unlimited":2,"1st Edition":1.1}}],
 "048/070":[{"i":601836,"n":"Durant (Team Plasma)","p":{"1st Edition":4,"Unlimited":1.68}}],
 "049/070":[{"i":601863,"n":"Cobalion EX - 049/070","p":{"1st Edition Holofoil":5.5}}],
 "050/070":[{"i":601835,"n":"Druddigon (Team Plasma)","p":{"1st Edition":6.67}}],
@@ -64,7 +64,7 @@
 "063/070":[{"i":601896,"n":"Hypnotoxic Laser","p":{"1st Edition":2.98,"Unlimited":1}}],
 "064/070":[{"i":601890,"n":"Colress - 064/070","p":{"Unlimited":3.79,"1st Edition":4}}],
 "065/070":[{"i":601904,"n":"Team Plasma Grunt","p":{"Unlimited":2,"1st Edition":5}}],
-"066/070":[{"i":601901,"n":"Plasma Frigate","p":{"1st Edition":5.22,"Unlimited":1.65}}],
+"066/070":[{"i":601901,"n":"Plasma Frigate","p":{"1st Edition":5.22,"Unlimited":2}}],
 "067/070":[{"i":601900,"n":"Plasma Energy","p":{"1st Edition":5,"Unlimited":1.3}}],
 "068/070":[{"i":601873,"n":"Scramble Switch","p":{"1st Edition Holofoil":5.01,"Unlimited Holofoil":5.99}}],
 "069/070":[{"i":601865,"n":"Dowsing Machine","p":{"1st Edition Holofoil":13}}],
@@ -73,6 +73,5 @@
 "072/070":[{"i":601878,"n":"Articuno EX (Team Plasma) - 072/070","p":{"1st Edition Holofoil":1625,"Unlimited Holofoil":250}}],
 "073/070":[{"i":601879,"n":"Cobalion EX - 073/070","p":{"1st Edition Holofoil":50}}],
 "075/070":[{"i":601880,"n":"Colress - 075/070","p":{"1st Edition Holofoil":110,"Unlimited Holofoil":45.99}}],
-"078/070":[{"i":601884,"n":"Blastoise","p":{"Unlimited Holofoil":300}}],
-"079/070":[{"i":601886,"n":"Random Receiver","p":{"Unlimited Holofoil":59.99}}]
+"078/070":[{"i":601884,"n":"Blastoise","p":{"Unlimited Holofoil":300}}]
 }

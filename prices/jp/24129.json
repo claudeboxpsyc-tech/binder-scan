@@ -1,6 +1,6 @@
 {
 "001/055":[{"i":613042,"n":"Koffing","p":{"1st Edition":7.33,"Unlimited":9.33}}],
-"002/055":[{"i":613078,"n":"Weezing","p":{"Unlimited":1.75,"1st Edition":10}}],
+"002/055":[{"i":613078,"n":"Weezing","p":{"Unlimited":1.75,"1st Edition":2.5}}],
 "004/055":[{"i":613051,"n":"Wurmple","p":{"Unlimited":6.5,"1st Edition":9}}],
 "005/055":[{"i":613092,"n":"Silcoon","p":{"1st Edition":9,"Unlimited":2.49}}],
 "006/055":[{"i":613054,"n":"Beautifly","p":{"1st Edition Holofoil":8.99,"Unlimited Holofoil":9}}],
@@ -29,7 +29,7 @@
 "030/055":[{"i":613081,"n":"Hitmonchan ex","p":{"Unlimited Holofoil":22.48,"1st Edition Holofoil":34.69}}],
 "031/055":[{"i":613045,"n":"Phanpy","p":{"1st Edition":5,"Unlimited":3}}],
 "032/055":[{"i":613068,"n":"Donphan","p":{"Unlimited":8.99,"1st Edition":8.99}}],
-"033/055":[{"i":613043,"n":"Makuhita","p":{"1st Edition":4.13,"Unlimited":1.5}}],
+"033/055":[{"i":613043,"n":"Makuhita","p":{"1st Edition":4,"Unlimited":1.5}}],
 "034/055":[{"i":613060,"n":"Hariyama","p":{"Unlimited Holofoil":6.25,"1st Edition Holofoil":11.99}}],
 "035/055":[{"i":613072,"n":"Nosepass","p":{"1st Edition":7,"Unlimited":3}}],
 "036/055":[{"i":613079,"n":"Chansey ex","p":{"Unlimited Holofoil":29.4,"1st Edition Holofoil":26.25}}],
