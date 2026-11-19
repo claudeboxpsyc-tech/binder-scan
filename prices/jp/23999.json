@@ -9,7 +9,7 @@
 "008/090":[{"i":607191,"n":"Leafeon","p":{"1st Edition":9}}],
 "009/090":[{"i":607147,"n":"Growlithe","p":{"1st Edition":4.46,"Unlimited":6.33}}],
 "010/090":[{"i":607168,"n":"Arcanine","p":{"1st Edition Holofoil":54.95}}],
-"011/090":[{"i":607184,"n":"Flareon","p":{"1st Edition":5}}],
+"011/090":[{"i":607184,"n":"Flareon","p":{"1st Edition":5,"Unlimited":10}}],
 "012/090":[{"i":607164,"n":"Staryu","p":{"Unlimited":1.1,"1st Edition":3.25}}],
 "013/090":[{"i":607216,"n":"Starmie","p":{"1st Edition":1.98,"Unlimited":4.5}}],
 "014/090":[{"i":607196,"n":"Vaporeon","p":{"1st Edition":14.99}}],
@@ -26,7 +26,7 @@
 "025/090":[{"i":607192,"n":"Mamoswine GL","p":{"Unlimited":3.95,"1st Edition":2}}],
 "026/090":[{"i":607172,"n":"Froslass GL","p":{"1st Edition Holofoil":9.17}}],
 "027/090":[{"i":607195,"n":"Raichu GL","p":{"1st Edition":5}}],
-"028/090":[{"i":607190,"n":"Jolteon","p":{"1st Edition":16.38}}],
+"028/090":[{"i":607190,"n":"Jolteon","p":{"1st Edition":16.38,"Unlimited":8.99}}],
 "029/090":[{"i":607174,"n":"Luxray GL","p":{"1st Edition Holofoil":13.99}}],
 "031/090":[{"i":607230,"n":"Heat Rotom","p":{"1st Edition Holofoil":19.43}}],
 "033/090":[{"i":607232,"n":"Wash Rotom","p":{"1st Edition Holofoil":18.8}}],
@@ -40,7 +40,7 @@
 "041/090":[{"i":607181,"n":"Alakazam 4","p":{"1st Edition":12.94}}],
 "042/090":[{"i":607198,"n":"Alakazam 4 LV.X","p":{"1st Edition Holofoil":42.99}}],
 "043/090":[{"i":607187,"n":"Gengar GL","p":{"1st Edition":99.99}}],
-"044/090":[{"i":607151,"n":"Koffing","p":{"1st Edition":4.76,"Unlimited":3}}],
+"044/090":[{"i":607151,"n":"Koffing","p":{"1st Edition":4.86}}],
 "045/090":[{"i":607226,"n":"Weezing","p":{"Unlimited":3,"1st Edition":3}}],
 "046/090":[{"i":607175,"n":"Mismagius GL","p":{"1st Edition Holofoil":10.35}}],
 "047/090":[{"i":607193,"n":"Nidoking","p":{"1st Edition":3.5}}],
@@ -48,7 +48,7 @@
 "049/090":[{"i":607206,"n":"Aerodactyl GL","p":{"1st Edition":4.5,"Unlimited":6.34}}],
 "050/090":[{"i":607165,"n":"Trapinch","p":{"1st Edition":2,"Unlimited":1.35}}],
 "051/090":[{"i":607176,"n":"Rampardos GL","p":{"Unlimited Holofoil":6,"1st Edition Holofoil":25.58}}],
-"052/090":[{"i":607186,"n":"Gastrodon - 052/090","p":{"1st Edition":3.5,"Unlimited":2.87}}],
+"052/090":[{"i":607186,"n":"Gastrodon - 052/090","p":{"1st Edition":3.5,"Unlimited":3.99}}],
 "053/090":[{"i":607173,"n":"Lucario GL","p":{"1st Edition Holofoil":9.46}}],
 "054/090":[{"i":607148,"n":"Hippopotas","p":{"Unlimited":10,"1st Edition":3.31}}],
 "055/090":[{"i":607189,"n":"Hippowdon","p":{"Unlimited":2,"1st Edition":5}}],
@@ -81,6 +81,5 @@
 "084/090":[{"i":607223,"n":"Upper Energy","p":{"Unlimited":1.99,"1st Edition":3}}],
 "085/090":[{"i":607215,"n":"SP Energy","p":{"1st Edition":2.5,"Unlimited":0.49}}],
 "086/090":[{"i":607208,"n":"Darkness Energy","p":{"Unlimited":3,"1st Edition":2.99}}],
-"087/090":[{"i":648614,"n":"Metal Energy","p":{"Unlimited":4,"1st Edition":3.98}}],
-"090/090":[{"i":607203,"n":"Flying Pikachu","p":{"1st Edition Holofoil":70}}]
+"087/090":[{"i":648614,"n":"Metal Energy","p":{"Unlimited":4,"1st Edition":3.98}}]
 }

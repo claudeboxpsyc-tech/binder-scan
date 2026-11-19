@@ -1,5 +1,5 @@
 {
-"001/055":[{"i":613042,"n":"Koffing","p":{"1st Edition":7.33,"Unlimited":9.33}}],
+"001/055":[{"i":613042,"n":"Koffing","p":{"Unlimited":9.33}}],
 "002/055":[{"i":613078,"n":"Weezing","p":{"Unlimited":1.75,"1st Edition":2.5}}],
 "004/055":[{"i":613051,"n":"Wurmple","p":{"Unlimited":6.5,"1st Edition":9}}],
 "005/055":[{"i":613092,"n":"Silcoon","p":{"1st Edition":9,"Unlimited":2.49}}],
@@ -37,7 +37,7 @@
 "038/055":[{"i":613071,"n":"Linoone","p":{"Unlimited":3,"1st Edition":6.5}}],
 "039/055":[{"i":613049,"n":"Taillow","p":{"1st Edition":1.15,"Unlimited":4.97}}],
 "040/055":[{"i":613076,"n":"Swellow","p":{"1st Edition":6.82,"Unlimited":3}}],
-"041/055":[{"i":613094,"n":"Slakoth","p":{"1st Edition":8.5,"Unlimited":4.99}}],
+"041/055":[{"i":613094,"n":"Slakoth","p":{"1st Edition":8.5,"Unlimited":4.5}}],
 "042/055":[{"i":613077,"n":"Vigoroth","p":{"1st Edition":6.99,"Unlimited":7.4}}],
 "043/055":[{"i":613064,"n":"Slaking","p":{"1st Edition Holofoil":4.5,"Unlimited Holofoil":6.99}}],
 "044/055":[{"i":613093,"n":"Skitty","p":{"1st Edition":12,"Unlimited":5.33}}],

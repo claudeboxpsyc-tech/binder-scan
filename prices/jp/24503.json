@@ -1,5 +1,5 @@
 {
-"002/019":[{"i":658362,"n":"Sky-Splitting Deoxys - 002/019","p":{"Unlimited":40}}],
+"002/019":[{"i":658362,"n":"Sky-Splitting Deoxys - 002/019","p":{"Unlimited":44.39}}],
 "003/019":[{"i":658363,"n":"Sky's Rayquaza","p":{"Unlimited":100}}],
 "004/019":[{"i":658364,"n":"LaRousse's Plusle","p":{"Unlimited":23.33}}],
 "005/019":[{"i":658365,"n":"LaRousse's Minun","p":{"Unlimited":29.99}}],
@@ -9,9 +9,11 @@
 "009/019":[{"i":658369,"n":"Ash's Torkoal","p":{"Unlimited":39}}],
 "011/019":[{"i":658371,"n":"Rebecca's Metagross","p":{"Unlimited":69.99}}],
 "012/019":[{"i":658372,"n":"Rafe's Blaziken","p":{"Unlimited":49}}],
-"013/019":[{"i":658373,"n":"Energy Switch","p":{"Unlimited":7.5}}],
+"013/019":[{"i":658373,"n":"Energy Switch","p":{"Unlimited":5}}],
 "014/019":[{"i":658374,"n":"Energy Search","p":{"Unlimited":10}}],
+"015/019":[{"i":658375,"n":"Potion","p":{"Unlimited":10}}],
+"016/019":[{"i":658376,"n":"Switch","p":{"Unlimited":4}}],
 "017/019":[{"i":658377,"n":"Tory's Feelings","p":{"Unlimited":20}}],
-"018/019":[{"i":658378,"n":"Strength Charm","p":{"Unlimited":20.49}}],
+"018/019":[{"i":658378,"n":"Strength Charm","p":{"Unlimited":10}}],
 "019/019":[{"i":658379,"n":"Magnetic Storm","p":{"Unlimited":4}}]
 }

@@ -22,7 +22,7 @@
 "021/070":[{"i":608023,"n":"Lapras","p":{"1st Edition":3}},{"i":608094,"n":"Lapras (Mirror Holofoil)","p":{"1st Edition Holofoil":25}}],
 "022/070":[{"i":608024,"n":"Totodile","p":{"1st Edition":3.09}}],
 "023/070":[{"i":608025,"n":"Croconaw","p":{"1st Edition":3}}],
-"024/070":[{"i":608026,"n":"Feraligatr - 024/070","p":{"1st Edition":3.67}}],
+"024/070":[{"i":608026,"n":"Feraligatr - 024/070","p":{"1st Edition":4}}],
 "025/070":[{"i":608027,"n":"Feraligatr - 025/070","p":{"1st Edition Holofoil":19.99}}],
 "026/070":[{"i":608028,"n":"Qwilfish","p":{"1st Edition":2}}],
 "027/070":[{"i":608029,"n":"Corsola","p":{"1st Edition":2.5}},{"i":608100,"n":"Corsola (Mirror Holofoil)","p":{"1st Edition Holofoil":17}}],
@@ -46,7 +46,7 @@
 "045/070":[{"i":608048,"n":"Donphan - 045/070","p":{"1st Edition":2.08}},{"i":608139,"n":"Donphan (Mirror Holofoil) - 045/070","p":{"1st Edition Holofoil":10}}],
 "047/070":[{"i":608049,"n":"Spearow","p":{"1st Edition":1.35}},{"i":608141,"n":"Spearow (Mirror Holofoil)","p":{"1st Edition Holofoil":8}}],
 "048/070":[{"i":608050,"n":"Fearow","p":{"1st Edition":3.99}},{"i":608143,"n":"Fearow (Mirror Holofoil)","p":{"1st Edition Holofoil":5}}],
-"049/070":[{"i":608051,"n":"Cleffa","p":{"1st Edition Holofoil":29.99}},{"i":608146,"n":"Cleffa (Mirror Holofoil)","p":{"1st Edition Holofoil":19}}],
+"049/070":[{"i":608051,"n":"Cleffa","p":{"1st Edition Holofoil":29.9}},{"i":608146,"n":"Cleffa (Mirror Holofoil)","p":{"1st Edition Holofoil":19}}],
 "050/070":[{"i":608052,"n":"Clefairy","p":{"1st Edition":3.5}}],
 "051/070":[{"i":608053,"n":"Clefable","p":{"1st Edition Holofoil":19.95}}],
 "052/070":[{"i":608054,"n":"Chansey","p":{"1st Edition":9.94}},{"i":608153,"n":"Chansey (Mirror Holofoil)","p":{"1st Edition Holofoil":4}}],
@@ -64,7 +64,7 @@
 "064/070":[{"i":608066,"n":"Switch","p":{"1st Edition":1.75}},{"i":608183,"n":"Switch (Mirror Holofoil)","p":{"1st Edition Holofoil":9.99}}],
 "065/070":[{"i":608067,"n":"Pokemon Reversal","p":{"1st Edition":2}}],
 "066/070":[{"i":608068,"n":"Poke Ball","p":{"1st Edition":1.5}}],
-"067/070":[{"i":608069,"n":"Professor Elm's Training Method","p":{"1st Edition":3}},{"i":608187,"n":"Professor Elm's Training Method (Mirror Holofoil)","p":{"1st Edition Holofoil":12.49}}],
+"067/070":[{"i":608069,"n":"Professor Elm's Training Method","p":{"1st Edition":3.25}},{"i":608187,"n":"Professor Elm's Training Method (Mirror Holofoil)","p":{"1st Edition Holofoil":9.99}}],
 "068/070":[{"i":608070,"n":"Professor Oak's New Theory","p":{"1st Edition":1}},{"i":608189,"n":"Professor Oak's New Theory (Mirror Holofoil)","p":{"1st Edition Holofoil":2.99}}],
-"069/070":[{"i":608071,"n":"Bill","p":{"1st Edition":2}}]
+"069/070":[{"i":608071,"n":"Bill","p":{"1st Edition":1.99}}]
 }

@@ -1,8 +1,7 @@
 {
 "001/082":[{"i":612344,"n":"Zubat","p":{"Unlimited":8,"1st Edition":1.25}}],
 "002/082":[{"i":612283,"n":"Golbat","p":{"1st Edition":3.95,"Unlimited":5}}],
-"003/082":[{"i":612289,"n":"Koffing","p":{"1st Edition":9.95,"Unlimited":3}}],
-"004/082":[{"i":612339,"n":"Weezing","p":{"1st Edition":3.5,"Unlimited":1.25}}],
+"004/082":[{"i":612339,"n":"Weezing","p":{"Unlimited":1.25}}],
 "006/082":[{"i":612342,"n":"Wurmple","p":{"Unlimited":2.5,"1st Edition":4.16}}],
 "007/082":[{"i":612324,"n":"Silcoon","p":{"Unlimited":1.75,"1st Edition":2}}],
 "008/082":[{"i":612267,"n":"Beautifly","p":{"1st Edition Holofoil":7.99}}],
@@ -29,7 +28,6 @@
 "031/082":[{"i":612274,"n":"Corphish","p":{"Unlimited":4,"1st Edition":2}}],
 "032/082":[{"i":612282,"n":"Electrike","p":{"1st Edition":4.95,"Unlimited":2.25}}],
 "033/082":[{"i":612299,"n":"Manectric ex","p":{"1st Edition Holofoil":36.99,"Unlimited Holofoil":44.08}}],
-"034/082":[{"i":612312,"n":"Plusle","p":{"1st Edition":10}}],
 "036/082":[{"i":612306,"n":"Natu","p":{"Unlimited":5.39,"1st Edition":3.75}}],
 "038/082":[{"i":612321,"n":"Shedinja","p":{"Unlimited Holofoil":7,"1st Edition Holofoil":6.99}}],
 "039/082":[{"i":612329,"n":"Solrock","p":{"Unlimited":3.85,"1st Edition":1}}],
@@ -46,7 +44,7 @@
 "051/082":[{"i":612295,"n":"Lunatone","p":{"Unlimited":2.5,"1st Edition":3}}],
 "052/082":[{"i":612340,"n":"Whiscash","p":{"1st Edition Holofoil":19}}],
 "053/082":[{"i":612265,"n":"Baltoy","p":{"1st Edition":2,"Unlimited":2.28}}],
-"054/082":[{"i":612273,"n":"Claydol","p":{"Unlimited Holofoil":8.99,"1st Edition Holofoil":8}}],
+"054/082":[{"i":612273,"n":"Claydol","p":{"Unlimited Holofoil":8.99}}],
 "055/082":[{"i":612336,"n":"Taillow","p":{"Unlimited":3.4,"1st Edition":1.75}}],
 "056/082":[{"i":612335,"n":"Swellow","p":{"1st Edition":2,"Unlimited":10.5}}],
 "057/082":[{"i":612327,"n":"Slakoth","p":{"Unlimited":1,"1st Edition":2.49}}],
@@ -68,6 +66,6 @@
 "078/082":[{"i":612330,"n":"Space Center","p":{"1st Edition":1.99,"Unlimited":4}}],
 "079/082":[{"i":612303,"n":"Meteor Falls","p":{"1st Edition":3,"Unlimited":1.38}}],
 "080/082":[{"i":612318,"n":"Scramble Energy","p":{"Unlimited":2,"1st Edition":5.49}}],
-"081/082":[{"i":612287,"n":"Heal Energy","p":{"1st Edition":2,"Unlimited":5}}],
+"081/082":[{"i":612287,"n":"Heal Energy","p":{"1st Edition":2.5,"Unlimited":5}}],
 "082/082":[{"i":612269,"n":"Boost Energy","p":{"1st Edition":13,"Unlimited":4}}]
 }

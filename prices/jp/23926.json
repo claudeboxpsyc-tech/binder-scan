@@ -1,7 +1,7 @@
 {
 "001/059":[{"i":604104,"n":"Paras","p":{"1st Edition":0.97}}],
 "002/059":[{"i":604105,"n":"Parasect","p":{"1st Edition":1.92}}],
-"003/059":[{"i":604069,"n":"Chespin","p":{"1st Edition":3.25}}],
+"003/059":[{"i":604069,"n":"Chespin","p":{"1st Edition":3.33}}],
 "004/059":[{"i":604109,"n":"Quilladin","p":{"1st Edition":1.5}}],
 "005/059":[{"i":604067,"n":"Chesnaught","p":{"1st Edition Holofoil":4}}],
 "006/059":[{"i":604068,"n":"Chesnaught BREAK","p":{"1st Edition Holofoil":3.82}}],
@@ -10,7 +10,7 @@
 "009/059":[{"i":604083,"n":"Houndoom EX - 009/059","p":{"Unlimited Holofoil":496.49,"1st Edition Holofoil":5.49}}],
 "010/059":[{"i":604081,"n":"Mega Houndoom EX - 010/059","p":{"1st Edition Holofoil":50}}],
 "011/059":[{"i":604103,"n":"Pansear","p":{"1st Edition":0.99}}],
-"012/059":[{"i":604114,"n":"Simisear","p":{"1st Edition":1.75}}],
+"012/059":[{"i":604114,"n":"Simisear","p":{"1st Edition":1.87}}],
 "013/059":[{"i":604079,"n":"Goldeen","p":{"1st Edition":1.33}}],
 "014/059":[{"i":604113,"n":"Seaking","p":{"1st Edition":1}}],
 "015/059":[{"i":604122,"n":"Staryu","p":{"1st Edition":2}}],
@@ -25,7 +25,7 @@
 "024/059":[{"i":604089,"n":"Magneton","p":{"1st Edition":2.6}}],
 "025/059":[{"i":604090,"n":"Magnezone","p":{"1st Edition Holofoil":2.5}}],
 "026/059":[{"i":604110,"n":"Raikou","p":{"1st Edition Holofoil":7.04}}],
-"027/059":[{"i":604096,"n":"Mewtwo EX - 027/059","p":{"1st Edition Holofoil":9.03}}],
+"027/059":[{"i":604096,"n":"Mewtwo EX - 027/059","p":{"1st Edition Holofoil":9.03,"Unlimited Holofoil":94.49}}],
 "028/059":[{"i":604094,"n":"M Mewtwo ex - 028/059","p":{"1st Edition Holofoil":72.73}}],
 "029/059":[{"i":604100,"n":"Misdreavus","p":{"Unlimited":5,"1st Edition":1.5}}],
 "030/059":[{"i":604101,"n":"Mismagius","p":{"1st Edition Holofoil":7}}],
@@ -57,5 +57,6 @@
 "057/059":[{"i":604099,"n":"Mewtwo Spirit Link","p":{"1st Edition":8.25}}],
 "058/059":[{"i":604076,"n":"Giovanni's Scheme - 058/059","p":{"1st Edition":2.95}}],
 "059/059":[{"i":604066,"n":"Burning Energy","p":{"Unlimited":2.2,"1st Edition":5.05}}],
-"063/059":[{"i":604095,"n":"Mega Mewtwo EX - 063/059","p":{"Unlimited Holofoil":18947.49}}]
+"063/059":[{"i":604095,"n":"Mega Mewtwo EX - 063/059","p":{"Unlimited Holofoil":18947.49}}],
+"065/059":[{"i":604098,"n":"Mewtwo EX - 065/059","p":{"1st Edition Holofoil":400}}]
 }
