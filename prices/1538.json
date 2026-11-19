@@ -1,5 +1,5 @@
 {
-"1/30":[{"i":98671,"n":"Lillipup (#1)","p":{"Normal":0.7}},{"i":98703,"n":"Purrloin (#1)","p":{"Normal":0.5}}],
+"1/30":[{"i":98671,"n":"Lillipup (#1)","p":{"Normal":0.7}},{"i":98703,"n":"Purrloin (#1)","p":{"Normal":0.54}}],
 "10/30":[{"i":98679,"n":"Fighting Energy (#10)","p":{"Normal":0.75}},{"i":98724,"n":"Darkness Energy (#10)","p":{"Normal":0.87}}],
 "11/30":[{"i":98685,"n":"Timburr (#11)","p":{"Normal":0.16}},{"i":98694,"n":"PlusPower (Zoroark)","p":{"Normal":0.1}}],
 "12/30":[{"i":98687,"n":"Audino (#12)","p":{"Normal":0.42}},{"i":98708,"n":"Patrat (#12)","p":{"Normal":0.14}}],
@@ -23,7 +23,7 @@
 "29/30":[{"i":98686,"n":"Timburr (#29)","p":{"Normal":0.87}},{"i":98709,"n":"Patrat (#29)","p":{"Normal":0.68}}],
 "3/30":[{"i":98673,"n":"Fighting Energy (#3)","p":{"Normal":0.6}},{"i":98718,"n":"Darkness Energy (#3)","p":{"Normal":2.19}}],
 "30/30":[{"i":98696,"n":"Excadrill (#30 Holo)","p":{"Holofoil":0.34}},{"i":98716,"n":"Zoroark (#30 Holo)","p":{"Holofoil":0.94}}],
-"4/30":[{"i":98684,"n":"Energy Switch (Excadrill)","p":{"Normal":0.26}},{"i":98706,"n":"Minccino (#4)","p":{"Normal":5.08}}],
+"4/30":[{"i":98684,"n":"Energy Switch (Excadrill)","p":{"Normal":0.26}},{"i":98706,"n":"Minccino (#4)","p":{"Normal":5.07}}],
 "5/30":[{"i":98674,"n":"Fighting Energy (#5)","p":{"Normal":0.99}},{"i":98719,"n":"Darkness Energy (#5)","p":{"Normal":0.79}}],
 "6/30":[{"i":98675,"n":"Fighting Energy (#6)","p":{"Normal":0.6}},{"i":98720,"n":"Darkness Energy (#6)","p":{"Normal":0.71}}],
 "7/30":[{"i":98676,"n":"Fighting Energy (#7)","p":{"Normal":0.69}},{"i":98721,"n":"Darkness Energy (#7)","p":{"Normal":0.84}}],
