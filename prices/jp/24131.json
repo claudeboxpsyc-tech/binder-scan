@@ -10,9 +10,11 @@
 "010/019":[{"i":613993,"n":"Aron - 010/019","p":{"1st Edition":5.5,"Unlimited":4.65}}],
 "011/019":[{"i":613994,"n":"Aron - 011/019","p":{"Unlimited":1}}],
 "012/019":[{"i":613990,"n":"Lairon","p":{"Unlimited":5,"1st Edition":3.5}}],
+"013/019":[{"i":613982,"n":"Energy Switch","p":{"1st Edition":3}}],
 "014/019":[{"i":613979,"n":"Potion","p":{"Unlimited":1,"1st Edition":1}}],
-"015/019":[{"i":613983,"n":"PokeNav","p":{"Unlimited":0.88}}],
-"017/019":[{"i":613981,"n":"Poke Ball","p":{"Unlimited":0.63}}],
-"018/019":[{"i":613984,"n":"Professor Birch","p":{"1st Edition":5,"Unlimited":2.5}}],
-"019/019":[{"i":613985,"n":"Lum Berry","p":{"Unlimited":2.5,"1st Edition":4}}]
+"015/019":[{"i":613983,"n":"PokeNav","p":{"Unlimited":0.88,"1st Edition":1}}],
+"016/019":[{"i":613980,"n":"Switch","p":{"1st Edition":1}}],
+"017/019":[{"i":613981,"n":"Poke Ball","p":{"Unlimited":0.63,"1st Edition":2}}],
+"018/019":[{"i":613984,"n":"Professor Birch","p":{"1st Edition":4.5,"Unlimited":2.5}}],
+"019/019":[{"i":613985,"n":"Lum Berry","p":{"Unlimited":2.5,"1st Edition":3}}]
 }

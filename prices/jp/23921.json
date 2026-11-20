@@ -1,6 +1,6 @@
 {
 "001/070":[{"i":603707,"n":"Tangela","p":{"Unlimited":3.5,"1st Edition":1.83}}],
-"002/070":[{"i":603708,"n":"Tangrowth","p":{"1st Edition":5.01,"Unlimited":4}}],
+"002/070":[{"i":603708,"n":"Tangrowth","p":{"1st Edition":3.5,"Unlimited":4}}],
 "003/070":[{"i":603714,"n":"Treecko","p":{"Unlimited":2.35,"1st Edition":2}}],
 "004/070":[{"i":603669,"n":"Grovyle","p":{"Unlimited":5,"1st Edition":1.76}}],
 "005/070":[{"i":603698,"n":"Sceptile - 005/070","p":{"Unlimited":5,"1st Edition":8}}],
@@ -8,8 +8,8 @@
 "007/070":[{"i":603703,"n":"Shroomish","p":{"Unlimited":1.54,"1st Edition":1.1}}],
 "008/070":[{"i":603652,"n":"Breloom","p":{"1st Edition":1.8,"Unlimited":3}}],
 "009/070":[{"i":603718,"n":"Volbeat","p":{"1st Edition":8}}],
-"010/070":[{"i":603673,"n":"Illumise","p":{"1st Edition":2.01}}],
-"011/070":[{"i":603715,"n":"Trevenant EX - 011/070","p":{"Unlimited Holofoil":5,"1st Edition Holofoil":3.74}}],
+"010/070":[{"i":603673,"n":"Illumise","p":{"1st Edition":2.16}}],
+"011/070":[{"i":603715,"n":"Trevenant EX - 011/070","p":{"Unlimited Holofoil":5,"1st Edition Holofoil":4}}],
 "012/070":[{"i":603719,"n":"Vulpix","p":{"Unlimited":2,"1st Edition":0.99}}],
 "013/070":[{"i":603687,"n":"Ninetales","p":{"1st Edition":5.82}}],
 "014/070":[{"i":603704,"n":"Slugma","p":{"1st Edition":1.49,"Unlimited":2}}],

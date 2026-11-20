@@ -2,7 +2,7 @@
 "001/059":[{"i":601564,"n":"Oddish","p":{"Unlimited":2,"1st Edition":2.65}}],
 "002/059":[{"i":601557,"n":"Gloom","p":{"1st Edition":1.5,"Unlimited":1.5}}],
 "003/059":[{"i":601585,"n":"Vileplume","p":{"1st Edition Holofoil":2.25}}],
-"004/059":[{"i":601594,"n":"Bellossom","p":{"1st Edition":9.99,"Unlimited":2.99}}],
+"004/059":[{"i":601594,"n":"Bellossom","p":{"1st Edition":10,"Unlimited":8}}],
 "005/059":[{"i":601558,"n":"Heracross","p":{"Unlimited":1.95,"1st Edition":10}}],
 "006/059":[{"i":601551,"n":"Combee","p":{"1st Edition":1.25,"Unlimited":0.5}}],
 "007/059":[{"i":601607,"n":"Vespiquen","p":{"1st Edition":4,"Unlimited":3.74}}],
@@ -31,7 +31,7 @@
 "030/059":[{"i":601572,"n":"Venipede","p":{"Unlimited":1.02,"1st Edition":2.7}}],
 "031/059":[{"i":601573,"n":"Whirlipede","p":{"1st Edition":0.99,"Unlimited":2.5}}],
 "032/059":[{"i":601584,"n":"Scolipede","p":{"Unlimited Holofoil":2.5,"1st Edition Holofoil":9.99}}],
-"033/059":[{"i":601583,"n":"Meloetta","p":{"1st Edition Holofoil":5.31}}],
+"033/059":[{"i":601583,"n":"Meloetta","p":{"1st Edition Holofoil":5.75}}],
 "034/059":[{"i":601556,"n":"Gligar","p":{"Unlimited":10,"1st Edition":2.23}}],
 "035/059":[{"i":601579,"n":"Gliscor","p":{"1st Edition Holofoil":4.54,"Unlimited Holofoil":3.49}}],
 "036/059":[{"i":601571,"n":"Trapinch","p":{"Unlimited":2.5,"1st Edition":1.85}}],
@@ -57,9 +57,8 @@
 "057/059":[{"i":601609,"n":"Virbank City Gym","p":{"1st Edition":0.5,"Unlimited":1.09}}],
 "058/059":[{"i":601580,"n":"Gold Potion","p":{"1st Edition Holofoil":4.99}}],
 "059/059":[{"i":601577,"n":"Crystal Wall","p":{"Unlimited Holofoil":3.98,"1st Edition Holofoil":1.99}}],
-"060/059":[{"i":601589,"n":"Cresselia EX - 060/059","p":{"1st Edition Holofoil":49.99,"Unlimited Holofoil":45}}],
+"060/059":[{"i":601589,"n":"Cresselia EX - 060/059","p":{"1st Edition Holofoil":40,"Unlimited Holofoil":45}}],
 "061/059":[{"i":601590,"n":"Landorus EX - 061/059","p":{"1st Edition Holofoil":15}}],
 "063/059":[{"i":601588,"n":"Cheren","p":{"1st Edition Holofoil":150}}],
-"064/059":[{"i":601591,"n":"Golurk","p":{"1st Edition Holofoil":49.99}}],
 "065/059":[{"i":601592,"n":"Rocky Helmet","p":{"Unlimited Holofoil":19.99}}]
 }

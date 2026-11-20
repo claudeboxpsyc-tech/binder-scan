@@ -1,13 +1,12 @@
 {
 "001/086":[{"i":611371,"n":"Weedle","p":{"Unlimited":4,"1st Edition":5}}],
 "002/086":[{"i":611358,"n":"Kakuna","p":{"1st Edition":7.5,"Unlimited":3}}],
-"003/086":[{"i":611372,"n":"Zubat","p":{"Unlimited":2}}],
 "004/086":[{"i":611357,"n":"Golbat","p":{"1st Edition":2.99,"Unlimited":3.08}}],
 "005/086":[{"i":611360,"n":"Koffing","p":{"Unlimited":10,"1st Edition":8.25}}],
 "006/086":[{"i":611414,"n":"Weezing","p":{"1st Edition":1.5}}],
 "009/086":[{"i":611405,"n":"Illumise","p":{"Unlimited":3}}],
 "010/086":[{"i":611373,"n":"Beedrill (Delta Species)","p":{"Unlimited Holofoil":19.99,"1st Edition Holofoil":37.69}}],
-"011/086":[{"i":611374,"n":"Crobat (Delta Species)","p":{"1st Edition Holofoil":45,"Unlimited Holofoil":29.99}}],
+"011/086":[{"i":611374,"n":"Crobat (Delta Species)","p":{"1st Edition Holofoil":50,"Unlimited Holofoil":29.99}}],
 "013/086":[{"i":611361,"n":"Larvitar (Delta Species)","p":{"1st Edition":4}}],
 "014/086":[{"i":611435,"n":"Pupitar (Delta Species)","p":{"Unlimited":7,"1st Edition":5}}],
 "015/086":[{"i":611411,"n":"Sunny Castform","p":{"Unlimited":5,"1st Edition":20}}],
@@ -59,11 +58,11 @@
 "071/086":[{"i":611432,"n":"Holon's Magnemite","p":{"1st Edition":3.88,"Unlimited":1}}],
 "073/086":[{"i":611420,"n":"Eevee (Delta Species)","p":{"Unlimited":6,"1st Edition":10}}],
 "074/086":[{"i":611437,"n":"Skarmory","p":{"1st Edition":5}}],
-"077/086":[{"i":611430,"n":"Holon Scientist","p":{"1st Edition":4.99}}],
+"077/086":[{"i":611430,"n":"Holon Scientist","p":{"1st Edition":3.47,"Unlimited":1}}],
 "078/086":[{"i":611428,"n":"Holon Researcher","p":{"1st Edition":3}}],
 "080/086":[{"i":611424,"n":"Holon Farmer","p":{"1st Edition":2.25,"Unlimited":4}}],
 "081/086":[{"i":611425,"n":"Holon Lass","p":{"1st Edition":4}}],
-"082/086":[{"i":611427,"n":"Holon Research Tower","p":{"1st Edition":2.75,"Unlimited":6.48}}],
+"082/086":[{"i":611427,"n":"Holon Research Tower","p":{"1st Edition":2.5,"Unlimited":6.48}}],
 "083/086":[{"i":611429,"n":"Holon Ruins","p":{"1st Edition":4}}],
 "085/086":[{"i":611421,"n":"Holon Energy FF","p":{"Unlimited":2}}]
 }

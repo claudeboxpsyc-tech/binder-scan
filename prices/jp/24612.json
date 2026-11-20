@@ -13,7 +13,7 @@
 "015/052":[{"i":677711,"n":"Ponyta","p":{"Normal":4}}],
 "016/052":[{"i":677712,"n":"Rapidash","p":{"Normal":4.7}}],
 "019/052":[{"i":677715,"n":"Wartortle","p":{"Normal":1}}],
-"020/052":[{"i":677716,"n":"Blastoise ex","p":{"Holofoil":199.99}}],
+"020/052":[{"i":677716,"n":"Blastoise ex","p":{"Holofoil":201.74}}],
 "021/052":[{"i":677717,"n":"Shellder","p":{"Normal":8.5}}],
 "022/052":[{"i":677718,"n":"Cloyster","p":{"Normal":8}}],
 "023/052":[{"i":677719,"n":"Krabby","p":{"Normal":11}}],
@@ -21,7 +21,7 @@
 "025/052":[{"i":677721,"n":"Magnemite","p":{"Normal":6.5}}],
 "026/052":[{"i":677722,"n":"Magneton","p":{"Normal":9}}],
 "027/052":[{"i":677723,"n":"Drowzee","p":{"Normal":4.99}}],
-"028/052":[{"i":677724,"n":"Hypno","p":{"Normal":4.12}}],
+"028/052":[{"i":677724,"n":"Hypno","p":{"Normal":4.79}}],
 "029/052":[{"i":677725,"n":"Diglett","p":{"Normal":4.68}}],
 "030/052":[{"i":677726,"n":"Dugtrio","p":{"Normal":11.5}}],
 "032/052":[{"i":677728,"n":"Pidgeotto","p":{"Normal":2}}],
@@ -39,6 +39,6 @@
 "048/052":[{"i":677744,"n":"Switch","p":{"Normal":7}}],
 "049/052":[{"i":677745,"n":"Pokemon Reversal","p":{"Normal":3}}],
 "050/052":[{"i":677746,"n":"Poke Ball","p":{"Normal":7}}],
-"051/052":[{"i":677747,"n":"Professor Oak's Research","p":{"Normal":5.98}}],
-"052/052":[{"i":677748,"n":"Bill's Maintenance","p":{"Normal":5}}]
+"051/052":[{"i":677747,"n":"Professor Oak's Research","p":{"Normal":5.95}}],
+"052/052":[{"i":677748,"n":"Bill's Maintenance","p":{"Normal":4.98}}]
 }
