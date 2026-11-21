@@ -12,8 +12,9 @@
 "011/019":[{"i":612469,"n":"Beldum - 011/019","p":{"Unlimited":3,"1st Edition":1.5}}],
 "012/019":[{"i":612474,"n":"Metang - 012/019","p":{"1st Edition":1.5,"Unlimited":2}}],
 "013/019":[{"i":612459,"n":"Potion","p":{"1st Edition":1.99}}],
-"014/019":[{"i":612462,"n":"Life Herb","p":{"Unlimited":4.99}}],
-"017/019":[{"i":612461,"n":"Poke Ball","p":{"1st Edition":4.95}}],
+"014/019":[{"i":612462,"n":"Life Herb","p":{"Unlimited":4.99,"1st Edition":1.49}}],
+"016/019":[{"i":612460,"n":"Switch","p":{"1st Edition":1.49}}],
+"017/019":[{"i":612461,"n":"Poke Ball","p":{"1st Edition":3.22}}],
 "018/019":[{"i":612464,"n":"Steven's Advice","p":{"1st Edition":6.48}}],
-"019/019":[{"i":612465,"n":"Magnetic Storm","p":{"1st Edition":8.95}}]
+"019/019":[{"i":612465,"n":"Magnetic Storm","p":{"1st Edition":4.95}}]
 }

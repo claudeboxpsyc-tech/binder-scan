@@ -6,7 +6,7 @@
 "007/021":[{"i":660152,"n":"Milcery","p":{"Normal":0.91}}],
 "008/021":[{"i":660153,"n":"Alcremie","p":{"Normal":0.98}}],
 "009/021":[{"i":660154,"n":"Tatsugiri","p":{"Normal":0.78}}],
-"010/021":[{"i":660155,"n":"Buddy-Buddy Poffin","p":{"Normal":0.88}}],
+"010/021":[{"i":660155,"n":"Buddy-Buddy Poffin","p":{"Normal":0.84}}],
 "011/021":[{"i":660156,"n":"Ultra Ball","p":{"Normal":0.29}}],
 "012/021":[{"i":660157,"n":"Switch","p":{"Normal":0.78}}],
 "013/021":[{"i":660158,"n":"Mega Signal","p":{"Normal":0.53}}],
@@ -17,5 +17,5 @@
 "019/021":[{"i":660164,"n":"Boss's Orders","p":{"Normal":0.8}}],
 "020/021":[{"i":660165,"n":"Lillie's Determination","p":{"Normal":1}}],
 "021/021":[{"i":660166,"n":"Mystery Garden","p":{"Normal":0.78}}],
-"022/021":[{"i":654110,"n":"Meloetta - 022/021","p":{"Holofoil":7.1}}]
+"022/021":[{"i":654110,"n":"Meloetta - 022/021","p":{"Holofoil":7.16}}]
 }

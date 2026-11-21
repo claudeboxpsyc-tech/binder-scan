@@ -31,7 +31,7 @@
 "040/080":[{"i":612846,"n":"Espeon","p":{"Unlimited Holofoil":62.5}}],
 "041/080":[{"i":612821,"n":"Ralts","p":{"Unlimited":1.95,"1st Edition":3.49}}],
 "042/080":[{"i":612852,"n":"Kirlia","p":{"Unlimited":5}}],
-"043/080":[{"i":612828,"n":"Duskull","p":{"Unlimited":2,"1st Edition":5.04}}],
+"043/080":[{"i":612828,"n":"Duskull","p":{"Unlimited":4,"1st Edition":5.04}}],
 "044/080":[{"i":612892,"n":"Team Magma's Baltoy","p":{"1st Edition":8,"Unlimited":3}}],
 "045/080":[{"i":612837,"n":"Team Magma's Claydol","p":{"Unlimited Holofoil":34.98}}],
 "046/080":[{"i":612823,"n":"Geodude","p":{"Unlimited":1.21,"1st Edition":2.5}}],
@@ -63,7 +63,7 @@
 "074/080":[{"i":612854,"n":"Maxie","p":{"1st Edition":5.25,"Unlimited":3}}],
 "075/080":[{"i":612853,"n":"Archie","p":{"Unlimited":2}}],
 "076/080":[{"i":612890,"n":"Team Magma Technical Machine 01","p":{"1st Edition":2,"Unlimited":2}}],
-"077/080":[{"i":612889,"n":"Team Aqua Technical Machine 01","p":{"Unlimited":2.75,"1st Edition":2.25}}],
+"077/080":[{"i":612889,"n":"Team Aqua Technical Machine 01","p":{"Unlimited":2.5,"1st Edition":2.25}}],
 "078/080":[{"i":612876,"n":"Double Rainbow Energy","p":{"1st Edition":2,"Unlimited":2}}],
 "079/080":[{"i":612877,"n":"Magma Energy","p":{"1st Edition":3,"Unlimited":2}}],
 "080/080":[{"i":612878,"n":"Aqua Energy","p":{"Unlimited":19.99,"1st Edition":4}}]

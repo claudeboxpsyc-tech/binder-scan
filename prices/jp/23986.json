@@ -22,9 +22,12 @@
 "026/049":[{"i":606470,"n":"Regigigas","p":{"Normal":5.95}}],
 "027/049":[{"i":606454,"n":"Furfrou","p":{"Normal":2}}],
 "028/049":[{"i":606440,"n":"Max Revive","p":{"Normal":2}}],
+"030/049":[{"i":606445,"n":"Ultra Ball","p":{"Normal":0.99}}],
 "032/049":[{"i":606442,"n":"VS Seeker","p":{"Normal":5}}],
 "034/049":[{"i":606436,"n":"Switch","p":{"Normal":0.25}}],
-"039/049":[{"i":606471,"n":"Manectric Spirit Link","p":{"Normal":5}}],
+"038/049":[{"i":606481,"n":"Kyogre Spirit Link","p":{"Normal":6}}],
+"039/049":[{"i":606471,"n":"Manectric Spirit Link","p":{"Normal":3.25}}],
 "042/049":[{"i":606449,"n":"Tierno","p":{"Normal":0.63}}],
-"043/049":[{"i":606447,"n":"Professor Sycamore","p":{"Normal":2}}]
+"043/049":[{"i":606447,"n":"Professor Sycamore","p":{"Normal":2}}],
+"045/049":[{"i":606441,"n":"Pokemon Fan Club","p":{"Normal":1.49}}]
 }

@@ -1,10 +1,11 @@
 {
 "001/024":[{"i":596052,"n":"Pikachu","p":{"Normal":7.42}}],
 "002/024":[{"i":647018,"n":"Raichu (Mirror Holofoil)","p":{"Holofoil":8.4}}],
+"003/024":[{"i":596054,"n":"Chinchou","p":{"Normal":5.03}}],
 "004/024":[{"i":596055,"n":"Joltik","p":{"Normal":15.85}},{"i":647020,"n":"Joltik (Mirror Holofoil)","p":{"Holofoil":9}}],
 "005/024":[{"i":596056,"n":"Galvantula","p":{"Normal":2.49}}],
 "006/024":[{"i":596049,"n":"Tapu Koko V","p":{"Holofoil":2.16}}],
-"007/024":[{"i":596057,"n":"Yamper","p":{"Holofoil":14}},{"i":647022,"n":"Yamper (Mirror Holofoil)","p":{"Holofoil":5}}],
+"007/024":[{"i":596057,"n":"Yamper","p":{"Holofoil":14}}],
 "008/024":[{"i":596058,"n":"Boltund","p":{"Normal":5,"Holofoil":1.98}}],
 "009/024":[{"i":596059,"n":"Morpeko","p":{"Holofoil":13.99}}],
 "010/024":[{"i":596060,"n":"Drampa","p":{"Normal":4.29}}],
@@ -12,8 +13,9 @@
 "013/024":[{"i":596045,"n":"Energy Search","p":{"Normal":1}}],
 "015/024":[{"i":596047,"n":"Pokegear 3.0","p":{"Normal":6.45}}],
 "016/024":[{"i":596043,"n":"Switch","p":{"Normal":4}}],
-"017/024":[{"i":596048,"n":"Pokemon Catcher","p":{"Normal":4}}],
+"017/024":[{"i":596048,"n":"Pokemon Catcher","p":{"Normal":3.95}}],
 "020/024":[{"i":596064,"n":"Professor's Research","p":{"Normal":12}}],
+"021/024":[{"i":596066,"n":"Bede","p":{"Normal":6}}],
 "022/024":[{"i":596065,"n":"Poke Kid","p":{"Normal":5}},{"i":647029,"n":"Poke Kid (Mirror Holofoil)","p":{"Holofoil":3.79}}],
 "023/024":[{"i":596051,"n":"Hop","p":{"Normal":1}},{"i":647016,"n":"Hop (Mirror Holofoil)","p":{"Holofoil":3.49}}]
 }

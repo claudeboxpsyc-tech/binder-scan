@@ -5,7 +5,7 @@
 "004/069":[{"i":601365,"n":"Carnivine","p":{"Unlimited":0.5,"1st Edition":2}}],
 "005/069":[{"i":601394,"n":"Karrablast","p":{"1st Edition":0.99}}],
 "006/069":[{"i":601414,"n":"Shelmet","p":{"1st Edition":0.35}}],
-"007/069":[{"i":601359,"n":"Accelgor","p":{"1st Edition":2.5}}],
+"007/069":[{"i":601359,"n":"Accelgor","p":{"1st Edition":2}}],
 "008/069":[{"i":601385,"n":"Flareon","p":{"1st Edition":6.3}}],
 "009/069":[{"i":601380,"n":"Entei EX - 009/069","p":{"1st Edition Holofoil":21.24}}],
 "010/069":[{"i":601421,"n":"Torchic","p":{"1st Edition":4.74}}],
@@ -13,7 +13,7 @@
 "012/069":[{"i":601362,"n":"Blaziken","p":{"1st Edition Holofoil":12.6}}],
 "013/069":[{"i":601388,"n":"Heatmor","p":{"1st Edition":2}}],
 "014/069":[{"i":601400,"n":"Larvesta","p":{"1st Edition":1.39}}],
-"015/069":[{"i":601429,"n":"Volcarona","p":{"1st Edition Holofoil":2.99}}],
+"015/069":[{"i":601429,"n":"Volcarona","p":{"1st Edition Holofoil":2.86}}],
 "016/069":[{"i":601417,"n":"Slowpoke","p":{"1st Edition":3.48}}],
 "017/069":[{"i":601415,"n":"Slowbro","p":{"1st Edition":4.29}}],
 "018/069":[{"i":601427,"n":"Vaporeon","p":{"1st Edition":7.5}}],
@@ -38,7 +38,7 @@
 "038/069":[{"i":601367,"n":"Cofagrigus","p":{"1st Edition":0.77}}],
 "039/069":[{"i":601360,"n":"Aerodactyl","p":{"1st Edition":3.49}}],
 "040/069":[{"i":601373,"n":"Drilbur","p":{"1st Edition":9.33}}],
-"041/069":[{"i":601384,"n":"Excadrill","p":{"1st Edition":2.97}}],
+"041/069":[{"i":601384,"n":"Excadrill","p":{"1st Edition":2.24}}],
 "042/069":[{"i":601426,"n":"Umbreon","p":{"1st Edition":49.98}}],
 "043/069":[{"i":601412,"n":"Sableye","p":{"1st Edition":7.95}}],
 "044/069":[{"i":601371,"n":"Darkrai EX - 044/069","p":{"1st Edition Holofoil":38.87}}],
@@ -69,6 +69,5 @@
 "069/069":[{"i":601424,"n":"Twist Mountain","p":{"1st Edition":0.99}}],
 "070/069":[{"i":601381,"n":"Entei EX - 070/069","p":{"1st Edition Holofoil":60}}],
 "071/069":[{"i":601410,"n":"Raikou EX - 071/069","p":{"1st Edition Holofoil":199.69}}],
-"072/069":[{"i":601372,"n":"Darkrai EX - 072/069","p":{"Unlimited Holofoil":149.99}}],
 "073/069":[{"i":601423,"n":"Tornadus EX - 073/069","p":{"1st Edition Holofoil":61.09}}]
 }

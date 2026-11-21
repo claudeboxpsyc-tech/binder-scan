@@ -6,7 +6,7 @@
 "005/023":[{"i":595491,"n":"Turtonator","p":{"Normal":4.19}}],
 "006/023":[{"i":595484,"n":"Scorbunny","p":{"Normal":5,"Holofoil":5}},{"i":646970,"n":"Scorbunny (Mirror Holofoil)","p":{"Holofoil":12.49}}],
 "007/023":[{"i":595492,"n":"Raboot","p":{"Normal":5,"Holofoil":5}},{"i":646977,"n":"Raboot (Mirror Holofoil)","p":{"Holofoil":6.64}}],
-"008/023":[{"i":595493,"n":"Cinderace","p":{"Normal":5,"Holofoil":3.49}},{"i":646978,"n":"Cinderace (Mirror Holofoil)","p":{"Holofoil":24.49}}],
+"008/023":[{"i":595493,"n":"Cinderace","p":{"Normal":3.5,"Holofoil":3.49}},{"i":646978,"n":"Cinderace (Mirror Holofoil)","p":{"Holofoil":24.49}}],
 "009/023":[{"i":595494,"n":"Sizzlipede","p":{"Normal":6}},{"i":646979,"n":"Sizzlipede (Mirror Holofoil)","p":{"Holofoil":8.59}}],
 "010/023":[{"i":595495,"n":"Minccino","p":{"Normal":5}},{"i":646980,"n":"Minccino (Mirror Holofoil)","p":{"Holofoil":14.29}}],
 "011/023":[{"i":595478,"n":"Energy Search","p":{"Normal":6}}],
@@ -20,6 +20,6 @@
 "019/023":[{"i":595497,"n":"Vitality Band","p":{"Normal":7.5}}],
 "020/023":[{"i":595498,"n":"Professor's Research","p":{"Normal":3.5}},{"i":646983,"n":"Professor's Research (Mirror Holofoil)","p":{"Holofoil":8.79}}],
 "021/023":[{"i":595499,"n":"Poke Kid","p":{"Normal":4.75}},{"i":646984,"n":"Poke Kid (Mirror Holofoil)","p":{"Holofoil":6.9}}],
-"022/023":[{"i":595486,"n":"Hop","p":{"Normal":1}},{"i":646972,"n":"Hop (Mirror Holofoil)","p":{"Holofoil":5.89}}],
+"022/023":[{"i":595486,"n":"Hop","p":{"Normal":1.5}},{"i":646972,"n":"Hop (Mirror Holofoil)","p":{"Holofoil":5.89}}],
 "023/023":[{"i":595485,"n":"Marnie","p":{"Normal":6.5}},{"i":646971,"n":"Marnie (Mirror Holofoil)","p":{"Holofoil":10}}]
 }

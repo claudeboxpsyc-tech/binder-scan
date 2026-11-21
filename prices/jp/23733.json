@@ -1,7 +1,6 @@
 {
 "001/088":[{"i":576253,"n":"Zubat - 001/088","p":{"1st Edition":20.5}}],
 "002/088":[{"i":576254,"n":"Zubat - 002/088","p":{"1st Edition":35}}],
-"004/088":[{"i":576198,"n":"Ledyba - 004/088","p":{"1st Edition":7.51}}],
 "005/088":[{"i":576199,"n":"Ledyba - 005/088","p":{"1st Edition":17.99,"Unlimited":10}}],
 "006/088":[{"i":576197,"n":"Ledian - 006/088","p":{"1st Edition":5,"Unlimited":11}}],
 "007/088":[{"i":576196,"n":"Ledian - 007/088","p":{"Unlimited Holofoil":108,"1st Edition Holofoil":45}}],
@@ -30,7 +29,7 @@
 "041/088":[{"i":576195,"n":"Kadabra","p":{"1st Edition":15.67}}],
 "043/088":[{"i":576166,"n":"Alakazam - 043/088","p":{"1st Edition Holofoil":299.99}}],
 "044/088":[{"i":576241,"n":"Starmie - 044/088","p":{"1st Edition":49.99,"Unlimited":10}}],
-"046/088":[{"i":576205,"n":"Misdreavus","p":{"1st Edition":20.99}}],
+"046/088":[{"i":576205,"n":"Misdreavus","p":{"Unlimited":15,"1st Edition":20.99}}],
 "047/088":[{"i":576251,"n":"Wobbuffet","p":{"Unlimited":7,"1st Edition":37.5}}],
 "048/088":[{"i":576182,"n":"Girafarig","p":{"Unlimited":3.9,"1st Edition":6.75}}],
 "049/088":[{"i":576233,"n":"Sandshrew+A78","p":{"Unlimited":31.25,"1st Edition":34.5}}],

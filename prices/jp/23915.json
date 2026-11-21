@@ -1,6 +1,6 @@
 {
 "001/060":[{"i":603200,"n":"Weedle","p":{"1st Edition":2,"Unlimited":1.75}}],
-"002/060":[{"i":603174,"n":"Kakuna","p":{"Unlimited":0.75,"1st Edition":1.5}}],
+"002/060":[{"i":603174,"n":"Kakuna","p":{"Unlimited":0.75,"1st Edition":1.65}}],
 "003/060":[{"i":603145,"n":"Beedrill","p":{"1st Edition":3,"Unlimited":3}}],
 "004/060":[{"i":603177,"n":"Ledyba","p":{"Unlimited":0.99,"1st Edition":1.49}}],
 "005/060":[{"i":603176,"n":"Ledian","p":{"Unlimited":4.99,"1st Edition":1.49}}],
@@ -32,7 +32,7 @@
 "031/060":[{"i":603186,"n":"Rhyhorn","p":{"1st Edition":2,"Unlimited":1.95}}],
 "032/060":[{"i":603185,"n":"Rhydon","p":{"Unlimited":1.89,"1st Edition":3}}],
 "033/060":[{"i":603187,"n":"Rhyperior","p":{"Unlimited Holofoil":1.75,"1st Edition Holofoil":2.5}}],
-"034/060":[{"i":603193,"n":"Solrock","p":{"Unlimited":0.95,"1st Edition":1.99}}],
+"034/060":[{"i":603193,"n":"Solrock","p":{"Unlimited":0.95,"1st Edition":1.49}}],
 "035/060":[{"i":603172,"n":"Inkay","p":{"1st Edition":1,"Unlimited":1.99}}],
 "036/060":[{"i":603178,"n":"Malamar","p":{"Unlimited":1.2,"1st Edition":1.99}}],
 "037/060":[{"i":603203,"n":"Yveltal EX - 037/060","p":{"1st Edition Holofoil":7.17}}],

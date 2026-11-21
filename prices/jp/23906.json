@@ -10,7 +10,7 @@
 "009/076":[{"i":602785,"n":"Virizion EX - 009/076","p":{"Unlimited Holofoil":7,"1st Edition Holofoil":11.53}}],
 "010/076":[{"i":602729,"n":"Genesect EX (Team Plasma) - 010/076","p":{"1st Edition Holofoil":13,"Unlimited Holofoil":4}}],
 "011/076":[{"i":602744,"n":"Larvesta","p":{"1st Edition":1.2,"Unlimited":1.5}}],
-"012/076":[{"i":602787,"n":"Volcarona (Team Plasma)","p":{"Unlimited Holofoil":9.95,"1st Edition Holofoil":11.49}}],
+"012/076":[{"i":602787,"n":"Volcarona (Team Plasma)","p":{"Unlimited Holofoil":10.67,"1st Edition Holofoil":12.24}}],
 "013/076":[{"i":602743,"n":"Lapras","p":{"Unlimited":4.25,"1st Edition":2}}],
 "014/076":[{"i":602763,"n":"Remoraid","p":{"1st Edition":1,"Unlimited":3.36}}],
 "015/076":[{"i":602753,"n":"Octillery (Team Plasma)","p":{"1st Edition":2.25,"Unlimited":2}}],
@@ -25,7 +25,7 @@
 "024/076":[{"i":602722,"n":"Eelektrik","p":{"Unlimited":5.49,"1st Edition":2}}],
 "025/076":[{"i":602723,"n":"Eelektross (Team Plasma)","p":{"Unlimited Holofoil":3.54,"1st Edition Holofoil":4.59}}],
 "026/076":[{"i":602718,"n":"Drifloon","p":{"Unlimited":5,"1st Edition":12}}],
-"027/076":[{"i":602717,"n":"Drifblim","p":{"1st Edition":1.9,"Unlimited":4}}],
+"027/076":[{"i":602717,"n":"Drifblim","p":{"1st Edition":4,"Unlimited":4}}],
 "028/076":[{"i":602783,"n":"Uxie","p":{"1st Edition":4,"Unlimited":2}}],
 "029/076":[{"i":602750,"n":"Mesprit","p":{"1st Edition Holofoil":4.75}}],
 "030/076":[{"i":602709,"n":"Azelf","p":{"Unlimited":15,"1st Edition":4}}],
@@ -77,7 +77,6 @@
 "076/076":[{"i":602756,"n":"Plasma Energy","p":{"Unlimited":1.75,"1st Edition":2}}],
 "077/076":[{"i":602786,"n":"Virizion EX - 077/076","p":{"Unlimited Holofoil":35,"1st Edition Holofoil":59.99}}],
 "079/076":[{"i":602740,"n":"Jirachi EX - 079/076","p":{"1st Edition Holofoil":50,"Unlimited Holofoil":300}}],
-"080/076":[{"i":602716,"n":"Dialga EX (Team Plasma) - 080/076","p":{"1st Edition Holofoil":180}}],
 "081/076":[{"i":602755,"n":"Palkia EX (Team Plasma) - 081/076","p":{"Unlimited Holofoil":270}}],
 "085/076":[{"i":602721,"n":"Dusknoir","p":{"1st Edition Holofoil":350}}]
 }
