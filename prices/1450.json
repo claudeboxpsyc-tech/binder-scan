@@ -1,6 +1,6 @@
 {
 "001/017":[{"i":86049,"n":"Heatran","p":{"Normal":2.32,"Holofoil":5.06}}],
-"002/017":[{"i":86877,"n":"Lucario","p":{"Normal":27.63,"Holofoil":25.23}}],
+"002/017":[{"i":86877,"n":"Lucario","p":{"Normal":27.95,"Holofoil":25.23}}],
 "003/017":[{"i":86948,"n":"Luxray","p":{"Normal":22.32,"Holofoil":34.94}}],
 "004/017":[{"i":88376,"n":"Probopass","p":{"Normal":6.04,"Holofoil":6.7}}],
 "005/017":[{"i":90691,"n":"Yanmega","p":{"Normal":4.89,"Holofoil":5.91}}],
@@ -13,7 +13,7 @@
 "012/017":[{"i":84287,"n":"Chimchar","p":{"Normal":4.09,"Reverse Holofoil":49.79}},{"i":616999,"n":"Chimchar (Cracked Ice Holo)","p":{"Holofoil":59.99}}],
 "014/017":[{"i":86007,"n":"Happiny","p":{"Normal":14.67,"Holofoil":20.66}}],
 "015/017":[{"i":88148,"n":"Piplup","p":{"Normal":17.77}}],
-"016/017":[{"i":88755,"n":"Riolu","p":{"Normal":5.49,"Reverse Holofoil":45.99}}],
+"016/017":[{"i":88755,"n":"Riolu","p":{"Normal":5.29,"Reverse Holofoil":45.99}}],
 "017/017":[{"i":90076,"n":"Turtwig","p":{"Normal":4.47}}],
 "13/17":[{"i":84475,"n":"Croagunk","p":{"Normal":0.6,"Holofoil":30.65}}]
 }

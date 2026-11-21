@@ -18,7 +18,7 @@
 "021":[{"i":86326,"n":"Jirachi - 021 (Jirachi: Wish Maker DVD Release)","p":{"Normal":79.97}}],
 "022":[{"i":83784,"n":"Beldum - 022 (e-League)","p":{"Normal":6.83}}],
 "024":[{"i":84293,"n":"Chimecho - 024 (e-League)","p":{"Normal":14.66}},{"i":228153,"n":"Chimecho - 024 (e-League) [Winner]","p":{"Normal":43.02}}],
-"025":[{"i":85523,"n":"Flygon - 025 (e-League)","p":{"Normal":58.69}},{"i":228158,"n":"Flygon - 025 (e-League) [Winner]","p":{"Normal":623.07}}],
+"025":[{"i":85523,"n":"Flygon - 025 (e-League)","p":{"Normal":58.69}},{"i":228158,"n":"Flygon - 025 (e-League) [Winner]","p":{"Normal":623.06}}],
 "026":[{"i":90053,"n":"Tropical Wind - 026 (2004 World Championships) [Participation]","p":{"Normal":223.5}}],
 "029":[{"i":84145,"n":"Celebi - 029 (EX Collector's Carry Tin)","p":{"Holofoil":89.11}}],
 "030":[{"i":89603,"n":"Suicune - 030 (EX Collector's Carry Tin)","p":{"Holofoil":46.35}}],
@@ -51,8 +51,8 @@
 "50/101":[{"i":220757,"n":"Swalot - 50/101 (Prerelease)","p":{"Normal":118.16}}],
 "50/97":[{"i":253400,"n":"Bagon - 50/97 (Black Star)","p":{"Normal":20.73}},{"i":281958,"n":"Bagon - 50/97 (Scrye Magazine)","p":{"Normal":72.5}},{"i":281960,"n":"Bagon - 50/97 (InQuest Gamer)","p":{"Normal":89.15}},{"i":281964,"n":"Bagon - 50/97 (Gen Con 2004 Promo)","p":{"Normal":160}}],
 "52/111":[{"i":213009,"n":"Tropius - 52/111 (Prerelease)","p":{"Normal":19.51}},{"i":228597,"n":"Tropius - 52/111 (Prerelease) [Staff]","p":{"Normal":199}}],
-"52/130":[{"i":220758,"n":"Luxio - 52/130 (Prerelease)","p":{"Normal":32.44}},{"i":242915,"n":"Luxio - 52/130 (Prerelease) [Staff]","p":{"Normal":143}}],
+"52/130":[{"i":220758,"n":"Luxio - 52/130 (Prerelease)","p":{"Normal":32.33}},{"i":242915,"n":"Luxio - 52/130 (Prerelease) [Staff]","p":{"Normal":143.33}}],
 "61/113":[{"i":236461,"n":"Ditto - 61/113 (Origins International Game Expo 2007)","p":{"Normal":407.14}}],
 "70/147":[{"i":164213,"n":"Milotic - 70/147 (Prerelease)","p":{"Normal":49}},{"i":164214,"n":"Milotic - 70/147 (Prerelease) [Staff]","p":{"Normal":236.04}}],
-"98/130":[{"i":213022,"n":"Shinx - 98/130 (City Championships)","p":{"Normal":13.59}},{"i":233307,"n":"Shinx - 98/130 (City Championships) [Staff]","p":{"Normal":223.33}}]
+"98/130":[{"i":213022,"n":"Shinx - 98/130 (City Championships)","p":{"Normal":13.59}}]
 }
