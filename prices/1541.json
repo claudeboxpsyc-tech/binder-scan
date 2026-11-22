@@ -3,7 +3,7 @@
 "1/12":[{"i":84017,"n":"Buizel","p":{"Normal":0.26}}],
 "10/11":[{"i":88478,"n":"Quick Ball","p":{"Normal":1}}],
 "10/12":[{"i":85246,"n":"Energy Search (Manaphy)","p":{"Normal":0.21}}],
-"11/11":[{"i":85443,"n":"Fighting Energy (Lucario)","p":{"Normal":0.42}}],
+"11/11":[{"i":85443,"n":"Fighting Energy (Lucario)","p":{"Normal":0.37}}],
 "11/12":[{"i":88344,"n":"Potion (Manaphy)","p":{"Normal":0.24}}],
 "12/12":[{"i":90511,"n":"Water Energy","p":{"Normal":0.48}}],
 "2/11":[{"i":85893,"n":"Graveler","p":{"Normal":0.93}}],
@@ -16,7 +16,7 @@
 "5/12":[{"i":88144,"n":"Piplup","p":{"Normal":1.41}}],
 "6/12":[{"i":88369,"n":"Prinplup","p":{"Normal":0.73}},{"i":88753,"n":"Riolu","p":{"Normal":0.82}}],
 "7/11":[{"i":89522,"n":"Starly","p":{"Normal":0.35}}],
-"7/12":[{"i":89027,"n":"Seaking","p":{"Normal":0.34}}],
+"7/12":[{"i":89027,"n":"Seaking","p":{"Normal":0.35}}],
 "8/11":[{"i":85247,"n":"Energy Search (Lucario)","p":{"Normal":0.44}}],
 "8/12":[{"i":89999,"n":"Totodile","p":{"Normal":2.48}}],
 "9/12":[{"i":85034,"n":"Dusk Ball","p":{"Normal":0.27}},{"i":88345,"n":"Potion (Lucario)","p":{"Normal":0.37}}]
