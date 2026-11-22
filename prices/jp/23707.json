@@ -9,7 +9,7 @@
 "008/114":[{"i":574253,"n":"Bounsweet","p":{"Holofoil":0.93}}],
 "009/114":[{"i":574254,"n":"Steenee","p":{"Holofoil":1}}],
 "010/114":[{"i":574255,"n":"Tsareena","p":{"Holofoil":2.25}}],
-"011/114":[{"i":574256,"n":"Tapu Bulu","p":{"Holofoil":2.26}}],
+"011/114":[{"i":574256,"n":"Tapu Bulu","p":{"Holofoil":2.37}}],
 "013/114":[{"i":574258,"n":"Ho-Oh GX","p":{"Holofoil":4.91}}],
 "014/114":[{"i":574259,"n":"Victini","p":{"Holofoil":3.75}}],
 "015/114":[{"i":574260,"n":"Litwick","p":{"Holofoil":1.96}}],
@@ -17,7 +17,7 @@
 "017/114":[{"i":574262,"n":"Chandelure","p":{"Holofoil":4.75}}],
 "018/114":[{"i":574263,"n":"Salandit","p":{"Holofoil":2.5}}],
 "019/114":[{"i":574264,"n":"Salazzle","p":{"Holofoil":1.59}}],
-"020/114":[{"i":574265,"n":"Alolan Sandshrew","p":{"Holofoil":4.99}}],
+"020/114":[{"i":574265,"n":"Alolan Sandshrew","p":{"Holofoil":5}}],
 "021/114":[{"i":574266,"n":"Alolan Sandslash","p":{"Holofoil":5.67}}],
 "022/114":[{"i":574267,"n":"Alolan Vulpix","p":{"Holofoil":47.65}}],
 "023/114":[{"i":574268,"n":"Alolan Ninetales","p":{"Holofoil":23.45}}],
@@ -107,6 +107,6 @@
 "117/114":[{"i":574362,"n":"Celesteela GX - 117/114","p":{"Holofoil":11.15}}],
 "118/114":[{"i":574363,"n":"Lana - 118/114","p":{"Holofoil":200}}],
 "120/114":[{"i":574365,"n":"Lusamine - 120/114","p":{"Holofoil":600}}],
-"122/114":[{"i":574367,"n":"Xurkitree GX - 122/114","p":{"Holofoil":23}}],
+"122/114":[{"i":574367,"n":"Xurkitree GX - 122/114","p":{"Holofoil":35}}],
 "123/114":[{"i":574368,"n":"Celesteela GX - 123/114","p":{"Holofoil":40}}]
 }

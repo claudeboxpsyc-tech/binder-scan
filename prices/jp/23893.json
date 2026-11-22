@@ -44,7 +44,7 @@
 "043/053":[{"i":600840,"n":"Unfezant","p":{"Unlimited":2.5,"1st Edition":0.35}}],
 "044/053":[{"i":600814,"n":"Minccino","p":{"Unlimited":0.99,"1st Edition":3}}],
 "045/053":[{"i":600794,"n":"Cinccino","p":{"Unlimited":3,"1st Edition":5.99}}],
-"046/053":[{"i":600793,"n":"Bouffalant","p":{"Unlimited":0.95,"1st Edition":0.75}}],
+"046/053":[{"i":600793,"n":"Bouffalant","p":{"Unlimited":0.95,"1st Edition":1}}],
 "047/053":[{"i":600837,"n":"Tornadus - 047/053","p":{"Unlimited Holofoil":4.99,"1st Edition Holofoil":4.4}}],
 "048/053":[{"i":600803,"n":"Energy Retrieval","p":{"1st Edition":3}}],
 "049/053":[{"i":600796,"n":"Crushing Hammer","p":{"Unlimited":0.25,"1st Edition":10}}],
@@ -52,6 +52,6 @@
 "051/053":[{"i":600813,"n":"Max Potion","p":{"1st Edition":2.7,"Unlimited":2}}],
 "052/053":[{"i":600823,"n":"Recycle","p":{"1st Edition":5.04}}],
 "053/053":[{"i":600822,"n":"Professor Juniper","p":{"1st Edition":2}}],
-"054/053":[{"i":600838,"n":"Tornadus - 054/053","p":{"Unlimited Holofoil":57.5,"1st Edition Holofoil":33}}],
+"054/053":[{"i":600838,"n":"Tornadus - 054/053","p":{"Unlimited Holofoil":57.5,"1st Edition Holofoil":35.99}}],
 "055/053":[{"i":600825,"n":"Reshiram - 055/053","p":{"1st Edition Holofoil":140}}]
 }

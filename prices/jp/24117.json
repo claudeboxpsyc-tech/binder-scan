@@ -1,8 +1,8 @@
 {
 "001/082":[{"i":612383,"n":"Caterpie","p":{"Unlimited":3,"1st Edition":4}}],
-"002/082":[{"i":612417,"n":"Metapod","p":{"Unlimited":3,"1st Edition":3.75}}],
+"002/082":[{"i":612417,"n":"Metapod","p":{"Unlimited":3,"1st Edition":4}}],
 "003/082":[{"i":612382,"n":"Butterfree","p":{"1st Edition Holofoil":50,"Unlimited Holofoil":17.49}}],
-"004/082":[{"i":612456,"n":"Weedle","p":{"1st Edition":7,"Unlimited":5}}],
+"004/082":[{"i":612456,"n":"Weedle","p":{"1st Edition":7,"Unlimited":1.85}}],
 "005/082":[{"i":612407,"n":"Kakuna","p":{"1st Edition":3,"Unlimited":3.5}}],
 "006/082":[{"i":612379,"n":"Beedrill","p":{"Unlimited Holofoil":13.5,"1st Edition Holofoil":19.26}}],
 "007/082":[{"i":612424,"n":"NidoranF","p":{"1st Edition":1.24,"Unlimited":2}}],
@@ -24,7 +24,7 @@
 "028/082":[{"i":612444,"n":"Seel","p":{"Unlimited":2,"1st Edition":1.43}}],
 "030/082":[{"i":612445,"n":"Shellder","p":{"1st Edition":5.99,"Unlimited":5.99}}],
 "032/082":[{"i":612410,"n":"Krabby","p":{"Unlimited":4.5}}],
-"033/082":[{"i":612409,"n":"Kingler","p":{"Unlimited":1}}],
+"033/082":[{"i":612409,"n":"Kingler","p":{"1st Edition":9.95,"Unlimited":1}}],
 "034/082":[{"i":612412,"n":"Magikarp","p":{"Unlimited":10,"1st Edition":10}}],
 "037/082":[{"i":612432,"n":"Pikachu","p":{"Unlimited":35,"1st Edition":39.5}}],
 "038/082":[{"i":612441,"n":"Raichu","p":{"1st Edition Holofoil":23.15,"Unlimited Holofoil":19.99}}],
@@ -38,11 +38,12 @@
 "049/082":[{"i":612393,"n":"Drowzee","p":{"1st Edition":2.75,"Unlimited":8}}],
 "050/082":[{"i":612406,"n":"Hypno","p":{"1st Edition":15,"Unlimited":10}}],
 "051/082":[{"i":612396,"n":"Exeggcute","p":{"1st Edition":9.99}}],
+"052/082":[{"i":612397,"n":"Exeggutor","p":{"Unlimited Holofoil":38.5}}],
 "054/082":[{"i":612420,"n":"Mr. Mime ex - 054/082","p":{"Unlimited Holofoil":65}}],
 "055/082":[{"i":612423,"n":"Nidoqueen","p":{"1st Edition Holofoil":32}}],
 "056/082":[{"i":612422,"n":"Nidoking","p":{"Unlimited Holofoil":34.5}}],
 "057/082":[{"i":612391,"n":"Diglett","p":{"1st Edition":5,"Unlimited":3.99}}],
-"058/082":[{"i":612394,"n":"Dugtrio","p":{"Unlimited":3,"1st Edition":13}}],
+"058/082":[{"i":612394,"n":"Dugtrio","p":{"Unlimited":4,"1st Edition":13}}],
 "059/082":[{"i":612415,"n":"Mankey","p":{"1st Edition":0.5,"Unlimited":3.25}}],
 "060/082":[{"i":612439,"n":"Primeape","p":{"Unlimited":6}}],
 "061/082":[{"i":612428,"n":"Onix","p":{"Unlimited":5,"1st Edition":4.34}}],
@@ -53,7 +54,6 @@
 "067/082":[{"i":612399,"n":"Farfetch'd","p":{"1st Edition":2.5}}],
 "068/082":[{"i":612411,"n":"Lickitung","p":{"1st Edition":2.5,"Unlimited":18.99}}],
 "070/082":[{"i":612408,"n":"Kangaskhan","p":{"1st Edition Holofoil":24}}],
-"074/082":[{"i":612448,"n":"Snorlax","p":{"1st Edition Holofoil":99.99}}],
 "075/082":[{"i":612402,"n":"Great Ball","p":{"1st Edition":5.47,"Unlimited":1.45}}],
 "076/082":[{"i":612455,"n":"VS Seeker","p":{"Unlimited":5,"1st Edition":3}}],
 "077/082":[{"i":612433,"n":"PokeDex HANDY909","p":{"Unlimited":4.99,"1st Edition":0.75}}],
@@ -61,5 +61,5 @@
 "079/082":[{"i":612384,"n":"Celio's Network","p":{"1st Edition":1,"Unlimited":1}}],
 "080/082":[{"i":612381,"n":"Bill's Maintenance","p":{"1st Edition":3,"Unlimited":2}}],
 "081/082":[{"i":612398,"n":"Exp. Share","p":{"Unlimited":0.75,"1st Edition":1}}],
-"082/082":[{"i":612421,"n":"Mt. Moon","p":{"Unlimited":1.99}}]
+"082/082":[{"i":612421,"n":"Mt. Moon","p":{"Unlimited":1.48}}]
 }

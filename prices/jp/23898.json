@@ -26,7 +26,7 @@
 "025/069":[{"i":601409,"n":"Raikou EX - 025/069","p":{"1st Edition Holofoil":8.13}}],
 "027/069":[{"i":601403,"n":"Minun","p":{"1st Edition":14.95}}],
 "028/069":[{"i":601393,"n":"Joltik","p":{"1st Edition":6}}],
-"029/069":[{"i":601386,"n":"Galvantula","p":{"1st Edition":7}}],
+"029/069":[{"i":601386,"n":"Galvantula","p":{"1st Edition":6}}],
 "030/069":[{"i":601425,"n":"Tynamo","p":{"1st Edition":0.5}}],
 "031/069":[{"i":601375,"n":"Eelektrik","p":{"1st Edition":1.87}}],
 "032/069":[{"i":601376,"n":"Eelektross","p":{"1st Edition Holofoil":2.09}}],
@@ -69,5 +69,6 @@
 "069/069":[{"i":601424,"n":"Twist Mountain","p":{"1st Edition":0.99}}],
 "070/069":[{"i":601381,"n":"Entei EX - 070/069","p":{"1st Edition Holofoil":60}}],
 "071/069":[{"i":601410,"n":"Raikou EX - 071/069","p":{"1st Edition Holofoil":199.69}}],
+"072/069":[{"i":601372,"n":"Darkrai EX - 072/069","p":{"1st Edition Holofoil":99.99}}],
 "073/069":[{"i":601423,"n":"Tornadus EX - 073/069","p":{"1st Edition Holofoil":61.09}}]
 }

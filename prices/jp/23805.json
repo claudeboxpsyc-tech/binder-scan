@@ -1,16 +1,16 @@
 {
 "002/021":[{"i":588683,"n":"Magnemite","p":{"Normal":5}}],
-"003/021":[{"i":588684,"n":"Voltorb","p":{"Normal":1.25}}],
-"004/021":[{"i":588685,"n":"Electrode","p":{"Normal":3.82}}],
+"003/021":[{"i":588684,"n":"Voltorb","p":{"Normal":2}}],
+"004/021":[{"i":588685,"n":"Electrode","p":{"Normal":3.89}}],
 "005/021":[{"i":588679,"n":"Shinx","p":{"Normal":3.18}}],
 "007/021":[{"i":588680,"n":"Pawmi","p":{"Normal":1.08}}],
 "008/021":[{"i":588681,"n":"Pawmo","p":{"Normal":5.06}}],
 "009/021":[{"i":588682,"n":"Pawmot","p":{"Normal":0.75}}],
 "010/021":[{"i":588677,"n":"Lechonk","p":{"Normal":3.6}}],
 "011/021":[{"i":588671,"n":"Energy Switch","p":{"Normal":3.6}}],
-"012/021":[{"i":588676,"n":"Electric Generator","p":{"Normal":2.1}}],
+"012/021":[{"i":588676,"n":"Electric Generator","p":{"Normal":3.95}}],
 "013/021":[{"i":588674,"n":"Nest Ball","p":{"Normal":0.1}}],
 "014/021":[{"i":588673,"n":"Ultra Ball","p":{"Normal":0.13}}],
-"017/021":[{"i":588672,"n":"Pokemon Catcher","p":{"Normal":1.13}}],
-"021/021":[{"i":588675,"n":"Professor's Research","p":{"Normal":0.25}}]
+"017/021":[{"i":588672,"n":"Pokemon Catcher","p":{"Normal":2}}],
+"021/021":[{"i":588675,"n":"Professor's Research","p":{"Normal":2.08}}]
 }

@@ -62,7 +62,7 @@
 "062/080":[{"i":608438,"n":"Lickilicky","p":{"1st Edition":2.92}}],
 "063/080":[{"i":608439,"n":"Kangaskhan","p":{"1st Edition":4.2}}],
 "065/080":[{"i":608441,"n":"Porygon","p":{"1st Edition":5}}],
-"066/080":[{"i":608442,"n":"Porygon2","p":{"1st Edition":5.11}}],
+"066/080":[{"i":608442,"n":"Porygon2","p":{"1st Edition":5.04}}],
 "068/080":[{"i":608444,"n":"Aipom","p":{"1st Edition":1.75}}],
 "069/080":[{"i":608445,"n":"Ambipom","p":{"1st Edition":3}},{"i":608526,"n":"Ambipom (Mirror Holofoil)","p":{"1st Edition Holofoil":20.39}}],
 "072/080":[{"i":608448,"n":"Palkia & Dialga Legend - 072/080","p":{"1st Edition Holofoil":80}}],
@@ -71,7 +71,7 @@
 "075/080":[{"i":608451,"n":"Rayquaza & Deoxys Legend - 075/080","p":{"1st Edition Holofoil":65,"Unlimited Holofoil":275}}],
 "076/080":[{"i":608452,"n":"Junk Arm","p":{"1st Edition":1}},{"i":608533,"n":"Junk Arm (Mirror Holofoil)","p":{"1st Edition Holofoil":5}}],
 "077/080":[{"i":608453,"n":"Black Belt","p":{"1st Edition":3}}],
-"078/080":[{"i":608454,"n":"Twins","p":{"1st Edition":5}}],
+"078/080":[{"i":608454,"n":"Twins","p":{"1st Edition":5}},{"i":608535,"n":"Twins (Mirror Holofoil)","p":{"1st Edition Holofoil":999}}],
 "079/080":[{"i":608455,"n":"Indigo Plateau","p":{"1st Edition":12}}],
 "080/080":[{"i":608456,"n":"Rescue Energy","p":{"1st Edition":1.87}}]
 }
