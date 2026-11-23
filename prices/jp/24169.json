@@ -1,5 +1,5 @@
 {
-"1":[{"i":614656,"n":"Growlithe - 1","p":{"Normal":15.87}}],
+"1":[{"i":614656,"n":"Growlithe - 1","p":{"Normal":15.83}}],
 "10":[{"i":614670,"n":"Wartortle - 10","p":{"Normal":85}}],
 "11":[{"i":614637,"n":"Basic Fire Energy - 11","p":{"Normal":3.99}}],
 "12":[{"i":614631,"n":"Basic Fighting Energy - 12","p":{"Normal":3}}],
@@ -36,7 +36,7 @@
 "40":[{"i":614667,"n":"Squirtle - 40","p":{"Normal":96.99}}],
 "5":[{"i":614641,"n":"Basic Water Energy - 5","p":{"Normal":3}}],
 "6":[{"i":614642,"n":"Basic Water Energy - 6","p":{"Normal":3}}],
-"7":[{"i":614655,"n":"Full Heal","p":{"Normal":2.49}}],
+"7":[{"i":614655,"n":"Full Heal","p":{"Normal":2.74}}],
 "8":[{"i":614636,"n":"Basic Fire Energy - 8","p":{"Normal":5.99}}],
 "9":[{"i":614661,"n":"Poliwag","p":{"Normal":9.99}}]
 }

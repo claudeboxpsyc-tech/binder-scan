@@ -50,7 +50,7 @@
 "049/076":[{"i":602742,"n":"Lairon","p":{"Unlimited":1,"1st Edition":3}}],
 "050/076":[{"i":602704,"n":"Aggron","p":{"Unlimited":1,"1st Edition":1}}],
 "051/076":[{"i":602739,"n":"Jirachi EX - 051/076","p":{"1st Edition Holofoil":11}}],
-"052/076":[{"i":602724,"n":"Escavalier (Team Plasma)","p":{"Unlimited":3.48,"1st Edition":2}}],
+"052/076":[{"i":602724,"n":"Escavalier (Team Plasma)","p":{"Unlimited":1.49,"1st Edition":2}}],
 "053/076":[{"i":602715,"n":"Dialga EX (Team Plasma) - 053/076","p":{"Unlimited Holofoil":20,"1st Edition Holofoil":14.5}}],
 "054/076":[{"i":602754,"n":"Palkia EX (Team Plasma) - 054/076","p":{"Unlimited Holofoil":16.14,"1st Edition Holofoil":17.5}}],
 "055/076":[{"i":602708,"n":"Axew","p":{"Unlimited":1,"1st Edition":2}}],
@@ -76,7 +76,8 @@
 "075/076":[{"i":602727,"n":"G Booster","p":{"1st Edition Holofoil":3.43,"Unlimited Holofoil":3.98}}],
 "076/076":[{"i":602756,"n":"Plasma Energy","p":{"Unlimited":1.75,"1st Edition":2}}],
 "077/076":[{"i":602786,"n":"Virizion EX - 077/076","p":{"Unlimited Holofoil":35,"1st Edition Holofoil":59.99}}],
-"079/076":[{"i":602740,"n":"Jirachi EX - 079/076","p":{"1st Edition Holofoil":50,"Unlimited Holofoil":300}}],
+"079/076":[{"i":602740,"n":"Jirachi EX - 079/076","p":{"1st Edition Holofoil":100,"Unlimited Holofoil":300}}],
+"080/076":[{"i":602716,"n":"Dialga EX (Team Plasma) - 080/076","p":{"1st Edition Holofoil":180}}],
 "081/076":[{"i":602755,"n":"Palkia EX (Team Plasma) - 081/076","p":{"Unlimited Holofoil":270}}],
 "085/076":[{"i":602721,"n":"Dusknoir","p":{"1st Edition Holofoil":350}}]
 }

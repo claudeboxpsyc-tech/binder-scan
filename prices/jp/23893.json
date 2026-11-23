@@ -1,5 +1,5 @@
 {
-"001/053":[{"i":600831,"n":"Sewaddle","p":{"1st Edition":1,"Unlimited":2.99}}],
+"001/053":[{"i":600831,"n":"Sewaddle","p":{"1st Edition":1,"Unlimited":3}}],
 "002/053":[{"i":600833,"n":"Swadloon","p":{"1st Edition":0.85,"Unlimited":2}}],
 "003/053":[{"i":600811,"n":"Leavanny","p":{"1st Edition":2.84,"Unlimited":0.99}}],
 "004/053":[{"i":600795,"n":"Cottonee","p":{"1st Edition":2,"Unlimited":0.35}}],
@@ -41,7 +41,7 @@
 "040/053":[{"i":600810,"n":"Klinklang","p":{"Unlimited Holofoil":2,"1st Edition Holofoil":1.5}}],
 "041/053":[{"i":600818,"n":"Pidove","p":{"1st Edition":1.99,"Unlimited":0.75}}],
 "042/053":[{"i":600839,"n":"Tranquill","p":{"Unlimited":2.99,"1st Edition":0.99}}],
-"043/053":[{"i":600840,"n":"Unfezant","p":{"Unlimited":2.5,"1st Edition":0.35}}],
+"043/053":[{"i":600840,"n":"Unfezant","p":{"Unlimited":3,"1st Edition":0.35}}],
 "044/053":[{"i":600814,"n":"Minccino","p":{"Unlimited":0.99,"1st Edition":3}}],
 "045/053":[{"i":600794,"n":"Cinccino","p":{"Unlimited":3,"1st Edition":5.99}}],
 "046/053":[{"i":600793,"n":"Bouffalant","p":{"Unlimited":0.95,"1st Edition":1}}],
@@ -51,7 +51,7 @@
 "050/053":[{"i":600821,"n":"Pokemon Communication","p":{"1st Edition":5}}],
 "051/053":[{"i":600813,"n":"Max Potion","p":{"1st Edition":2.7,"Unlimited":2}}],
 "052/053":[{"i":600823,"n":"Recycle","p":{"1st Edition":5.04}}],
-"053/053":[{"i":600822,"n":"Professor Juniper","p":{"1st Edition":2}}],
+"053/053":[{"i":600822,"n":"Professor Juniper","p":{"1st Edition":1.25}}],
 "054/053":[{"i":600838,"n":"Tornadus - 054/053","p":{"Unlimited Holofoil":57.5,"1st Edition Holofoil":35.99}}],
 "055/053":[{"i":600825,"n":"Reshiram - 055/053","p":{"1st Edition Holofoil":140}}]
 }

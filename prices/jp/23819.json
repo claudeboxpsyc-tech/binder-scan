@@ -1,8 +1,8 @@
 {
-"001/032":[{"i":591943,"n":"Bulbasaur","p":{"Holofoil":25.82}}],
+"001/032":[{"i":591943,"n":"Bulbasaur","p":{"Holofoil":25.71}}],
 "002/032":[{"i":591944,"n":"Ivysaur","p":{"Holofoil":8.74}}],
 "003/032":[{"i":591945,"n":"Venusaur","p":{"Holofoil":49.7}}],
-"004/032":[{"i":591946,"n":"Paras","p":{"Holofoil":2.71}}],
+"004/032":[{"i":591946,"n":"Paras","p":{"Holofoil":2.75}}],
 "005/032":[{"i":591947,"n":"Parasect","p":{"Holofoil":1.59}}],
 "006/032":[{"i":591948,"n":"Scyther","p":{"Holofoil":8.94}}],
 "007/032":[{"i":591949,"n":"Pinsir","p":{"Holofoil":1.46}}],
@@ -11,7 +11,7 @@
 "010/032":[{"i":591952,"n":"Onix","p":{"Holofoil":6.41}}],
 "011/032":[{"i":591953,"n":"Hitmonlee","p":{"Holofoil":9.32}}],
 "012/032":[{"i":591954,"n":"Hitmonchan","p":{"Holofoil":7.56}}],
-"013/032":[{"i":591955,"n":"Doduo","p":{"Holofoil":1.41}}],
+"013/032":[{"i":591955,"n":"Doduo","p":{"Holofoil":1.38}}],
 "014/032":[{"i":591956,"n":"Dodrio","p":{"Holofoil":1.43}}],
 "015/032":[{"i":591957,"n":"Chansey","p":{"Holofoil":7.78}}],
 "016/032":[{"i":591958,"n":"Snorlax","p":{"Holofoil":15.12}}],
@@ -24,11 +24,11 @@
 "023/032":[{"i":591965,"n":"Switch","p":{"Holofoil":0.56}}],
 "024/032":[{"i":591966,"n":"Poke Ball","p":{"Holofoil":0.8}}],
 "025/032":[{"i":591967,"n":"Sun Seed","p":{"Holofoil":1.15}}],
-"026/032":[{"i":591968,"n":"Professor Oak","p":{"Holofoil":0.72}}],
+"026/032":[{"i":591968,"n":"Professor Oak","p":{"Holofoil":0.71}}],
 "027/032":[{"i":591969,"n":"Pokemon Fan Club","p":{"Holofoil":1.66}}],
-"028/032":[{"i":591970,"n":"Pokemon Nurse","p":{"Holofoil":7.89}}],
-"029/032":[{"i":591971,"n":"Boss's Orders","p":{"Holofoil":1.16}}],
+"028/032":[{"i":591970,"n":"Pokemon Nurse","p":{"Holofoil":7.9}}],
+"029/032":[{"i":591971,"n":"Boss's Orders","p":{"Holofoil":0.98}}],
 "030/032":[{"i":591972,"n":"Bill","p":{"Holofoil":0.44}}],
 "031/032":[{"i":591973,"n":"Rocket's Admin.","p":{"Holofoil":0.78}}],
-"032/032":[{"i":591974,"n":"Double Colorless Energy","p":{"Holofoil":1.2}}]
+"032/032":[{"i":591974,"n":"Double Colorless Energy","p":{"Holofoil":1.18}}]
 }
