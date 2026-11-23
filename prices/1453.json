@@ -1,13 +1,13 @@
 {
 "13/95":[{"i":211517,"n":"Blastoise - 13/95 (Prerelease)","p":{"Holofoil":159.99}},{"i":211518,"n":"Blastoise - 13/95 (Prerelease) [Staff]","p":{"Holofoil":950}}],
 "17/90":[{"i":221177,"n":"Leafeon - 17/90 (Prerelease)","p":{"Holofoil":149.99}}],
-"20/102":[{"i":224195,"n":"Electivire - 20/102 (Prerelease)","p":{"Holofoil":54.68}},{"i":224196,"n":"Electivire - 20/102 (Prerelease) [Staff]","p":{"Holofoil":164.33}}],
+"20/102":[{"i":224195,"n":"Electivire - 20/102 (Prerelease)","p":{"Holofoil":55.56}},{"i":224196,"n":"Electivire - 20/102 (Prerelease) [Staff]","p":{"Holofoil":164.33}}],
 "HGSS01":[{"i":86125,"n":"Ho-Oh - HGSS01","p":{"Holofoil":148.65}}],
 "HGSS02":[{"i":86909,"n":"Lugia - HGSS02","p":{"Holofoil":485.99}}],
 "HGSS03":[{"i":88098,"n":"Pikachu - HGSS03","p":{"Holofoil":59.94}}],
 "HGSS04":[{"i":90622,"n":"Wobbuffet - HGSS04","p":{"Holofoil":15.31}}],
 "HGSS05":[{"i":86174,"n":"Hoothoot - HGSS05","p":{"Holofoil":16.25}}],
-"HGSS06":[{"i":87795,"n":"Noctowl - HGSS06","p":{"Holofoil":13.31}}],
+"HGSS06":[{"i":87795,"n":"Noctowl - HGSS06","p":{"Holofoil":12.94}}],
 "HGSS07":[{"i":85421,"n":"Feraligatr (Prime) - HGSS07","p":{"Holofoil":82.83}}],
 "HGSS08":[{"i":87295,"n":"Meganium (Prime) - HGSS08","p":{"Holofoil":75}}],
 "HGSS09":[{"i":90108,"n":"Typhlosion (Prime) - HGSS09","p":{"Holofoil":90.99}}],
@@ -26,5 +26,5 @@
 "HGSS22":[{"i":88313,"n":"Porygon - HGSS22","p":{"Holofoil":21.63}}],
 "HGSS23":[{"i":88328,"n":"Porygon2 - HGSS23","p":{"Holofoil":20.5}}],
 "HGSS24":[{"i":86097,"n":"Hitmonchan - HGSS24","p":{"Holofoil":20.3}}],
-"HGSS25":[{"i":86109,"n":"Hitmonlee - HGSS25","p":{"Holofoil":21.83}}]
+"HGSS25":[{"i":86109,"n":"Hitmonlee - HGSS25","p":{"Holofoil":24.44}}]
 }

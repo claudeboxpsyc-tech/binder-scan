@@ -3,9 +3,9 @@
 "004":[{"i":556890,"n":"Basic Lightning Energy - Pikachu 3","p":{"Normal":0.13}},{"i":556892,"n":"Basic Lightning Energy - Pikachu 4","p":{"Normal":0.15}},{"i":556894,"n":"Basic Lightning Energy - Pikachu 8","p":{"Normal":0.13}},{"i":556895,"n":"Basic Lightning Energy - Pikachu 9","p":{"Normal":0.13}},{"i":556896,"n":"Basic Lightning Energy - Pikachu 10","p":{"Normal":0.13}},{"i":556897,"n":"Basic Lightning Energy - Pikachu 11","p":{"Normal":0.15}},{"i":556898,"n":"Basic Lightning Energy - Pikachu 12","p":{"Normal":0.13}},{"i":556899,"n":"Basic Lightning Energy - Pikachu 16","p":{"Normal":0.14}},{"i":556900,"n":"Basic Lightning Energy - Pikachu 20","p":{"Normal":0.13}},{"i":556901,"n":"Basic Lightning Energy - Pikachu 22","p":{"Normal":0.13}},{"i":556902,"n":"Basic Lightning Energy - Pikachu 24","p":{"Normal":0.13}},{"i":556903,"n":"Basic Lightning Energy - Pikachu 27","p":{"Normal":0.13}},{"i":556904,"n":"Basic Lightning Energy - Pikachu 31","p":{"Normal":0.13}},{"i":556905,"n":"Basic Lightning Energy - Pikachu 35","p":{"Normal":0.12}},{"i":556906,"n":"Basic Lightning Energy - Pikachu 39","p":{"Normal":0.14}},{"i":556907,"n":"Basic Lightning Energy - Pikachu 43","p":{"Normal":0.12}},{"i":556908,"n":"Basic Lightning Energy - Pikachu 48","p":{"Normal":0.11}},{"i":607999,"n":"Basic Lightning Energy - Pikachu 7","p":{"Normal":0.12}}],
 "007":[{"i":556825,"n":"Basic Darkness Energy - Darkrai Deck","p":{"Normal":0.15}}],
 "023/182":[{"i":557028,"n":"Fuecoco - Armarouge 1","p":{"Normal":0.35}},{"i":557029,"n":"Fuecoco - Armarouge 14","p":{"Normal":0.29}},{"i":557039,"n":"Fuecoco - Armarouge 17","p":{"Normal":0.35}},{"i":557040,"n":"Fuecoco - Armarouge 42","p":{"Normal":0.29}}],
-"033/198":[{"i":557051,"n":"Houndour - Armarouge 7","p":{"Normal":0.19}},{"i":557052,"n":"Houndour - Armarouge 21","p":{"Normal":0.22}},{"i":557053,"n":"Houndour - Armarouge 39","p":{"Normal":0.2}}],
-"034/198":[{"i":557046,"n":"Houndoom - Armarouge 23","p":{"Normal":0.32}},{"i":557050,"n":"Houndoom - Armarouge 27","p":{"Normal":0.32}}],
-"035/198":[{"i":557070,"n":"Torkoal - Armarouge 4","p":{"Normal":0.24}},{"i":557071,"n":"Torkoal - Armarouge 53","p":{"Normal":0.15}}],
+"033/198":[{"i":557051,"n":"Houndour - Armarouge 7","p":{"Normal":0.19}},{"i":557052,"n":"Houndour - Armarouge 21","p":{"Normal":0.22}},{"i":557053,"n":"Houndour - Armarouge 39","p":{"Normal":0.21}}],
+"034/198":[{"i":557046,"n":"Houndoom - Armarouge 23","p":{"Normal":0.33}},{"i":557050,"n":"Houndoom - Armarouge 27","p":{"Normal":0.32}}],
+"035/198":[{"i":557070,"n":"Torkoal - Armarouge 4","p":{"Normal":0.24}},{"i":557071,"n":"Torkoal - Armarouge 53","p":{"Normal":0.16}}],
 "036/193":[{"i":557007,"n":"Crocalor - Armarouge 15","p":{"Normal":0.18}},{"i":557008,"n":"Crocalor - Armarouge 30","p":{"Normal":0.18}},{"i":557009,"n":"Crocalor - Armarouge 51","p":{"Normal":0.2}}],
 "038/198":[{"i":557067,"n":"Skeledirge - Armarouge 36","p":{"Normal":0.25}}],
 "039/193":[{"i":557004,"n":"Charcadet - Armarouge 13","p":{"Normal":0.28}},{"i":557005,"n":"Charcadet - Armarouge 19","p":{"Normal":0.34}},{"i":557006,"n":"Charcadet - Armarouge 56","p":{"Normal":0.35}}],
@@ -16,7 +16,7 @@
 "069/198":[{"i":556925,"n":"Rotom - Pikachu 14","p":{"Normal":0.2}}],
 "077/193":[{"i":556942,"n":"Wattrel - Pikachu 17","p":{"Normal":0.16}},{"i":556943,"n":"Wattrel - Pikachu 58","p":{"Normal":0.14}}],
 "082/193":[{"i":556922,"n":"Kilowattrel - Pikachu 40","p":{"Normal":0.17}}],
-"105":[{"i":556445,"n":"Armarouge ex (Armarouge 60)","p":{"Holofoil":2.85}}],
+"105":[{"i":556445,"n":"Armarouge ex (Armarouge 60)","p":{"Holofoil":2.88}}],
 "106":[{"i":556443,"n":"Pikachu ex (Pikachu 60)","p":{"Holofoil":11.03}}],
 "107":[{"i":556923,"n":"Mareep - Pikachu 19","p":{"Normal":0.35}},{"i":556924,"n":"Mareep - Pikachu 41","p":{"Normal":0.81}},{"i":556926,"n":"Mareep - Pikachu 45","p":{"Normal":0.47}},{"i":556927,"n":"Mareep - Pikachu 2","p":{"Normal":1.15}}],
 "108":[{"i":556910,"n":"Flaaffy - Pikachu 5","p":{"Normal":2.44}},{"i":556911,"n":"Flaaffy - Pikachu 37","p":{"Normal":0.68}},{"i":556912,"n":"Flaaffy - Pikachu 53","p":{"Normal":0.74}}],
@@ -42,5 +42,5 @@
 "188/192":[{"i":556920,"n":"Potion - Pikachu 15","p":{"Normal":0.11}},{"i":556921,"n":"Potion - Pikachu 18","p":{"Normal":0.13}}],
 "188/198":[{"i":556871,"n":"Potion - Darkrai Deck","p":{"Normal":0.13}},{"i":557065,"n":"Potion - Armarouge 25","p":{"Normal":0.14}},{"i":557066,"n":"Potion - Armarouge 37","p":{"Normal":0.15}}],
 "194/198":[{"i":556893,"n":"Switch - Darkrai Deck","p":{"Normal":0.15}},{"i":556928,"n":"Switch - Pikachu 36","p":{"Normal":0.13}},{"i":556931,"n":"Switch - Pikachu 52","p":{"Normal":0.19}},{"i":557068,"n":"Switch - Armarouge 40","p":{"Normal":0.16}},{"i":557069,"n":"Switch - Armarouge 58","p":{"Normal":0.13}}],
-"198/198":[{"i":556909,"n":"Youngster - Darkrai Deck","p":{"Normal":0.09}},{"i":556944,"n":"Youngster - Pikachu 21","p":{"Normal":0.2}},{"i":556946,"n":"Youngster - Pikachu 50","p":{"Normal":0.15}},{"i":556947,"n":"Youngster - Pikachu 59","p":{"Normal":0.15}},{"i":557073,"n":"Youngster - Armarouge 18","p":{"Normal":0.14}},{"i":557074,"n":"Youngster - Armarouge 50","p":{"Normal":0.13}},{"i":557075,"n":"Youngster - Armarouge 59","p":{"Normal":0.15}}]
+"198/198":[{"i":556909,"n":"Youngster - Darkrai Deck","p":{"Normal":0.1}},{"i":556944,"n":"Youngster - Pikachu 21","p":{"Normal":0.21}},{"i":556946,"n":"Youngster - Pikachu 50","p":{"Normal":0.16}},{"i":556947,"n":"Youngster - Pikachu 59","p":{"Normal":0.17}},{"i":557073,"n":"Youngster - Armarouge 18","p":{"Normal":0.16}},{"i":557074,"n":"Youngster - Armarouge 50","p":{"Normal":0.15}},{"i":557075,"n":"Youngster - Armarouge 59","p":{"Normal":0.17}}]
 }
