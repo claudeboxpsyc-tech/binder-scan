@@ -1,7 +1,6 @@
 {
 "001/055":[{"i":613042,"n":"Koffing","p":{"Unlimited":11}}],
 "002/055":[{"i":613078,"n":"Weezing","p":{"Unlimited":1.75,"1st Edition":2.5}}],
-"003/055":[{"i":613063,"n":"Sceptile","p":{"Unlimited Holofoil":29.99,"1st Edition Holofoil":34.99}}],
 "004/055":[{"i":613051,"n":"Wurmple","p":{"Unlimited":6.5,"1st Edition":9}}],
 "005/055":[{"i":613092,"n":"Silcoon","p":{"1st Edition":9,"Unlimited":2.49}}],
 "006/055":[{"i":613054,"n":"Beautifly","p":{"1st Edition Holofoil":8.99,"Unlimited Holofoil":9}}],
@@ -45,7 +44,7 @@
 "045/055":[{"i":613057,"n":"Delcatty","p":{"1st Edition Holofoil":5,"Unlimited Holofoil":14.99}}],
 "046/055":[{"i":613083,"n":"Sneasel ex","p":{"Unlimited Holofoil":89.99,"1st Edition Holofoil":44.99}}],
 "047/055":[{"i":613046,"n":"Poochyena","p":{"Unlimited":2,"1st Edition":5}}],
-"048/055":[{"i":613062,"n":"Mightyena","p":{"Unlimited Holofoil":29.99,"1st Edition Holofoil":25}}],
+"048/055":[{"i":613062,"n":"Mightyena","p":{"1st Edition Holofoil":25}}],
 "049/055":[{"i":613084,"n":"Aron","p":{"Unlimited":4,"1st Edition":4.44}}],
 "050/055":[{"i":613070,"n":"Lairon","p":{"1st Edition":9,"Unlimited":2.8}}],
 "051/055":[{"i":613053,"n":"Aggron","p":{"Unlimited Holofoil":11.99,"1st Edition Holofoil":19.99}}],

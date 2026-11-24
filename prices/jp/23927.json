@@ -4,11 +4,11 @@
 "003/080":[{"i":604176,"n":"Meganium","p":{"1st Edition Holofoil":5.89}}],
 "004/080":[{"i":604196,"n":"Seedot","p":{"Unlimited":2,"1st Edition":1}}],
 "005/080":[{"i":604170,"n":"Kricketot","p":{"1st Edition":1.05}}],
-"006/080":[{"i":604171,"n":"Kricketune","p":{"Unlimited":2.73,"1st Edition":1.2}}],
+"006/080":[{"i":604171,"n":"Kricketune","p":{"Unlimited":3.28,"1st Edition":1.2}}],
 "007/080":[{"i":604182,"n":"Petilil","p":{"1st Edition":1.7}}],
 "008/080":[{"i":604172,"n":"Lilligant","p":{"1st Edition":1}}],
 "009/080":[{"i":604144,"n":"Durant","p":{"1st Edition":2.89}}],
-"010/080":[{"i":604177,"n":"Numel","p":{"1st Edition":1.12}}],
+"010/080":[{"i":604177,"n":"Numel","p":{"Unlimited":1.2,"1st Edition":1.12}}],
 "011/080":[{"i":604131,"n":"Camerupt","p":{"1st Edition":1,"Unlimited":4.62}}],
 "012/080":[{"i":604165,"n":"Heatmor","p":{"1st Edition":1.99,"Unlimited":0.99}}],
 "013/080":[{"i":604205,"n":"Slowpoke","p":{"1st Edition":8}}],
@@ -73,5 +73,5 @@
 "082/080":[{"i":604160,"n":"Mega Gyarados EX - 082/080","p":{"1st Edition Holofoil":499.99}}],
 "086/080":[{"i":604194,"n":"Scizor EX - 086/080","p":{"1st Edition Holofoil":177.5}}],
 "087/080":[{"i":604192,"n":"Mega Scizor Ex - 087/080","p":{"1st Edition Holofoil":150}}],
-"089/080":[{"i":604163,"n":"Gyarados EX - 089/080","p":{"1st Edition Holofoil":349.99}}]
+"089/080":[{"i":604163,"n":"Gyarados EX - 089/080","p":{"1st Edition Holofoil":349.99,"Unlimited Holofoil":550}}]
 }

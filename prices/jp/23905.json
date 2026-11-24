@@ -14,7 +14,7 @@
 "013/051":[{"i":602279,"n":"Vanillish","p":{"1st Edition":3}}],
 "014/051":[{"i":602317,"n":"Vanilluxe (Team Plasma)","p":{"Unlimited":3.79,"1st Edition":3}}],
 "015/051":[{"i":602306,"n":"Cryogonal (Team Plasma)","p":{"Unlimited":2.99,"1st Edition":1.58}}],
-"016/051":[{"i":602288,"n":"Kyurem (Team Plasma)","p":{"1st Edition Holofoil":9}}],
+"016/051":[{"i":602288,"n":"Kyurem (Team Plasma)","p":{"1st Edition Holofoil":9.3}}],
 "017/051":[{"i":602281,"n":"Voltorb","p":{"1st Edition":2.99}}],
 "018/051":[{"i":602286,"n":"Electrode","p":{"1st Edition Holofoil":6}}],
 "019/051":[{"i":602275,"n":"Pachirisu","p":{"1st Edition":3}}],
@@ -27,7 +27,7 @@
 "026/051":[{"i":602272,"n":"Metang","p":{"Unlimited":1.6,"1st Edition":3.39}}],
 "027/051":[{"i":602291,"n":"Metagross (Team Plasma)","p":{"1st Edition Holofoil":9.9}}],
 "028/051":[{"i":602311,"n":"Nidoking","p":{"1st Edition":6.5}}],
-"029/051":[{"i":602270,"n":"Makuhita","p":{"1st Edition":2,"Unlimited":5.07}}],
+"029/051":[{"i":602270,"n":"Makuhita","p":{"1st Edition":2,"Unlimited":4.9}}],
 "030/051":[{"i":602268,"n":"Hariyama","p":{"1st Edition":1,"Unlimited":1}}],
 "031/051":[{"i":602295,"n":"Umbreon (Team Plasma)","p":{"Unlimited Holofoil":69.99,"1st Edition Holofoil":79.99}}],
 "032/051":[{"i":602276,"n":"Pawniard","p":{"1st Edition":3.82}}],
@@ -51,5 +51,5 @@
 "050/051":[{"i":602290,"n":"Life Dew","p":{"1st Edition Holofoil":6}}],
 "051/051":[{"i":602312,"n":"Plasma Energy","p":{"Unlimited":1}}],
 "052/051":[{"i":602298,"n":"Thundurus EX (Team Plasma) - 052/051","p":{"1st Edition Holofoil":79.99}}],
-"053/051":[{"i":602296,"n":"Latias EX - 053/051","p":{"1st Edition Holofoil":95,"Unlimited Holofoil":149.99}}]
+"053/051":[{"i":602296,"n":"Latias EX - 053/051","p":{"1st Edition Holofoil":92,"Unlimited Holofoil":149.99}}]
 }

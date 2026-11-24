@@ -1,7 +1,7 @@
 {
 "001/082":[{"i":612383,"n":"Caterpie","p":{"Unlimited":3,"1st Edition":4}}],
 "002/082":[{"i":612417,"n":"Metapod","p":{"Unlimited":3,"1st Edition":4}}],
-"003/082":[{"i":612382,"n":"Butterfree","p":{"1st Edition Holofoil":50,"Unlimited Holofoil":17.49}}],
+"003/082":[{"i":612382,"n":"Butterfree","p":{"1st Edition Holofoil":50,"Unlimited Holofoil":18.74}}],
 "004/082":[{"i":612456,"n":"Weedle","p":{"1st Edition":7,"Unlimited":1.85}}],
 "005/082":[{"i":612407,"n":"Kakuna","p":{"1st Edition":3,"Unlimited":3.5}}],
 "006/082":[{"i":612379,"n":"Beedrill","p":{"Unlimited Holofoil":13.5,"1st Edition Holofoil":19.26}}],
@@ -26,7 +26,8 @@
 "032/082":[{"i":612410,"n":"Krabby","p":{"Unlimited":4.5}}],
 "033/082":[{"i":612409,"n":"Kingler","p":{"1st Edition":9.95,"Unlimited":1}}],
 "034/082":[{"i":612412,"n":"Magikarp","p":{"Unlimited":10,"1st Edition":10}}],
-"037/082":[{"i":612432,"n":"Pikachu","p":{"Unlimited":35,"1st Edition":39.5}}],
+"035/082":[{"i":612404,"n":"Gyarados ex","p":{"1st Edition Holofoil":70}}],
+"037/082":[{"i":612432,"n":"Pikachu","p":{"Unlimited":102.5,"1st Edition":39.5}}],
 "038/082":[{"i":612441,"n":"Raichu","p":{"1st Edition Holofoil":23.15,"Unlimited Holofoil":19.99}}],
 "039/082":[{"i":612413,"n":"Magnemite","p":{"1st Edition":5.99,"Unlimited":3}}],
 "041/082":[{"i":612454,"n":"Voltorb","p":{"1st Edition":2.49,"Unlimited":2}}],

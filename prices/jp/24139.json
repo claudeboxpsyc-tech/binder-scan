@@ -2,8 +2,8 @@
 "001/053":[{"i":613572,"n":"Seedot","p":{"Unlimited":0.35,"1st Edition":0.5}}],
 "002/053":[{"i":613561,"n":"Nuzleaf","p":{"1st Edition":2.06,"Unlimited":2.5}}],
 "003/053":[{"i":613574,"n":"Shiftry","p":{"Unlimited Holofoil":15,"1st Edition Holofoil":9.99}}],
-"004/053":[{"i":613578,"n":"Volbeat","p":{"1st Edition":4,"Unlimited":2.5}}],
-"005/053":[{"i":613549,"n":"Illumise","p":{"1st Edition":4,"Unlimited":3}}],
+"004/053":[{"i":613578,"n":"Volbeat","p":{"1st Edition":4,"Unlimited":2}}],
+"005/053":[{"i":613549,"n":"Illumise","p":{"1st Edition":4}}],
 "006/053":[{"i":613539,"n":"Cacnea","p":{"Unlimited":1,"1st Edition":5}}],
 "007/053":[{"i":613540,"n":"Cacturne","p":{"1st Edition Holofoil":14,"Unlimited Holofoil":13}}],
 "008/053":[{"i":613573,"n":"Seviper","p":{"1st Edition Holofoil":28.68,"Unlimited Holofoil":11.5}}],
@@ -17,6 +17,7 @@
 "016/053":[{"i":613557,"n":"Marill","p":{"Unlimited":6,"1st Edition":4.94}}],
 "017/053":[{"i":613536,"n":"Azumarill","p":{"Unlimited":4,"1st Edition":10.5}}],
 "018/053":[{"i":613554,"n":"Lotad","p":{"Unlimited":2.63,"1st Edition":7.79}}],
+"019/053":[{"i":613553,"n":"Lombre","p":{"1st Edition":10}}],
 "021/053":[{"i":613579,"n":"Wailord ex","p":{"1st Edition Holofoil":59.99}}],
 "022/053":[{"i":613563,"n":"Pikachu","p":{"Unlimited":17.32,"1st Edition":27.47}}],
 "023/053":[{"i":613566,"n":"Raichu ex","p":{"1st Edition Holofoil":20}}],
@@ -47,5 +48,5 @@
 "050/053":[{"i":613567,"n":"Rare Candy","p":{"1st Edition":7}}],
 "051/053":[{"i":613551,"n":"Lanette's Net Search","p":{"1st Edition":3,"Unlimited":1}}],
 "052/053":[{"i":613580,"n":"Wally's Training","p":{"Unlimited":2,"1st Edition":1.13}}],
-"053/053":[{"i":613559,"n":"Multi Energy","p":{"1st Edition":4,"Unlimited":3.5}}]
+"053/053":[{"i":613559,"n":"Multi Energy","p":{"1st Edition":3.5,"Unlimited":3.5}}]
 }

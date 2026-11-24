@@ -1,5 +1,6 @@
 {
 "001/DP-P":[{"i":613312,"n":"Riolu - 001/DP-P","p":{"Normal":8}}],
+"004/DP-P":[{"i":613355,"n":"Lucario LV.X - 004/DP-P","p":{"Holofoil":105}}],
 "005/DP-P":[{"i":613320,"n":"Turtwig - 005/DP-P","p":{"Normal":10}}],
 "006/DP-P":[{"i":613263,"n":"Cherubi - 006/DP-P","p":{"Normal":9.99}}],
 "007/DP-P":[{"i":613264,"n":"Chimchar - 007/DP-P","p":{"Normal":9.99}}],
@@ -25,6 +26,7 @@
 "035/DP-P":[{"i":613262,"n":"Cherrim - 035/DP-P","p":{"Normal":6}}],
 "036/DP-P":[{"i":613259,"n":"Carnivine - 036/DP-P","p":{"Normal":9}}],
 "037/DP-P":[{"i":613291,"n":"Monferno - 037/DP-P","p":{"Normal":5.99}}],
+"038/DP-P":[{"i":613373,"n":"Prinplup - 038/DP-P","p":{"Holofoil":15}}],
 "039/DP-P":[{"i":613297,"n":"Palkia - 039/DP-P","p":{"Normal":3}}],
 "040/DP-P":[{"i":613286,"n":"Luxio - 040/DP-P","p":{"Normal":3.5}}],
 "041/DP-P":[{"i":613271,"n":"Croagunk - 041/DP-P","p":{"Normal":8}}],
@@ -55,7 +57,7 @@
 "089/DP-P":[{"i":613319,"n":"Stunky - 089/DP-P","p":{"Normal":4}}],
 "090/DP-P":[{"i":613310,"n":"Probopass - 090/DP-P","p":{"Normal":5.5}}],
 "091/DP-P":[{"i":613292,"n":"Munchlax - 091/DP-P","p":{"Normal":19.98}}],
-"092/DP-P":[{"i":613351,"n":"Heatran LV.X - 092/DP-P","p":{"Holofoil":150}}],
+"092/DP-P":[{"i":613351,"n":"Heatran LV.X - 092/DP-P","p":{"Holofoil":100}}],
 "093/DP-P":[{"i":613288,"n":"Magnezone - 093/DP-P","p":{"Normal":4.35}}],
 "094/DP-P":[{"i":613340,"n":"Dusknoir - 094/DP-P","p":{"Holofoil":10}}],
 "095/DP-P":[{"i":613368,"n":"Pikachu - 095/DP-P","p":{"Holofoil":92.5}}],

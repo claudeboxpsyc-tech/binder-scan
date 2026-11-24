@@ -1,5 +1,5 @@
 {
-"001/032":[{"i":591943,"n":"Bulbasaur","p":{"Holofoil":25.71}}],
+"001/032":[{"i":591943,"n":"Bulbasaur","p":{"Holofoil":25.09}}],
 "002/032":[{"i":591944,"n":"Ivysaur","p":{"Holofoil":8.74}}],
 "003/032":[{"i":591945,"n":"Venusaur","p":{"Holofoil":49.7}}],
 "004/032":[{"i":591946,"n":"Paras","p":{"Holofoil":2.75}}],
@@ -18,7 +18,7 @@
 "017/032":[{"i":591959,"n":"Lugia ex","p":{"Holofoil":5.29}}],
 "018/032":[{"i":591960,"n":"Super Rod","p":{"Holofoil":0.89}}],
 "019/032":[{"i":591961,"n":"Ultra Ball","p":{"Holofoil":0.89}}],
-"020/032":[{"i":591962,"n":"Computer Search","p":{"Holofoil":0.64}}],
+"020/032":[{"i":591962,"n":"Computer Search","p":{"Holofoil":0.61}}],
 "021/032":[{"i":591963,"n":"VS Seeker","p":{"Holofoil":1.21}}],
 "022/032":[{"i":591964,"n":"Rare Candy","p":{"Holofoil":1.05}}],
 "023/032":[{"i":591965,"n":"Switch","p":{"Holofoil":0.56}}],
@@ -29,6 +29,6 @@
 "028/032":[{"i":591970,"n":"Pokemon Nurse","p":{"Holofoil":7.9}}],
 "029/032":[{"i":591971,"n":"Boss's Orders","p":{"Holofoil":0.98}}],
 "030/032":[{"i":591972,"n":"Bill","p":{"Holofoil":0.44}}],
-"031/032":[{"i":591973,"n":"Rocket's Admin.","p":{"Holofoil":0.78}}],
+"031/032":[{"i":591973,"n":"Rocket's Admin.","p":{"Holofoil":0.77}}],
 "032/032":[{"i":591974,"n":"Double Colorless Energy","p":{"Holofoil":1.18}}]
 }

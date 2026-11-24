@@ -33,7 +33,7 @@
 "032/070":[{"i":601851,"n":"Ralts","p":{"1st Edition":1.5,"Unlimited":2.5}}],
 "033/070":[{"i":601840,"n":"Kirlia","p":{"Unlimited":1,"1st Edition":5}}],
 "034/070":[{"i":601866,"n":"Gallade","p":{"Unlimited Holofoil":12.99,"1st Edition Holofoil":10}}],
-"035/070":[{"i":601867,"n":"Giratina (Team Plasma)","p":{"Unlimited Holofoil":9.99,"1st Edition Holofoil":9.49}}],
+"035/070":[{"i":601867,"n":"Giratina (Team Plasma)","p":{"Unlimited Holofoil":9.99,"1st Edition Holofoil":9.24}}],
 "036/070":[{"i":601858,"n":"Trubbish","p":{"Unlimited":4,"1st Edition":3}}],
 "037/070":[{"i":601839,"n":"Garbodor (Team Plasma)","p":{"Unlimited":1,"1st Edition":3.99}}],
 "038/070":[{"i":601837,"n":"Elgyem","p":{"1st Edition":2.76}}],
@@ -53,7 +53,7 @@
 "052/070":[{"i":601889,"n":"Clefable","p":{"Unlimited":3.25,"1st Edition":6}}],
 "053/070":[{"i":601834,"n":"Doduo","p":{"1st Edition":1,"Unlimited":1}}],
 "054/070":[{"i":601833,"n":"Dodrio","p":{"Unlimited":1.5,"1st Edition":1.1}}],
-"055/070":[{"i":601903,"n":"Snorlax (Team Plasma)","p":{"1st Edition":30,"Unlimited":12}}],
+"055/070":[{"i":601903,"n":"Snorlax (Team Plasma)","p":{"1st Edition":30}}],
 "056/070":[{"i":601856,"n":"Togepi","p":{"Unlimited":4,"1st Edition":7.44}}],
 "057/070":[{"i":601857,"n":"Togetic","p":{"Unlimited":1.48,"1st Edition":2.13}}],
 "058/070":[{"i":601874,"n":"Togekiss","p":{"1st Edition Holofoil":20}}],
@@ -71,7 +71,6 @@
 "070/070":[{"i":601876,"n":"Victory Piece","p":{"Unlimited Holofoil":3.75,"1st Edition Holofoil":1.25}}],
 "071/070":[{"i":601883,"n":"Victini EX - 071/070","p":{"Unlimited Holofoil":99.99}}],
 "072/070":[{"i":601878,"n":"Articuno EX (Team Plasma) - 072/070","p":{"1st Edition Holofoil":1625,"Unlimited Holofoil":250}}],
-"073/070":[{"i":601879,"n":"Cobalion EX - 073/070","p":{"1st Edition Holofoil":50}}],
 "075/070":[{"i":601880,"n":"Colress - 075/070","p":{"1st Edition Holofoil":110,"Unlimited Holofoil":45.99}}],
 "078/070":[{"i":601884,"n":"Blastoise","p":{"Unlimited Holofoil":300}}]
 }
