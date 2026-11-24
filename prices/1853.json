@@ -14,7 +14,7 @@
 "39":[{"i":125119,"n":"Seadra","p":{"Normal":1.21}}],
 "42":[{"i":125141,"n":"Medicham","p":{"Normal":0.92}}],
 "46":[{"i":125156,"n":"Swellow","p":{"Normal":0.86}}],
-"51":[{"i":125131,"n":"Quilava","p":{"Normal":4.86}}],
+"51":[{"i":125131,"n":"Quilava","p":{"Normal":4.81}}],
 "55":[{"i":125116,"n":"Goldeen","p":{"Normal":0.87}},{"i":125153,"n":"Xatu","p":{"Normal":1.07}}],
 "57":[{"i":125142,"n":"Makuhita","p":{"Normal":0.28}}],
 "58":[{"i":125118,"n":"Horsea","p":{"Normal":0.96}}],
@@ -29,7 +29,7 @@
 "72":[{"i":125155,"n":"Taillow","p":{"Normal":0.48}}],
 "73":[{"i":125110,"n":"Torchic","p":{"Normal":1.13}}],
 "74":[{"i":125136,"n":"Ralts","p":{"Normal":2.9}}],
-"79":[{"i":125132,"n":"Skitty","p":{"Normal":1.6}}],
+"79":[{"i":125132,"n":"Skitty","p":{"Normal":1.68}}],
 "85":[{"i":125134,"n":"High Pressure System","p":{"Normal":1.5}}],
 "86":[{"i":125128,"n":"Double Full Heal","p":{"Normal":0.32}}],
 "87":[{"i":125158,"n":"Ancient Tomb","p":{"Normal":5.49}}],
@@ -38,5 +38,5 @@
 "90":[{"i":125123,"n":"Energy Search","p":{"Normal":0.13}}],
 "91":[{"i":125135,"n":"Potion","p":{"Normal":0.15}}],
 "93":[{"i":125121,"n":"Life Herb","p":{"Normal":0.29}}],
-"94/109":[{"i":214286,"n":"Metal Energy (Special) - 94/109","p":{"Normal":0.58}}]
+"94/109":[{"i":214286,"n":"Metal Energy (Special) - 94/109","p":{"Normal":0.59}}]
 }
