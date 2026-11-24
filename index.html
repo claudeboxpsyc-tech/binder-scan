@@ -545,27 +545,53 @@ async function tcGet(file){
   return null;
 }
 const stripPre = s => norm(String(s).replace(/^[A-Za-z]{1,6}\d*(\.\d+)?[a-z]?\s*:\s*/,""));
-async function tcVariants(card){
-  if(!card.set) return null;
-  const ja = card._lang === "ja", dir = ja ? "jp/" : "";
-  if(!tcIndexes[dir]) tcIndexes[dir] = (await tcGet(dir+"index.json")) || { groups:[] };
-  const ix = tcIndexes[dir], gs = ix.groups || [];
+// TCGplayer products for one card: [{i: productId, n: name, p: prices}]
+async function tcProducts(lang, setId, setName, localId, name){
+  const ja = lang === "ja", dir = ja ? "jp/" : "";
+  if(!tcIndexes[dir]) tcIndexes[dir] = tcGet(dir+"index.json").then(x=>x || { groups:[] });
+  const ix = await tcIndexes[dir], gs = ix.groups || [];
   let g;
-  if(ja){ const id = String(card.set.id||"").toLowerCase(); g = gs.find(x=>(x.a||"").toLowerCase()===id); }   // Japanese: match by set code
+  if(ja){ const id = String(setId||"").toLowerCase(); g = gs.find(x=>(x.a||"").toLowerCase()===id); }   // Japanese: match by set code
   else {
-    if(!card.set.name) return null;
-    const want = norm(card.set.name);
+    if(!setName) return null;
+    const want = norm(setName);
     g = gs.find(x=>stripPre(x.n)===want) || gs.find(x=>norm(x.n)===want) || gs.find(x=>stripPre(x.n).endsWith(" "+want));
   }
   if(!g) return null;
   const key = dir+g.g;
-  if(!tcFiles.has(key)) tcFiles.set(key, await tcGet(dir+g.g+".json"));
-  const cards = tcFiles.get(key); if(!cards) return null;
+  if(!tcFiles.has(key)) tcFiles.set(key, tcGet(dir+g.g+".json"));
+  const cards = await tcFiles.get(key); if(!cards) return null;
   let list = [];
-  for(const [num, arr] of Object.entries(cards)) if(sameLocal(num.split("/")[0], card.localId)) list.push(...arr);
-  const named = list.filter(p=>norm(p.n).startsWith(norm(card.name)));
+  for(const [num, arr] of Object.entries(cards)) if(sameLocal(num.split("/")[0], localId)) list.push(...arr);
+  const named = list.filter(p=>norm(p.n).startsWith(norm(name)));
   if(named.length) list = named;
-  return list.length ? tcToVariants(list, ix.u) : null;
+  return list.length ? { list, u: ix.u } : null;
+}
+async function tcVariants(card){
+  if(!card.set) return null;
+  const r = await tcProducts(card._lang, card.set.id, card.set.name, card.localId, card.name);
+  return r ? tcToVariants(r.list, r.u) : null;
+}
+/* Pictures: TCGdex has no image for some cards (many Japanese ones, very new sets).
+   Those are filled with TCGplayer's product photo, found through the price files. */
+const tcPhoto = (id, w=200) => `https://tcgplayer-cdn.tcgplayer.com/product/${id}_${w}w.jpg`;
+async function tcImageId(f){
+  try{ const r = await tcProducts(f.l, f.s, f.sn, f.n, f.nm); if(!r) return null;
+    return (r.list.find(p=>!/\(/.test(p.n)) || r.list[0]).i; }catch{ return null; }
+}
+const fillAttr = f => ` data-fill="${esc(JSON.stringify(f))}"`;
+const fillOfBrief = c => { const sid=setIdOf(c.id), s=setById.get(sid); return { l:LANG, s:sid, sn:s?s.name:"", n:c.localId, nm:c.name }; };
+function fillImages(root, w=200){
+  root.querySelectorAll(".ph[data-fill]").forEach(async el=>{
+    let f; try{ f = JSON.parse(el.dataset.fill); }catch{ return; }
+    el.removeAttribute("data-fill");
+    const id = await tcImageId(f); if(!id || !el.isConnected) return;
+    const im = new Image(); im.alt = f.nm || ""; im.loading = "lazy";
+    im.onload = () => { if(el.isConnected) el.replaceWith(im); };
+    im.onerror = () => { if(w!==200){ im.onerror=null; im.src = tcPhoto(id); } };
+    im.src = tcPhoto(id, w);
+    if(f.k){ const x = collection.find(y=>y.key===f.k); if(x && !x.img){ x.img = tcPhoto(id); store.set("bs.collection", collection); } }
+  });
 }
 async function variantsFor(card){
   const vs = buildVariants(card);
@@ -589,7 +615,7 @@ const img = (c, q="low") => c && c.image ? `${c.image}/${q}.webp` : null;
 function setStatus(html, busy=false){ $("status").innerHTML = html; $("busy").hidden = !busy; }
 let toastT; function toast(msg){ const t=$("toast"); t.textContent=msg; t.hidden=false; clearTimeout(toastT); toastT=setTimeout(()=>t.hidden=true,2200); }
 function esc(s){ return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
-function thumb(src, alt){ return src ? `<img src="${esc(src)}" alt="${esc(alt)}" loading="lazy">` : `<div class="ph">no image</div>`; }
+function thumb(src, alt, fill){ return src ? `<img src="${esc(src)}" alt="${esc(alt)}" loading="lazy">` : `<div class="ph"${fill?fillAttr(fill):""}>no image</div>`; }
 const mini = v => `<span class="mini k-${esc(v.kind)}${v.stamp?" k-stamp":""}" aria-hidden="true"></span>`;
 
 /* ---------- camera ---------- */
@@ -927,7 +953,8 @@ function renderCands(ranked){
   $("cands").innerHTML = ranked.map(({c,m,en})=>{ const s=setById.get(setIdOf(c.id));
     const setTxt = LANG==="ja" ? setIdOf(c.id) : (s?s.name:setIdOf(c.id));
     const nameTxt = en ? `${c.name} · ${en}` : c.name;
-    return `<button class="cand${m?" match":""}" type="button" data-id="${esc(c.id)}" aria-pressed="false" title="${esc(nameTxt)} · ${esc(s?s.name:setIdOf(c.id))} ${esc(c.localId)}">${thumb(img(c),c.name)}<small>${esc(nameTxt)}</small><small>${esc(setTxt)} · ${esc(c.localId)}</small></button>`; }).join("");
+    return `<button class="cand${m?" match":""}" type="button" data-id="${esc(c.id)}" aria-pressed="false" title="${esc(nameTxt)} · ${esc(s?s.name:setIdOf(c.id))} ${esc(c.localId)}">${thumb(img(c),c.name,fillOfBrief(c))}<small>${esc(nameTxt)}</small><small>${esc(setTxt)} · ${esc(c.localId)}</small></button>`; }).join("");
+  fillImages($("cands"));
 }
 function clearResults(){ $("candWrap").hidden=true; $("detailWrap").hidden=true; $("cands").innerHTML=""; current=null; }
 
@@ -1011,7 +1038,7 @@ async function selectCard(id){
                                       : `${c.name} ${c.set&&c.set.name?c.set.name+" ":""}${c.localId}${total}`);
     const upd = first && first.updated;
     $("detail").innerHTML = `
-      ${img(c,"high")?`<img src="${esc(img(c,"high"))}" alt="${esc(c.name)}">`:`<div class="ph">no image</div>`}
+      ${img(c,"high")?`<img src="${esc(img(c,"high"))}" alt="${esc(c.name)}">`:`<div class="ph"${fillAttr({l:c._lang||"en",s:c.set?c.set.id:"",sn:c.set?c.set.name:"",n:c.localId,nm:c.name})}>no image</div>`}
       <div class="meta">
         <h3>${esc(c.name)}${isJa?`<span class="lang">JP</span>`:""}</h3>
         ${enName?`<div class="sub">${esc(enName)}</div>`:""}
@@ -1037,6 +1064,7 @@ async function selectCard(id){
         <a href="https://www.ebay.com/sch/i.html?_nkw=${q}&LH_Sold=1&LH_Complete=1" target="_blank" rel="noopener">eBay sold</a>
         <a href="https://www.pricecharting.com/search-products?type=prices&q=${q}" target="_blank" rel="noopener">PriceCharting (graded)</a>
       </div>`;
+    fillImages($("detail"), 400);
     let chosen = first;
     const pick = v => {
       chosen = v;
@@ -1086,7 +1114,7 @@ function renderCollection(){
     if(v!=null){ total+=v*x.qty; base+=(a!=null?a:v)*x.qty; } else unpriced++;
     const d = v!=null && a!=null && a>0 ? (v-a)/a*100 : null;
     return `<div class="row">
-      ${x.image?`<img src="${esc(x.image)}/low.webp" alt="" loading="lazy">`:`<div class="ph">—</div>`}
+      ${x.image?`<img src="${esc(x.image)}/low.webp" alt="" loading="lazy">`:x.img?`<img src="${esc(x.img)}" alt="" loading="lazy">`:`<div class="ph"${fillAttr({l:x.lang||"en",s:setIdOf(x.id),sn:x.set,n:String(x.num).split("/")[0],nm:x.name,k:x.key})}>—</div>`}
       <div class="t"><b>${esc(x.name)}${x.lang==="ja"?`<span class="lang">JP</span>`:""}</b><span>${esc(x.set)} · ${esc(x.num)}</span><span>${esc(x.label)}</span></div>
       <div class="v">${fmt(v==null?null:v*x.qty,cur)}
         ${d!=null&&Math.abs(d)>=0.5?`<small class="${d>0?"up":"down"}">${d>0?"▲":"▼"} ${Math.abs(d).toFixed(1)}%</small>`:`<small>&nbsp;</small>`}
@@ -1094,6 +1122,7 @@ function renderCollection(){
       </div></div>`;
   }).join("");
   $("list").innerHTML = rows || `<div class="empty"><b>Your binder is empty</b>Scan a card or search by name, pick its version, then tap Add to collection.</div>`;
+  fillImages($("list"));
   $("totVal").textContent = fmt(total, cur);
   const dd = total-base;
   $("totDelta").innerHTML = collection.length ? `<span class="${dd>=0?"up":"down"}">${dd>=0?"+":"−"}${fmt(Math.abs(dd),cur)}</span> since added${unpriced?` · ${unpriced} unpriced`:""}` : "";
