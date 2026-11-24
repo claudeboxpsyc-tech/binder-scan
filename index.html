@@ -586,7 +586,7 @@ function fillImages(root, w=200){
     let f; try{ f = JSON.parse(el.dataset.fill); }catch{ return; }
     el.removeAttribute("data-fill");
     const id = await tcImageId(f); if(!id || !el.isConnected) return;
-    const im = new Image(); im.alt = f.nm || ""; im.loading = "lazy";
+    const im = new Image(); im.alt = f.nm || "";   // not lazy: a detached lazy image never loads
     im.onload = () => { if(el.isConnected) el.replaceWith(im); };
     im.onerror = () => { if(w!==200){ im.onerror=null; im.src = tcPhoto(id); } };
     im.src = tcPhoto(id, w);
