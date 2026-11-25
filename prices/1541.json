@@ -1,7 +1,7 @@
 {
 "1/11":[{"i":85691,"n":"Geodude","p":{"Normal":0.48}}],
 "1/12":[{"i":84017,"n":"Buizel","p":{"Normal":0.26}}],
-"10/11":[{"i":88478,"n":"Quick Ball","p":{"Normal":1}}],
+"10/11":[{"i":88478,"n":"Quick Ball","p":{"Normal":0.96}}],
 "10/12":[{"i":85246,"n":"Energy Search (Manaphy)","p":{"Normal":0.21}}],
 "11/11":[{"i":85443,"n":"Fighting Energy (Lucario)","p":{"Normal":0.37}}],
 "11/12":[{"i":88344,"n":"Potion (Manaphy)","p":{"Normal":0.24}}],
@@ -9,15 +9,15 @@
 "2/11":[{"i":85893,"n":"Graveler","p":{"Normal":0.93}}],
 "2/12":[{"i":85512,"n":"Floatzel","p":{"Normal":0.34}}],
 "3/11":[{"i":86875,"n":"Lucario","p":{"Holofoil":12.03}}],
-"3/12":[{"i":85808,"n":"Goldeen","p":{"Normal":0.28}}],
+"3/12":[{"i":85808,"n":"Goldeen","p":{"Normal":0.29}}],
 "4/11":[{"i":86982,"n":"Machoke","p":{"Normal":1.11}}],
 "4/12":[{"i":87145,"n":"Manaphy","p":{"Holofoil":5.44}}],
 "5/11":[{"i":86996,"n":"Machop","p":{"Normal":0.5}}],
 "5/12":[{"i":88144,"n":"Piplup","p":{"Normal":1.43}}],
 "6/12":[{"i":88369,"n":"Prinplup","p":{"Normal":0.73}},{"i":88753,"n":"Riolu","p":{"Normal":0.82}}],
 "7/11":[{"i":89522,"n":"Starly","p":{"Normal":0.35}}],
-"7/12":[{"i":89027,"n":"Seaking","p":{"Normal":0.35}}],
+"7/12":[{"i":89027,"n":"Seaking","p":{"Normal":0.34}}],
 "8/11":[{"i":85247,"n":"Energy Search (Lucario)","p":{"Normal":0.44}}],
 "8/12":[{"i":89999,"n":"Totodile","p":{"Normal":2.48}}],
-"9/12":[{"i":85034,"n":"Dusk Ball","p":{"Normal":0.29}},{"i":88345,"n":"Potion (Lucario)","p":{"Normal":0.37}}]
+"9/12":[{"i":85034,"n":"Dusk Ball","p":{"Normal":0.28}},{"i":88345,"n":"Potion (Lucario)","p":{"Normal":0.37}}]
 }
