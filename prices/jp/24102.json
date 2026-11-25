@@ -1,5 +1,5 @@
 {
-"001/016":[{"i":611811,"n":"Voltorb","p":{"1st Edition":5}}],
+"001/016":[{"i":611811,"n":"Voltorb","p":{"1st Edition":3.5}}],
 "002/016":[{"i":611812,"n":"Electrode","p":{"1st Edition":2}}],
 "006/016":[{"i":611816,"n":"Shuppet","p":{"Unlimited":1,"1st Edition":2.99}}],
 "007/016":[{"i":611817,"n":"Banette ex","p":{"1st Edition":14.99}}],
@@ -10,6 +10,5 @@
 "012/016":[{"i":611821,"n":"Switch","p":{"1st Edition":2.5,"Unlimited":3.95}}],
 "013/016":[{"i":649166,"n":"Master Ball","p":{"Unlimited":0.5,"1st Edition":4.5}}],
 "014/016":[{"i":611822,"n":"Scott","p":{"1st Edition":4}}],
-"015/017":[{"i":611823,"n":"Fieldworker","p":{"1st Edition":9}}],
 "016/016":[{"i":611824,"n":"Battle Frontier","p":{"1st Edition":2.5}}]
 }

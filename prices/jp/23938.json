@@ -9,10 +9,10 @@
 "009/018":[{"i":604725,"n":"Ultra Ball","p":{"Normal":1.2}}],
 "011/018":[{"i":604718,"n":"Switch","p":{"Normal":0.28}}],
 "012/018":[{"i":604723,"n":"Pokemon Catcher","p":{"Normal":0.7}}],
-"013/018":[{"i":604726,"n":"Random Receiver","p":{"Normal":0.5}}],
+"013/018":[{"i":604726,"n":"Random Receiver","p":{"Normal":2.23}}],
 "014/018":[{"i":604722,"n":"Professor Juniper","p":{"Normal":2.99}}],
 "015/018":[{"i":604724,"n":"Cheren","p":{"Normal":1}}],
-"016/018":[{"i":604727,"n":"Skyla","p":{"Normal":3.99}}],
+"016/018":[{"i":604727,"n":"Skyla","p":{"Normal":2.99}}],
 "017/018":[{"i":604721,"n":"Master Ball","p":{"Holofoil":15}}],
 "018/018":[{"i":604717,"n":"Double Colorless Energy","p":{"Normal":0.7}}]
 }

@@ -1,7 +1,7 @@
 {
 "001/069":[{"i":601364,"n":"Bulbasaur","p":{"1st Edition":8.5}}],
 "002/069":[{"i":601391,"n":"Ivysaur","p":{"1st Edition":5}}],
-"003/069":[{"i":601428,"n":"Venusaur","p":{"1st Edition Holofoil":8.13}}],
+"003/069":[{"i":601428,"n":"Venusaur","p":{"Unlimited Holofoil":25.99,"1st Edition Holofoil":8.13}}],
 "004/069":[{"i":601365,"n":"Carnivine","p":{"Unlimited":0.5,"1st Edition":2}}],
 "005/069":[{"i":601394,"n":"Karrablast","p":{"1st Edition":0.99}}],
 "006/069":[{"i":601414,"n":"Shelmet","p":{"1st Edition":0.35}}],
@@ -14,7 +14,7 @@
 "013/069":[{"i":601388,"n":"Heatmor","p":{"1st Edition":2}}],
 "014/069":[{"i":601400,"n":"Larvesta","p":{"1st Edition":1.39}}],
 "015/069":[{"i":601429,"n":"Volcarona","p":{"1st Edition Holofoil":2.86}}],
-"016/069":[{"i":601417,"n":"Slowpoke","p":{"1st Edition":3.58}}],
+"016/069":[{"i":601417,"n":"Slowpoke","p":{"1st Edition":3.64}}],
 "017/069":[{"i":601415,"n":"Slowbro","p":{"1st Edition":4.29}}],
 "018/069":[{"i":601427,"n":"Vaporeon","p":{"1st Edition":7.5}}],
 "019/069":[{"i":601405,"n":"Piplup","p":{"1st Edition":9.51}}],
@@ -24,6 +24,7 @@
 "023/069":[{"i":601419,"n":"Swanna","p":{"1st Edition":0.99}}],
 "024/069":[{"i":601392,"n":"Jolteon","p":{"1st Edition":8.5}}],
 "025/069":[{"i":601409,"n":"Raikou EX - 025/069","p":{"1st Edition Holofoil":8.13}}],
+"026/069":[{"i":601406,"n":"Plusle","p":{"1st Edition":19.88}}],
 "027/069":[{"i":601403,"n":"Minun","p":{"1st Edition":14.95}}],
 "028/069":[{"i":601393,"n":"Joltik","p":{"1st Edition":6}}],
 "029/069":[{"i":601386,"n":"Galvantula","p":{"1st Edition":6}}],
@@ -31,7 +32,7 @@
 "031/069":[{"i":601375,"n":"Eelektrik","p":{"1st Edition":1.74}}],
 "032/069":[{"i":601376,"n":"Eelektross","p":{"1st Edition Holofoil":2.09}}],
 "033/069":[{"i":601383,"n":"Espeon","p":{"Unlimited":25,"1st Edition":13.99}}],
-"034/069":[{"i":601416,"n":"Slowking","p":{"1st Edition":5.54}}],
+"034/069":[{"i":601416,"n":"Slowking","p":{"1st Edition":5.87}}],
 "035/069":[{"i":601431,"n":"Woobat","p":{"1st Edition":0.95}}],
 "036/069":[{"i":601420,"n":"Swoobat","p":{"1st Edition":1.79}}],
 "037/069":[{"i":601432,"n":"Yamask","p":{"1st Edition":2.83}}],
@@ -68,7 +69,6 @@
 "068/069":[{"i":601390,"n":"Hooligans Jim & Cas","p":{"1st Edition":2.72}}],
 "069/069":[{"i":601424,"n":"Twist Mountain","p":{"1st Edition":0.99}}],
 "070/069":[{"i":601381,"n":"Entei EX - 070/069","p":{"1st Edition Holofoil":60}}],
-"071/069":[{"i":601410,"n":"Raikou EX - 071/069","p":{"1st Edition Holofoil":199.69}}],
-"072/069":[{"i":601372,"n":"Darkrai EX - 072/069","p":{"1st Edition Holofoil":99.99}}],
+"071/069":[{"i":601410,"n":"Raikou EX - 071/069","p":{"1st Edition Holofoil":287.35}}],
 "073/069":[{"i":601423,"n":"Tornadus EX - 073/069","p":{"1st Edition Holofoil":61.09}}]
 }

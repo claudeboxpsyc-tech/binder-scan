@@ -1,5 +1,5 @@
 {
-"001/015":[{"i":612374,"n":"Seedot","p":{"1st Edition":3,"Unlimited":1}}],
+"001/015":[{"i":612374,"n":"Seedot","p":{"1st Edition":3,"Unlimited":1.25}}],
 "002/015":[{"i":612372,"n":"Nuzleaf","p":{"1st Edition":6.35,"Unlimited":2}}],
 "003/015":[{"i":612369,"n":"Shiftry","p":{"Unlimited":1,"1st Edition":5}}],
 "004/015":[{"i":612375,"n":"Spoink","p":{"1st Edition":8,"Unlimited":2}}],
@@ -7,7 +7,7 @@
 "006/015":[{"i":612368,"n":"Deoxys ex","p":{"Unlimited Holofoil":59.99}}],
 "007/015":[{"i":612373,"n":"Phanpy","p":{"Unlimited":4.99}}],
 "009/015":[{"i":612376,"n":"Energy Charge","p":{"Unlimited":2.48,"1st Edition":1}}],
-"010/015":[{"i":612362,"n":"Potion","p":{"Unlimited":2.16,"1st Edition":4}}],
+"010/015":[{"i":612362,"n":"Potion","p":{"Unlimited":2.16,"1st Edition":2.5}}],
 "011/015":[{"i":612363,"n":"Switch","p":{"1st Edition":1.39}}],
 "012/015":[{"i":612364,"n":"Master Ball","p":{"1st Edition":2.5}}],
 "013/015":[{"i":612366,"n":"Lady Outing","p":{"1st Edition":4}}],

@@ -1,17 +1,13 @@
 {
 "001/015":[{"i":612152,"n":"Rhyhorn","p":{"1st Edition":5}}],
 "002/015":[{"i":612153,"n":"Rhydon","p":{"1st Edition":4}}],
-"003/015":[{"i":612154,"n":"Makuhita","p":{"Unlimited":1.25,"1st Edition":4.99}}],
-"004/015":[{"i":612155,"n":"Hariyama","p":{"1st Edition":4}}],
+"003/015":[{"i":612154,"n":"Makuhita","p":{"Unlimited":1.25,"1st Edition":3.5}}],
+"004/015":[{"i":612155,"n":"Hariyama","p":{"1st Edition":3.5}}],
 "005/015":[{"i":612156,"n":"Nosepass","p":{"1st Edition":4.2}}],
 "006/015":[{"i":612157,"n":"Meditite","p":{"1st Edition":3.2}}],
 "007/015":[{"i":612158,"n":"Medicham ex","p":{"1st Edition Holofoil":23.17,"Unlimited Holofoil":12.5}}],
-"008/015":[{"i":612159,"n":"Potion","p":{"1st Edition":1}}],
-"009/015":[{"i":612160,"n":"Professor Cozmo's Discovery","p":{"1st Edition":3.5}}],
+"009/015":[{"i":612160,"n":"Professor Cozmo's Discovery","p":{"1st Edition":3}}],
 "010/015":[{"i":612161,"n":"Mr. Stone's Project","p":{"1st Edition":4.2}}],
-"011/015":[{"i":612162,"n":"Basic Fighting Energy - 011/015","p":{"1st Edition":1.5,"Unlimited":1.29}}],
-"012/015":[{"i":612163,"n":"Basic Fighting Energy - 012/015","p":{"1st Edition":1.5}}],
-"013/015":[{"i":612164,"n":"Basic Fighting Energy - 013/015","p":{"1st Edition":1.75,"Unlimited":0.99}}],
-"014/015":[{"i":612165,"n":"Basic Fighting Energy - 014/015","p":{"1st Edition":1.5}}],
-"015/015":[{"i":612166,"n":"Basic Fighting Energy - 015/015","p":{"1st Edition":1.5}}]
+"011/015":[{"i":612162,"n":"Basic Fighting Energy - 011/015","p":{"Unlimited":1.29}}],
+"013/015":[{"i":612164,"n":"Basic Fighting Energy - 013/015","p":{"1st Edition":1.99,"Unlimited":0.99}}]
 }

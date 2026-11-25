@@ -48,8 +48,8 @@
 "052/053":[{"i":596176,"n":"Hop (Cinderace Stamped)","p":{"Normal":2.48}},{"i":701570,"n":"Hop (Pikachu Stamped)","p":{"Normal":1}}],
 "053/053":[{"i":596175,"n":"Bug Catcher (Cinderace Stamped)","p":{"Normal":0.9}},{"i":701572,"n":"Bug Catcher (Pikachu Stamped)","p":{"Normal":2.49}}],
 "DAR":[{"i":701582,"n":"Basic Darkness Energy (Tyranitar Stamped)","p":{"Normal":0.99}}],
-"FIR":[{"i":701577,"n":"Basic Fire Energy (Cinderace Stamped)","p":{"Normal":0.61}}],
-"GRA":[{"i":701576,"n":"Basic Grass Energy (Cinderace Stamped)","p":{"Normal":0.61}}],
+"FIR":[{"i":701577,"n":"Basic Fire Energy (Cinderace Stamped)","p":{"Normal":0.72}}],
+"GRA":[{"i":701576,"n":"Basic Grass Energy (Cinderace Stamped)","p":{"Normal":0.72}}],
 "LIG":[{"i":701579,"n":"Basic Lightning Energy (Pikachu Stamped)","p":{"Normal":0.5}}],
 "WAT":[{"i":701578,"n":"Basic Water Energy (Pikachu Stamped)","p":{"Normal":0.87}}]
 }

@@ -6,10 +6,10 @@
 "008/017":[{"i":604922,"n":"Klinklang (Team Plasma)","p":{"Normal":5}}],
 "009/017":[{"i":604931,"n":"Durant (Team Plasma)","p":{"Normal":2}}],
 "010/017":[{"i":604932,"n":"Patrat","p":{"Normal":1.95}}],
-"011/017":[{"i":604933,"n":"Watchog (Team Plasma)","p":{"Normal":3}}],
+"011/017":[{"i":604933,"n":"Watchog (Team Plasma)","p":{"Normal":2}}],
 "013/017":[{"i":604923,"n":"Hypnotoxic Laser","p":{"Normal":7.77}}],
 "014/017":[{"i":604934,"n":"Colress","p":{"Normal":3}}],
 "015/017":[{"i":604935,"n":"Team Plasma Grunt","p":{"Normal":1}}],
 "016/017":[{"i":604936,"n":"Plasma Frigate","p":{"Normal":1.25}}],
-"017/017":[{"i":604921,"n":"Plasma Energy","p":{"Normal":1.25}}]
+"017/017":[{"i":604921,"n":"Plasma Energy","p":{"Normal":2}}]
 }

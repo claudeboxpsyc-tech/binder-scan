@@ -36,7 +36,7 @@
 "035/076":[{"i":602720,"n":"Duosion","p":{"Unlimited":2,"1st Edition":5.49}}],
 "036/076":[{"i":602764,"n":"Reuniclus","p":{"1st Edition":3,"Unlimited":0.99}}],
 "037/076":[{"i":602732,"n":"Golett","p":{"1st Edition":0.99,"Unlimited":1.78}}],
-"038/076":[{"i":602733,"n":"Golurk","p":{"Unlimited Holofoil":3,"1st Edition Holofoil":4.99}}],
+"038/076":[{"i":602733,"n":"Golurk","p":{"Unlimited Holofoil":5.5,"1st Edition Holofoil":4.99}}],
 "039/076":[{"i":602748,"n":"Machop","p":{"1st Edition":2.7,"Unlimited":1.25}}],
 "040/076":[{"i":602747,"n":"Machoke","p":{"1st Edition":1,"Unlimited":3}}],
 "041/076":[{"i":602746,"n":"Machamp","p":{"1st Edition Holofoil":5.99}}],
@@ -45,7 +45,6 @@
 "044/076":[{"i":602705,"n":"Archen","p":{"Unlimited":1.5,"1st Edition":2.75}}],
 "045/076":[{"i":602706,"n":"Archeops","p":{"1st Edition Holofoil":3.89,"Unlimited Holofoil":1.59}}],
 "046/076":[{"i":602736,"n":"Houndour","p":{"Unlimited":2,"1st Edition":2}}],
-"047/076":[{"i":602735,"n":"Houndoom","p":{"1st Edition Holofoil":34}}],
 "048/076":[{"i":602707,"n":"Aron","p":{"Unlimited":2,"1st Edition":2}}],
 "049/076":[{"i":602742,"n":"Lairon","p":{"Unlimited":1,"1st Edition":3}}],
 "050/076":[{"i":602704,"n":"Aggron","p":{"Unlimited":1,"1st Edition":1}}],
@@ -74,10 +73,9 @@
 "073/076":[{"i":602768,"n":"Scoop Up Cyclone","p":{"Unlimited Holofoil":12,"1st Edition Holofoil":7}}],
 "074/076":[{"i":602728,"n":"G Scope","p":{"1st Edition Holofoil":4.5}}],
 "075/076":[{"i":602727,"n":"G Booster","p":{"1st Edition Holofoil":3.43,"Unlimited Holofoil":3.98}}],
-"076/076":[{"i":602756,"n":"Plasma Energy","p":{"Unlimited":1.75,"1st Edition":2}}],
+"076/076":[{"i":602756,"n":"Plasma Energy","p":{"Unlimited":2,"1st Edition":2}}],
 "077/076":[{"i":602786,"n":"Virizion EX - 077/076","p":{"Unlimited Holofoil":33,"1st Edition Holofoil":59.99}}],
 "079/076":[{"i":602740,"n":"Jirachi EX - 079/076","p":{"1st Edition Holofoil":100,"Unlimited Holofoil":300}}],
 "080/076":[{"i":602716,"n":"Dialga EX (Team Plasma) - 080/076","p":{"1st Edition Holofoil":180}}],
-"081/076":[{"i":602755,"n":"Palkia EX (Team Plasma) - 081/076","p":{"Unlimited Holofoil":267.5}}],
-"085/076":[{"i":602721,"n":"Dusknoir","p":{"1st Edition Holofoil":350}}]
+"081/076":[{"i":602755,"n":"Palkia EX (Team Plasma) - 081/076","p":{"Unlimited Holofoil":267.5}}]
 }

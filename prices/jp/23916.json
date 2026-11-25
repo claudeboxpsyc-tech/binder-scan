@@ -9,7 +9,7 @@
 "008/054":[{"i":603232,"n":"Litleo","p":{"1st Edition":0.98}}],
 "009/054":[{"i":603242,"n":"Pyroar","p":{"1st Edition Holofoil":2.49}}],
 "010/054":[{"i":603243,"n":"Pyroar BREAK","p":{"1st Edition Holofoil":7.7}}],
-"011/054":[{"i":603258,"n":"Volcanion","p":{"1st Edition Holofoil":2.47}}],
+"011/054":[{"i":603258,"n":"Volcanion","p":{"1st Edition Holofoil":1.74}}],
 "012/054":[{"i":603259,"n":"Volcanion EX - 012/054","p":{"1st Edition Holofoil":4.79}}],
 "013/054":[{"i":603247,"n":"Shellos","p":{"1st Edition":1.8}}],
 "014/054":[{"i":603224,"n":"Gastrodon","p":{"1st Edition":3.67}}],
@@ -23,7 +23,7 @@
 "022/054":[{"i":603223,"n":"Galvantula","p":{"1st Edition":2.43}}],
 "023/054":[{"i":603218,"n":"Drifloon","p":{"1st Edition":1}}],
 "024/054":[{"i":603217,"n":"Drifblim","p":{"1st Edition":1.08,"Unlimited":4.95}}],
-"025/054":[{"i":603233,"n":"Litwick","p":{"1st Edition":2.74}}],
+"025/054":[{"i":603233,"n":"Litwick","p":{"1st Edition":3.48}}],
 "026/054":[{"i":603231,"n":"Lampent","p":{"1st Edition":2.62}}],
 "027/054":[{"i":603210,"n":"Chandelure","p":{"1st Edition Holofoil":13.94,"Unlimited Holofoil":14.99}}],
 "028/054":[{"i":603235,"n":"Nosepass","p":{"1st Edition":1.55}}],
@@ -53,5 +53,6 @@
 "053/054":[{"i":603234,"n":"Ninja Boy","p":{"1st Edition":5.4}}],
 "054/054":[{"i":603238,"n":"Pokemon Ranger - 054/054","p":{"1st Edition":0.1}}],
 "057/054":[{"i":603252,"n":"Steelix - 057/054","p":{"1st Edition Holofoil":75}}],
-"058/054":[{"i":603239,"n":"Pokemon Ranger - 058/054","p":{"1st Edition Holofoil":130}}]
+"058/054":[{"i":603239,"n":"Pokemon Ranger - 058/054","p":{"1st Edition Holofoil":130}}],
+"059/054":[{"i":603261,"n":"Volcanion EX - 059/054","p":{"1st Edition Holofoil":129.99}}]
 }

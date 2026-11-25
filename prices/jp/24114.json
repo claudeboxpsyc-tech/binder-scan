@@ -1,5 +1,5 @@
 {
-"001/082":[{"i":612344,"n":"Zubat","p":{"Unlimited":8,"1st Edition":1.25}}],
+"001/082":[{"i":612344,"n":"Zubat","p":{"Unlimited":8,"1st Edition":1.13}}],
 "002/082":[{"i":612283,"n":"Golbat","p":{"1st Edition":3.95,"Unlimited":5}}],
 "004/082":[{"i":612339,"n":"Weezing","p":{"Unlimited":1.25}}],
 "006/082":[{"i":612342,"n":"Wurmple","p":{"Unlimited":2.5,"1st Edition":4.16}}],
@@ -26,7 +26,7 @@
 "028/082":[{"i":612341,"n":"Wingull","p":{"Unlimited":5}}],
 "030/082":[{"i":612266,"n":"Barboach","p":{"1st Edition":0.5,"Unlimited":2.44}}],
 "031/082":[{"i":612274,"n":"Corphish","p":{"Unlimited":4,"1st Edition":2}}],
-"032/082":[{"i":612282,"n":"Electrike","p":{"1st Edition":4.95,"Unlimited":1.5}}],
+"032/082":[{"i":612282,"n":"Electrike","p":{"1st Edition":4.95,"Unlimited":1.75}}],
 "033/082":[{"i":612299,"n":"Manectric ex","p":{"1st Edition Holofoil":36.99,"Unlimited Holofoil":44.08}}],
 "036/082":[{"i":612306,"n":"Natu","p":{"Unlimited":5.33,"1st Edition":3.75}}],
 "038/082":[{"i":612321,"n":"Shedinja","p":{"Unlimited Holofoil":7,"1st Edition Holofoil":6.99}}],
@@ -50,6 +50,7 @@
 "058/082":[{"i":612338,"n":"Vigoroth","p":{"Unlimited":3,"1st Edition":2}}],
 "059/082":[{"i":612326,"n":"Slaking","p":{"1st Edition Holofoil":4,"Unlimited Holofoil":3}}],
 "060/082":[{"i":612334,"n":"Swablu","p":{"Unlimited":6.93,"1st Edition":9.5}}],
+"061/082":[{"i":612263,"n":"Altaria","p":{"1st Edition Holofoil":39.99}}],
 "062/082":[{"i":612264,"n":"Bagon","p":{"1st Edition":2.25,"Unlimited":5}}],
 "064/082":[{"i":612317,"n":"Salamence ex","p":{"1st Edition Holofoil":186.39,"Unlimited Holofoil":120}}],
 "068/082":[{"i":612313,"n":"Poochyena","p":{"1st Edition":3.2,"Unlimited":3.5}}],
