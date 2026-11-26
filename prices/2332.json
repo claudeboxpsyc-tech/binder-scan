@@ -1,8 +1,8 @@
 {
 "001":[{"i":599455,"n":"Grass Energy (2023)","p":{"Holofoil":17.98}}],
 "002":[{"i":599454,"n":"Fire Energy (2023)","p":{"Holofoil":21.19}}],
-"003":[{"i":599458,"n":"Water Energy (2023)","p":{"Holofoil":18.75}}],
-"004":[{"i":599456,"n":"Lightning Energy (2023)","p":{"Holofoil":20.04}}],
+"003":[{"i":599458,"n":"Water Energy (2023)","p":{"Holofoil":18.69}}],
+"004":[{"i":599456,"n":"Lightning Energy (2023)","p":{"Holofoil":20.02}}],
 "005":[{"i":599457,"n":"Psychic Energy (2023)","p":{"Holofoil":21.53}}],
 "006":[{"i":599453,"n":"Fighting Energy (2023)","p":{"Holofoil":20.12}}],
 "007":[{"i":599460,"n":"Darkness Energy (2023)","p":{"Holofoil":26.33}}],
@@ -15,8 +15,8 @@
 "014":[{"i":604501,"n":"Fighting Energy (2024)","p":{"Holofoil":7.58}}],
 "015":[{"i":604494,"n":"Darkness Energy (2024)","p":{"Holofoil":9.51}}],
 "016":[{"i":604495,"n":"Metal Energy (2024)","p":{"Holofoil":9.02}}],
-"059/072":[{"i":499366,"n":"Gym Trainer (2022)","p":{"Reverse Holofoil":14.18}}],
-"060/072":[{"i":278686,"n":"Professor's Research [Professor Juniper] - 060/072","p":{"Reverse Holofoil":14.12}}],
+"059/072":[{"i":499366,"n":"Gym Trainer (2022)","p":{"Reverse Holofoil":14.3}}],
+"060/072":[{"i":278686,"n":"Professor's Research [Professor Juniper] - 060/072","p":{"Reverse Holofoil":14.16}}],
 "084/088":[{"i":717548,"n":"Rosa's Encouragement - 084/088 [Top 8]","p":{"Reverse Holofoil":1450}},{"i":717550,"n":"Rosa's Encouragement - 084/088 [Finalist]","p":{"Reverse Holofoil":3500}}],
 "085/086":[{"i":704476,"n":"Professor's Research [Professor Juniper] - 085/086","p":{"Reverse Holofoil":31.68}}],
 "101/114":[{"i":176633,"n":"Professor Juniper - 101/114 (2013)","p":{"Reverse Holofoil":20.45}}],
@@ -37,7 +37,7 @@
 "140/172":[{"i":556967,"n":"Friends in Galar - 140/172 (2022)","p":{"Reverse Holofoil":2.14}}],
 "142/162":[{"i":685998,"n":"Bianca's Devotion - 142/162","p":{"Reverse Holofoil":10}}],
 "146/167":[{"i":718143,"n":"Community Center - 146/167","p":{"Reverse Holofoil":250}},{"i":718145,"n":"Community Center - 146/167 [Top 4]","p":{"Reverse Holofoil":615}},{"i":718146,"n":"Community Center - 146/167 [Top 8]","p":{"Reverse Holofoil":320}}],
-"147/172":[{"i":278687,"n":"Professor's Research [Professor Rowan] - 147/172","p":{"Reverse Holofoil":12.07}}],
+"147/172":[{"i":278687,"n":"Professor's Research [Professor Rowan] - 147/172","p":{"Reverse Holofoil":12.09}}],
 "148/172":[{"i":677790,"n":"Roseanne's Backup","p":{"Reverse Holofoil":3.24}}],
 "150/189":[{"i":556969,"n":"Roxanne - 150/189 (2022)","p":{"Reverse Holofoil":99.99}}],
 "153/185":[{"i":499857,"n":"League Staff","p":{"Reverse Holofoil":70}}],
@@ -50,7 +50,7 @@
 "223":[{"i":704479,"n":"Professor's Research [Professor Magnolia] - 223","p":{"Holofoil":29.99}}],
 "235/264":[{"i":696151,"n":"Judge - 235/264","p":{"Reverse Holofoil":590}}],
 "82/106":[{"i":176630,"n":"Professor Birch (2006)","p":{"Holofoil":63.08}}],
-"98/108":[{"i":176632,"n":"Professor Juniper - 98/108 (2013)","p":{"Reverse Holofoil":22.88}}],
+"98/108":[{"i":176632,"n":"Professor Juniper - 98/108 (2013)","p":{"Reverse Holofoil":23.15}}],
 "98/112":[{"i":176629,"n":"Prof. Oak's Research (2004-2005)","p":{"Normal":134.99}}],
-"SWSH167":[{"i":278685,"n":"Professor Burnet - SWSH167 (2021)","p":{"Reverse Holofoil":21.36}}]
+"SWSH167":[{"i":278685,"n":"Professor Burnet - SWSH167 (2021)","p":{"Reverse Holofoil":21.96}}]
 }
