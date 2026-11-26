@@ -9,5 +9,6 @@
 "012/016":[{"i":611188,"n":"Double Full Heal","p":{"1st Edition":6,"Unlimited":2.5}}],
 "013/016":[{"i":611190,"n":"PokeNav","p":{"1st Edition":2.49}}],
 "014/016":[{"i":611189,"n":"Celio's Network","p":{"Unlimited":1.99,"1st Edition":1.99}}],
-"015/016":[{"i":611185,"n":"Bill's Maintenance","p":{"Unlimited":2.5}}]
+"015/016":[{"i":611185,"n":"Bill's Maintenance","p":{"1st Edition":2,"Unlimited":2.5}}],
+"016/016":[{"i":611181,"n":"Multi Energy","p":{"Unlimited":1}}]
 }

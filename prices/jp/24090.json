@@ -9,7 +9,7 @@
 "011/068":[{"i":611452,"n":"Swellow (Delta Species)","p":{"Unlimited":4,"1st Edition":3}}],
 "012/068":[{"i":611453,"n":"Feebas (Delta Species)","p":{"1st Edition":5,"Unlimited":9}}],
 "013/068":[{"i":611454,"n":"Milotic (Delta Species)","p":{"Unlimited Holofoil":25}}],
-"014/068":[{"i":611455,"n":"Latias ex (Delta Species)","p":{"Unlimited Holofoil":85}}],
+"014/068":[{"i":611455,"n":"Latias ex (Delta Species)","p":{"Unlimited Holofoil":75,"1st Edition Holofoil":90}}],
 "016/068":[{"i":611457,"n":"Togepi (Delta Species)","p":{"Unlimited":3.38,"1st Edition":10}}],
 "017/068":[{"i":611458,"n":"Togetic (Delta Species)","p":{"1st Edition Holofoil":23.99}}],
 "018/068":[{"i":611459,"n":"Swablu (Delta Species)","p":{"Unlimited":5,"1st Edition":4}}],
@@ -24,7 +24,7 @@
 "029/068":[{"i":611470,"n":"Vulpix (Delta Species)","p":{"1st Edition":10}}],
 "030/068":[{"i":611471,"n":"Ninetales (Delta Species)","p":{"1st Edition Holofoil":135}}],
 "031/068":[{"i":611472,"n":"Lickitung (Delta Species)","p":{"Unlimited":4,"1st Edition":4.5}}],
-"032/068":[{"i":611473,"n":"Cyndaquil (Delta Species)","p":{"Unlimited":5.3,"1st Edition":10.87}}],
+"032/068":[{"i":611473,"n":"Cyndaquil (Delta Species)","p":{"Unlimited":5.3,"1st Edition":11.31}}],
 "033/068":[{"i":611474,"n":"Quilava (Delta Species)","p":{"Unlimited":9.75,"1st Edition":8}}],
 "034/068":[{"i":611475,"n":"Typhlosion (Delta Species)","p":{"1st Edition Holofoil":100.89}}],
 "035/068":[{"i":611476,"n":"Trapinch (Delta Species)","p":{"1st Edition":5.37,"Unlimited":5.99}}],
@@ -50,8 +50,9 @@
 "061/068":[{"i":611502,"n":"Ledyba (Delta Species)","p":{"Unlimited":1,"1st Edition":2.5}}],
 "062/068":[{"i":611503,"n":"Ledian (Delta Species)","p":{"1st Edition":3.5,"Unlimited":5.25}}],
 "063/068":[{"i":611504,"n":"Tropius (Delta Species)","p":{"Unlimited":4.99,"1st Edition":3}}],
-"064/068":[{"i":611505,"n":"Old Rod","p":{"Unlimited":0.99,"1st Edition":9.98}}],
+"064/068":[{"i":611505,"n":"Old Rod","p":{"Unlimited":2,"1st Edition":9.98}}],
 "065/068":[{"i":611506,"n":"Island Hermit","p":{"Unlimited":3.5,"1st Edition":5.5}}],
-"066/068":[{"i":611507,"n":"Strength Charm","p":{"Unlimited":2,"1st Edition":3}}],
-"067/068":[{"i":611508,"n":"Holon Legacy","p":{"Unlimited":3,"1st Edition":3}}]
+"066/068":[{"i":611507,"n":"Strength Charm","p":{"Unlimited":2.5,"1st Edition":3}}],
+"067/068":[{"i":611508,"n":"Holon Legacy","p":{"Unlimited":2,"1st Edition":3}}],
+"068/068":[{"i":611509,"n":"Scramble Energy","p":{"Unlimited":2}}]
 }

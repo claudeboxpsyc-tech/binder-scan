@@ -33,12 +33,13 @@
 "040/052":[{"i":677736,"n":"Persian","p":{"Normal":1}}],
 "041/052":[{"i":677737,"n":"Doduo","p":{"Normal":10}}],
 "043/052":[{"i":677739,"n":"Energy Switch","p":{"Normal":4.47}}],
+"044/052":[{"i":677740,"n":"Energy Removal 2","p":{"Normal":2}}],
 "045/052":[{"i":677741,"n":"Potion","p":{"Normal":4}}],
 "046/052":[{"i":677742,"n":"Super Scoop Up","p":{"Normal":7}}],
 "047/052":[{"i":677743,"n":"Life Herb","p":{"Normal":5}}],
 "048/052":[{"i":677744,"n":"Switch","p":{"Normal":7}}],
 "049/052":[{"i":677745,"n":"Pokemon Reversal","p":{"Normal":3}}],
 "050/052":[{"i":677746,"n":"Poke Ball","p":{"Normal":5}}],
-"051/052":[{"i":677747,"n":"Professor Oak's Research","p":{"Normal":5.95}}],
+"051/052":[{"i":677747,"n":"Professor Oak's Research","p":{"Normal":4.98}}],
 "052/052":[{"i":677748,"n":"Bill's Maintenance","p":{"Normal":4.98}}]
 }

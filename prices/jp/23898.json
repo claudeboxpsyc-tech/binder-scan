@@ -1,13 +1,13 @@
 {
 "001/069":[{"i":601364,"n":"Bulbasaur","p":{"1st Edition":8.5}}],
 "002/069":[{"i":601391,"n":"Ivysaur","p":{"1st Edition":5}}],
-"003/069":[{"i":601428,"n":"Venusaur","p":{"Unlimited Holofoil":25.99,"1st Edition Holofoil":8.13}}],
+"003/069":[{"i":601428,"n":"Venusaur","p":{"Unlimited Holofoil":25.99,"1st Edition Holofoil":8.17}}],
 "004/069":[{"i":601365,"n":"Carnivine","p":{"Unlimited":0.5,"1st Edition":2}}],
 "005/069":[{"i":601394,"n":"Karrablast","p":{"1st Edition":0.99}}],
 "006/069":[{"i":601414,"n":"Shelmet","p":{"1st Edition":0.35}}],
 "007/069":[{"i":601359,"n":"Accelgor","p":{"1st Edition":2}}],
 "008/069":[{"i":601385,"n":"Flareon","p":{"1st Edition":6.3}}],
-"009/069":[{"i":601380,"n":"Entei EX - 009/069","p":{"1st Edition Holofoil":21.24}}],
+"009/069":[{"i":601380,"n":"Entei EX - 009/069","p":{"1st Edition Holofoil":19.37}}],
 "010/069":[{"i":601421,"n":"Torchic","p":{"1st Edition":4.74}}],
 "011/069":[{"i":601368,"n":"Combusken","p":{"1st Edition":2}}],
 "012/069":[{"i":601362,"n":"Blaziken","p":{"1st Edition Holofoil":12.6}}],
@@ -39,7 +39,7 @@
 "038/069":[{"i":601367,"n":"Cofagrigus","p":{"1st Edition":0.77}}],
 "039/069":[{"i":601360,"n":"Aerodactyl","p":{"1st Edition":3.49}}],
 "040/069":[{"i":601373,"n":"Drilbur","p":{"1st Edition":9.33}}],
-"041/069":[{"i":601384,"n":"Excadrill","p":{"1st Edition":2.24}}],
+"041/069":[{"i":601384,"n":"Excadrill","p":{"1st Edition":1.5}}],
 "042/069":[{"i":601426,"n":"Umbreon","p":{"1st Edition":49.98}}],
 "043/069":[{"i":601412,"n":"Sableye","p":{"1st Edition":7.95}}],
 "044/069":[{"i":601371,"n":"Darkrai EX - 044/069","p":{"1st Edition Holofoil":38.87}}],
@@ -70,5 +70,5 @@
 "069/069":[{"i":601424,"n":"Twist Mountain","p":{"1st Edition":0.99}}],
 "070/069":[{"i":601381,"n":"Entei EX - 070/069","p":{"1st Edition Holofoil":60}}],
 "071/069":[{"i":601410,"n":"Raikou EX - 071/069","p":{"1st Edition Holofoil":287.35}}],
-"073/069":[{"i":601423,"n":"Tornadus EX - 073/069","p":{"1st Edition Holofoil":61.09}}]
+"073/069":[{"i":601423,"n":"Tornadus EX - 073/069","p":{"1st Edition Holofoil":60}}]
 }

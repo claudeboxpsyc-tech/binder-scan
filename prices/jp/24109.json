@@ -1,9 +1,13 @@
 {
 "001/015":[{"i":612190,"n":"Treecko","p":{"Unlimited":3}}],
-"002/015":[{"i":612189,"n":"Grovyle","p":{"Unlimited":2.25}}],
+"002/015":[{"i":612189,"n":"Grovyle","p":{"Unlimited":2.5}}],
 "003/015":[{"i":612191,"n":"Shroomish","p":{"1st Edition":3}}],
+"004/015":[{"i":612187,"n":"Breloom","p":{"Unlimited":4}}],
+"005/015":[{"i":612188,"n":"Cacnea","p":{"Unlimited":3}}],
 "006/015":[{"i":612185,"n":"Cacturne ex","p":{"1st Edition Holofoil":29.99}}],
-"007/015":[{"i":612186,"n":"Seviper","p":{"Unlimited":5.48,"1st Edition":2.5}}],
-"009/015":[{"i":612184,"n":"Mr. Stone's Project","p":{"1st Edition":2}}],
+"007/015":[{"i":612186,"n":"Seviper","p":{"Unlimited":5,"1st Edition":2.5}}],
+"008/015":[{"i":612182,"n":"Potion","p":{"Unlimited":1}}],
+"009/015":[{"i":612184,"n":"Mr. Stone's Project","p":{"Unlimited":3,"1st Edition":2}}],
+"010/015":[{"i":612183,"n":"Bill's Maintenance","p":{"Unlimited":1}}],
 "014/015":[{"i":612195,"n":"Basic Grass Energy - 014/015","p":{"Unlimited":2}}]
 }

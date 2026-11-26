@@ -1,9 +1,9 @@
 {
-"001/015":[{"i":612221,"n":"Ralts","p":{"1st Edition":5,"Unlimited":1.5}}],
+"001/015":[{"i":612221,"n":"Ralts","p":{"1st Edition":5,"Unlimited":2.75}}],
 "002/015":[{"i":612220,"n":"Kirlia","p":{"1st Edition":1.75}}],
 "003/015":[{"i":612215,"n":"Spoink","p":{"1st Edition":2,"Unlimited":9}}],
 "004/015":[{"i":612219,"n":"Grumpig","p":{"1st Edition":3,"Unlimited":12}}],
-"005/015":[{"i":612218,"n":"Duskull","p":{"1st Edition":1}}],
+"005/015":[{"i":612218,"n":"Duskull","p":{"Unlimited":4,"1st Edition":1}}],
 "006/015":[{"i":612216,"n":"Dusclops ex","p":{"Unlimited Holofoil":20,"1st Edition Holofoil":24}}],
 "007/015":[{"i":612217,"n":"Chimecho","p":{"1st Edition":1.68}}],
 "009/015":[{"i":612214,"n":"Mr. Stone's Project","p":{"1st Edition":2.5}}],
