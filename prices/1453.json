@@ -11,7 +11,7 @@
 "HGSS07":[{"i":85421,"n":"Feraligatr (Prime) - HGSS07","p":{"Holofoil":82.83}}],
 "HGSS08":[{"i":87295,"n":"Meganium (Prime) - HGSS08","p":{"Holofoil":75}}],
 "HGSS09":[{"i":90108,"n":"Typhlosion (Prime) - HGSS09","p":{"Holofoil":90.99}}],
-"HGSS10":[{"i":86653,"n":"Latias - HGSS10 (Cosmos Holo)","p":{"Holofoil":66.73}},{"i":97705,"n":"Latias - HGSS10 (Cracked Ice Holo)","p":{"Holofoil":461.41}}],
+"HGSS10":[{"i":86653,"n":"Latias - HGSS10 (Cosmos Holo)","p":{"Holofoil":70.77}},{"i":97705,"n":"Latias - HGSS10 (Cracked Ice Holo)","p":{"Holofoil":461.41}}],
 "HGSS11":[{"i":86667,"n":"Latios - HGSS11 (Cosmos Holo)","p":{"Holofoil":121.86}},{"i":97706,"n":"Latios - HGSS11 (Cracked Ice Holo)","p":{"Holofoil":555.53}}],
 "HGSS12":[{"i":84368,"n":"Cleffa - HGSS12","p":{"Holofoil":40.82}}],
 "HGSS13":[{"i":89364,"n":"Smoochum - HGSS13","p":{"Holofoil":35.64}}],
@@ -23,8 +23,8 @@
 "HGSS19":[{"i":88535,"n":"Raikou - HGSS19","p":{"Holofoil":57.61}}],
 "HGSS20":[{"i":85273,"n":"Entei - HGSS20","p":{"Holofoil":92.9}}],
 "HGSS21":[{"i":89605,"n":"Suicune - HGSS21","p":{"Holofoil":73.54}}],
-"HGSS22":[{"i":88313,"n":"Porygon - HGSS22","p":{"Holofoil":21.63}}],
+"HGSS22":[{"i":88313,"n":"Porygon - HGSS22","p":{"Holofoil":21.58}}],
 "HGSS23":[{"i":88328,"n":"Porygon2 - HGSS23","p":{"Holofoil":20.5}}],
-"HGSS24":[{"i":86097,"n":"Hitmonchan - HGSS24","p":{"Holofoil":20.49}}],
+"HGSS24":[{"i":86097,"n":"Hitmonchan - HGSS24","p":{"Holofoil":20.54}}],
 "HGSS25":[{"i":86109,"n":"Hitmonlee - HGSS25","p":{"Holofoil":24.44}}]
 }
