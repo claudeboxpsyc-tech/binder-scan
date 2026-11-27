@@ -23,6 +23,7 @@
 "050/072":[{"i":605247,"n":"Potion","p":{"Normal":0.25}}],
 "051/072":[{"i":605203,"n":"Crushing Hammer","p":{"Normal":0.95}}],
 "052/072":[{"i":605233,"n":"Max Revive","p":{"Normal":3}}],
+"053/072":[{"i":605211,"n":"Evosoda","p":{"Normal":15.91}}],
 "055/072":[{"i":605265,"n":"Ultra Ball","p":{"Normal":0.25}}],
 "056/072":[{"i":605249,"n":"Professor's Letter","p":{"Normal":0.25}}],
 "057/072":[{"i":605252,"n":"Rare Candy","p":{"Normal":1}}],
@@ -34,5 +35,6 @@
 "066/072":[{"i":605264,"n":"Tierno","p":{"Normal":2}}],
 "067/072":[{"i":605248,"n":"Professor Sycamore","p":{"Normal":0.5}}],
 "072/072":[{"i":605207,"n":"Double Colorless Energy","p":{"Normal":0.38}}],
-"073/072":[{"i":605195,"n":"Blastoise EX","p":{"Holofoil":26}}]
+"073/072":[{"i":605195,"n":"Blastoise EX","p":{"Holofoil":26}}],
+"074/072":[{"i":605194,"n":"Mega Blastoise EX","p":{"Normal":75}}]
 }

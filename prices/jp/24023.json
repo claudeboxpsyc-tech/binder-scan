@@ -1,5 +1,5 @@
 {
-"003/L-P":[{"i":608550,"n":"Typhlosion","p":{"Normal":35}}],
+"003/L-P":[{"i":608550,"n":"Typhlosion","p":{"Normal":75}}],
 "005/L-P":[{"i":608552,"n":"Chikorita - 005/L-P","p":{"Holofoil":29.99}}],
 "007/L-P":[{"i":608554,"n":"Totodile - 007/L-P","p":{"Holofoil":90}}],
 "008/L-P":[{"i":608555,"n":"Mareep - 008/L-P","p":{"Holofoil":25.74}}],
@@ -7,6 +7,7 @@
 "045/L-P":[{"i":608584,"n":"Latias","p":{"Holofoil":50.74}}],
 "046/L-P":[{"i":608585,"n":"Latios","p":{"Holofoil":99.99}}],
 "048/L-P":[{"i":608587,"n":"Ho-Oh - 048/L-P","p":{"Holofoil":80}}],
+"056/L-P":[{"i":608595,"n":"Zangoose","p":{"Holofoil":70}}],
 "059/L-P":[{"i":608598,"n":"Entei - 059/L-P","p":{"Holofoil":39.99}}],
 "060/L-P":[{"i":608599,"n":"Suicune - 060/L-P","p":{"Holofoil":124.99}}],
 "061/L-P":[{"i":608600,"n":"Raikou - 061/L-P","p":{"Holofoil":54.99}}],

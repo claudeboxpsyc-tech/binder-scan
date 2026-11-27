@@ -1,6 +1,6 @@
 {
 "001/070":[{"i":608003,"n":"Weedle","p":{"1st Edition":2}}],
-"002/070":[{"i":608004,"n":"Kakuna","p":{"1st Edition":1}}],
+"002/070":[{"i":608004,"n":"Kakuna","p":{"1st Edition":0.85}}],
 "003/070":[{"i":608005,"n":"Beedrill","p":{"1st Edition":2}}],
 "004/070":[{"i":608006,"n":"Spinarak","p":{"1st Edition":3}},{"i":608077,"n":"Spinarak (Mirror Holofoil)","p":{"1st Edition Holofoil":9.9}}],
 "005/070":[{"i":608007,"n":"Ariados","p":{"1st Edition":1.74}},{"i":608078,"n":"Ariados (Mirror Holofoil)","p":{"1st Edition Holofoil":7}}],
@@ -44,7 +44,7 @@
 "045/070":[{"i":608048,"n":"Donphan - 045/070","p":{"1st Edition":2.08}},{"i":608139,"n":"Donphan (Mirror Holofoil) - 045/070","p":{"1st Edition Holofoil":10}}],
 "047/070":[{"i":608049,"n":"Spearow","p":{"1st Edition":1.35}},{"i":608141,"n":"Spearow (Mirror Holofoil)","p":{"1st Edition Holofoil":5}}],
 "048/070":[{"i":608050,"n":"Fearow","p":{"1st Edition":3.99}}],
-"049/070":[{"i":608051,"n":"Cleffa","p":{"1st Edition Holofoil":29.8}},{"i":608146,"n":"Cleffa (Mirror Holofoil)","p":{"1st Edition Holofoil":19}}],
+"049/070":[{"i":608051,"n":"Cleffa","p":{"1st Edition Holofoil":10}}],
 "050/070":[{"i":608052,"n":"Clefairy","p":{"1st Edition":3.5}}],
 "051/070":[{"i":608053,"n":"Clefable","p":{"1st Edition Holofoil":19.95}}],
 "052/070":[{"i":608054,"n":"Chansey","p":{"1st Edition":9.94}},{"i":608153,"n":"Chansey (Mirror Holofoil)","p":{"1st Edition Holofoil":4}}],

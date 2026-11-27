@@ -17,7 +17,7 @@
 "016/059":[{"i":604121,"n":"Starmie","p":{"1st Edition":1.05}}],
 "017/059":[{"i":604112,"n":"Remoraid","p":{"1st Edition":0.99}}],
 "018/059":[{"i":604107,"n":"Piplup","p":{"1st Edition":2.78}}],
-"019/059":[{"i":604108,"n":"Prinplup","p":{"1st Edition":1.93}}],
+"019/059":[{"i":604108,"n":"Prinplup","p":{"1st Edition":1.85}}],
 "020/059":[{"i":604074,"n":"Empoleon","p":{"1st Edition Holofoil":5.65}}],
 "021/059":[{"i":604116,"n":"Snover","p":{"1st Edition":1.69}}],
 "022/059":[{"i":604060,"n":"Abomasnow","p":{"1st Edition":1.97}}],
@@ -43,7 +43,7 @@
 "042/059":[{"i":604124,"n":"Yveltal","p":{"1st Edition Holofoil":8.73}}],
 "043/059":[{"i":604065,"n":"Bronzor","p":{"1st Edition":0.5}}],
 "044/059":[{"i":604064,"n":"Bronzong","p":{"1st Edition":4.41}}],
-"045/059":[{"i":604102,"n":"Mr. Mime","p":{"1st Edition":2.22}}],
+"045/059":[{"i":604102,"n":"Mr. Mime","p":{"1st Edition":2.09}}],
 "046/059":[{"i":604117,"n":"Spritzee","p":{"1st Edition":1.25}}],
 "047/059":[{"i":604061,"n":"Aromatisse","p":{"1st Edition":1}}],
 "048/059":[{"i":604063,"n":"Axew","p":{"1st Edition":3}}],
@@ -58,6 +58,7 @@
 "057/059":[{"i":604099,"n":"Mewtwo Spirit Link","p":{"1st Edition":8.25}}],
 "058/059":[{"i":604076,"n":"Giovanni's Scheme - 058/059","p":{"1st Edition":2.95}}],
 "059/059":[{"i":604066,"n":"Burning Energy","p":{"Unlimited":2.2,"1st Edition":5.05}}],
+"062/059":[{"i":604097,"n":"Mewtwo EX - 062/059","p":{"1st Edition Holofoil":75}}],
 "063/059":[{"i":604095,"n":"Mega Mewtwo EX - 063/059","p":{"Unlimited Holofoil":41592.49}}],
 "065/059":[{"i":604098,"n":"Mewtwo EX - 065/059","p":{"1st Edition Holofoil":400}}]
 }
